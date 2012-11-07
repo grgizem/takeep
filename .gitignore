@@ -1,0 +1,9 @@
+*~pyc
+*~swp
+settings_local.py
+event.db
+log
+logs/
+.DS_Store
+build
+*#*
