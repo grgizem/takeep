@@ -9,6 +9,7 @@ class Event(models.Model):
     description = models.CharField(max_length='255')
     participant = models.ManyToManyField(User, related_name=u'attended_events')
     location = models.ForeignKey(Place, related_name='had_events')
+    access = models.IntegerField(default=0)
 
     def upload_to(self, filename):
             return 'events/%s/%s' % (self.title, filename)
