@@ -1,6 +1,8 @@
-Django==1.4.2
+django
 django_extensions
 django-debug-toolbar
 ipython>=0.10
 ipdb
-pep8==0.6.1
+pep8==0.6.
+django-tastypie
+Pillow
