@@ -56,7 +56,7 @@ class UserProfile(models.Model):
                                 blank=True,
                                 null=True,
                                 )
-    bio = models.CharField("Biography",
+    bio = models.TextField("Biography",
                            max_length=255,
                            blank=True,
                            null=True,
