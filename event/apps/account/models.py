@@ -20,9 +20,9 @@ class UserProfile(models.Model):
     OTHER = "00"
 
     LOCATION_CHOICES = (
-        (ISTANBUL, "İstanbul"),
+        (ISTANBUL, "Istanbul"),
         (ANKARA, "Ankara"),
-        (IZMIR, "İzmir"),
+        (IZMIR, "Izmir"),
         (OTHER, "Other"),
     )
 
