@@ -1,5 +1,7 @@
 from django.db import models
+from django.db.models.signals import post_save
 from django.contrib.auth.models import User
+from django.dispatch import receiver
 
 
 class UserProfile(models.Model):
@@ -59,3 +61,12 @@ class UserProfile(models.Model):
                            blank=True,
                            null=True,
                            )
+
+
+@receiver(post_save, sender=User)
+def post_user_creation_handler(sender, instance, *args, **kwargs):
+    user = instance
+    UserProfile.objects.get_or_create(user=user)
+
+# To be sure every User has an UserProfile.
+post_save.connect(post_user_creation_handler, sender=User)
