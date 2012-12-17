@@ -3,6 +3,6 @@ django_extensions
 django-debug-toolbar
 ipython>=0.10
 ipdb
-pep8==0.6.
+pep8==0.6.1
 django-tastypie
 Pillow
