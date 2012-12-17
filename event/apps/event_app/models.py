@@ -7,10 +7,8 @@ class Event(models.Model):
     host = models.ForeignKey(User, related_name='is_host')
     title = models.CharField(max_length='100')
     description = models.CharField(max_length='255')
-    participant = models.ManyToManyField(User, related_name=u'attended_events')
     location = models.ForeignKey(Place, related_name='had_events')
     is_private = models.BooleanField(default=False)
-
     tags = models.CharField(max_length=255,
                             blank=True,
                             null=True
@@ -25,3 +23,12 @@ class Event(models.Model):
 
     def __unicode__(self):
         return self.title
+
+
+class Participant(models.Model):
+    event = models.ForeignKey(Event, related_name='participants')
+    guest = models.ForeignKey(User, related_name='attended_to')
+    is_approved = models.BooleanField(default=False)
+
+    class Meta:
+        unique_together = ('event', 'guest')
