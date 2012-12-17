@@ -3,6 +3,59 @@ from django.contrib.auth.models import User
 
 
 class UserProfile(models.Model):
+
+    FEMALE = 'F'
+    MALE = 'M'
+
+    GENDER_CHOICES = (
+        (FEMALE, 'FEMALE'),
+        (MALE, 'MALE'),
+    )
+
+    ISTANBUL = "34"
+    ANKARA = "06"
+    IZMIR = "35"
+    OTHER = "00"
+
+    LOCATION_CHOICES = (
+        (ISTANBUL, "İstanbul"),
+        (ANKARA, "Ankara"),
+        (IZMIR, "İzmir"),
+        (OTHER, "Other"),
+    )
+
+    def upload_to(self, filename):
+            return 'users/%s/%s' % (self.user.username, filename)
+
     user = models.OneToOneField(User)
-    first_name = models.CharField(null=True, max_length='100')
-    last_name = models.CharField(null=True, max_length='100')
+
+    gender = models.CharField("Gender",
+                                max_length=1,
+                                choices=GENDER_CHOICES,
+                                blank=True,
+                                null=True,
+                                )
+    birthdate = models.DateField("Birthdate",
+                                 blank=True,
+                                 null=True,
+                                 )
+    address = models.TextField("Address",
+                               blank=True,
+                               null=True,
+                               )
+    photo = models.ImageField("Profile Photo",
+                              upload_to=upload_to,
+                              null=True,
+                              blank=True
+                              )
+    location = models.CharField("City",
+                                max_length=2,
+                                choices=LOCATION_CHOICES,
+                                blank=True,
+                                null=True,
+                                )
+    bio = models.CharField("Biography",
+                           max_length=255,
+                           blank=True,
+                           null=True,
+                           )
