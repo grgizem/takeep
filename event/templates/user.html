@@ -1,136 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Takeep</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Ece Kıvman/Elif Tuygan" >
+{% extends base.html %}    
 
-    <link href="../../static/takeep/css/bootstrap.min.css" rel="stylesheet">
+!-- Main Container
+================================================== -->
+{% block title %}Login{% endblock %}
 
-    </head>
+{% block navbar %}
+    <li class="nav-header">Username</li>
+         <li><a href="{% url edit_profile %}"> Edit Profile</a></li>
+         <li><a href="{% url create_event %}"> Add Event</a></li>
+         <li><a href="{% url my_events %}"> Manage your Events</a></li>
+    <li class="nav-header"> History</li>
+         <li><a href="events1.html">Past Event #1</a></li>
+         <li><a href="events2.html">Past Event #2</a></li>
+{% endblock %}
 
-  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+{% block content %}
+    <div class="hero-unit">
+        <h2>Event #1</h2>
+        <p>Description</p>
+        <p> <a class="btn" href="event1.html"> View details &raquo;</a></p>
+    </div>
 
+    <div class="hero-unit">
+        <h2>Event #2</h2>
+        <p>Description</p>
+        <p> <a class="btn" href="event2.html"> View details &raquo;</a></p>
+    </div>
 
-  	<!-- Navbar
-    ================================================== -->
- 	<div class="navbar navbar-fixed-top">
-   		<div class="navbar-inner">
-     		 <div class="container">
-       			 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-         		 <span class="icon-bar"></span>
-         		 <span class="icon-bar"></span>
-         		 <span class="icon-bar"></span>
-       			 </a>
-       			 <a class="brand" href="index.html">Takeep</a>
-       				 <div class="nav-collapse">
-          				 <ul class="nav">
-            			 <li><a href="index.html">Home</a></li>
-            			 <li><a href="events.html">Events</a></li>
-          				 </ul>
-          				 <form class="navbar-search pull-left" action="">
-            			 	 <input type="text" class="search-query span2" placeholder="Events">
-          				 </form>
-          				 <ul class="nav pull-right">
-              			 	 <li><a href="register.html">Username</a></li>
-            			 	 <li><a href="login.html">Logout</a></li>
-          				 </ul>
-        			 </div><!-- /.nav-collapse -->
-   			 </div>
-   		 </div>
-	 </div>
+    <div class="hero-unit">
+        <h2>Event #3</h2>
+        <p>Description</p>
+        <p> <a class="btn" href="event3.html"> View details &raquo;</a></p>
+    </div>
 
-    
+    <div class="hero-unit">
+        <h2>Event #4</h2>
+        <p>Description</p>
+        <p> <a class="btn" href="event4.html"> View details &raquo;</a></p>
+    </div>
 
- !-- Main Container
- ================================================== -->
- <div class="container"> 
-	 <div class="container-fluid">
-      	 <div class="row-fluid">
-        	 <div class="span3">
-          		 <div class="well sidebar-nav">
-            		 <ul class="nav nav-list">
-              		 <li class="nav-header">Username </li>
-              		 	 <li><a href="makeEvent.html"> Add Event</a></li>
-	      			 	 	<li class="nav-header"> History</li>
-              					 <li><a href="events.html">Past Event #1</a></li>
-              					 <li><a href="events.html">Past Event #2</a></li>
-            		 </ul>
-          		 </div><!--/.well -->
-        	 </div><!--/span-->
-        	 
-     <div class="container-fluid">
-    	<div class="row-fluid">
-        	 <div class="span3">
-        	 </div><!--/span-->
-        		 <div class="span9">
-          			<div class="hero-unit">
-           				<h2>Event #1</h2>
-              			<p>Description</p>
-              			<p> <a class="btn" href="event1.html"> View details &raquo;</a></p>
-					 </div>
-				 </div>
-			 </div>
-		</div>
-	
-
-
-
-     <div class="container-fluid">
-    	<div class="row-fluid">
-        	 <div class="span3">
-        	 </div><!--/span-->
-        		 <div class="span9">
-          			<div class="hero-unit">
-           				<h2>Event #2</h2>
-              			<p>Description</p>
-              			<p> <a class="btn" href="event2.html">View details &raquo;</a></p>
-					 </div>
-				 </div>
-			</div>
-		</div>
-	
-	
-
-     <div class="container-fluid">
-    	<div class="row-fluid">
-        	 <div class="span3">
-        	 </div><!--/span-->
-        		 <div class="span9">
-          			<div class="hero-unit">
-           				<h2>Event #3</h2>
-              			<p>Description</p>
-              			<p> <a class="btn" href="event3.html">View details &raquo;</a></p>
-					 </div>
-				 </div>
-			 </div>
-		 </div>
-	
-
-     <div class="container-fluid">
-    	<div class="row-fluid">
-        	 <div class="span3">
-        	 </div><!--/span-->
-        		 <div class="span9">
-          			<div class="hero-unit">
-           				<h2>Event #4</h2>
-              			<p>Description</p>
-              			<p> <a class="btn" href="event4.html">View details &raquo;</a></p>
-					 </div>
-				 </div>
-			 </div>
-	     </div>
-
-     	 <hr>
-     	 <footer>
-         <p>&copy; Company 2012</p>
-     	</footer>
-
-	 </div><!--/.fluid-container-->
-   
-
-
- </body>
- </html>
+    <div class="hero-unit">
+        <h2>Event #5</h2>
+        <p>Description</p>
+        <p> <a class="btn" href="event5.html"> View details &raquo;</a></p>
+    </div>
+{% endblock %}
