@@ -1,8 +1,8 @@
-{% extends base.html %}    
+{% extends 'base.html' %}    
 
-!-- Main Container
+<!-- Main Container
 ================================================== -->
-{% block title %}Sign up <h4> or <a href="login.html"> Login </a> </h4>{% endblock %}
+{% block title %}Sign up <h4> or <a href="{% url login %}"> Login </a> </h4>{% endblock %}
 
 {% block navbar %}
 {% endblock %}
@@ -52,8 +52,9 @@
                 				 <input type="checkbox" id="optionsCheckbox" value="option1">
                 				 I accept the terms of use.
               				 </label>
-            				 <button type="submit" class="btn btn-primary">Join</button>
-            				 <button type="submit" class="btn btn-primary">Cancel</button>
+                       <br />
+            				 <button type="submit" class="btn btn-inverse">Join</button>
+            				 <button type="submit" class="btn btn-inverse">Cancel</button>
             			</div>
           		 </div>
         	 </fieldset>

@@ -1,19 +1,25 @@
-{% extends 'base.html' %}
-
+{% extends 'base.html' %}    
 
 <!-- Main Container
 ================================================== -->
-{% block title %}Events{% endblock %}
+{% block title %}Login{% endblock %}
 
 {% block navbar %}
+    <li class="nav-header">Username</li>
+         <li><a href="{% url edit_profile %}"> Edit Profile</a></li>
+         <li><a href="{% url create_event %}"> Add Event</a></li>
+         <li><a href="{% url my_events %}"> Manage your Events</a></li>
+    <li class="nav-header"> History</li>
+         <li><a href="events1.html">Past Event #1</a></li>
+         <li><a href="events2.html">Past Event #2</a></li>
 {% endblock %}
 
 {% block content %}
     <div class="span45">
-	<div class="hero-unit">
-		<h2>Event #1</h2>
-  		<p>Description</p>
-  		<p> <a class="btn btn-inverse btn-small" href="event1.html"> View details &raquo;</a></p>
+    <div class="hero-unit">
+        <h2>Event #1</h2>
+        <p>Description</p>
+        <p> <a class="btn btn-inverse btn-small" href="event1.html"> View details &raquo;</a></p>
     </div>
     <div class="hero-unit">
         <h2>Event #2</h2>
