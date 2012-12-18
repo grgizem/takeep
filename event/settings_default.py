@@ -118,7 +118,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    #apps added
+    # 3rd party apps:
+    'django_extensions',
+    # apps:
     'apps.event_app',
     'apps.place',
     'apps.account',
