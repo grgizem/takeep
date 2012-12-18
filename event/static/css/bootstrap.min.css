@@ -41,6 +41,7 @@ a:hover{color:#97310e;text-decoration:underline;}
 .span7{width:540px;}
 .span6{width:460px;}
 .span5{width:380px;}
+.span45{width:340px;}
 .span4{width:300px;}
 .span3{width:220px;}
 .span2{width:140px;}
@@ -70,6 +71,7 @@ a:hover{color:#97310e;text-decoration:underline;}
 .row-fluid .span7{width:57.44680851063829%;*width:57.39361702127659%;}
 .row-fluid .span6{width:48.93617021276595%;*width:48.88297872340425%;}
 .row-fluid .span5{width:40.42553191489362%;*width:40.37234042553192%;}
+.row-fluid .span45{width:47.42553191489362%;*width:47.37234042553192%;}
 .row-fluid .span4{width:31.914893617021278%;*width:31.861702127659576%;}
 .row-fluid .span3{width:23.404255319148934%;*width:23.351063829787233%;}
 .row-fluid .span2{width:14.893617021276595%;*width:14.840425531914894%;}
@@ -206,6 +208,7 @@ input.span8, textarea.span8, .uneditable-input.span8{width:606px;}
 input.span7, textarea.span7, .uneditable-input.span7{width:526px;}
 input.span6, textarea.span6, .uneditable-input.span6{width:446px;}
 input.span5, textarea.span5, .uneditable-input.span5{width:366px;}
+input.span4, textarea.span45, .uneditable-input.span4{width:216px;}
 input.span4, textarea.span4, .uneditable-input.span4{width:286px;}
 input.span3, textarea.span3, .uneditable-input.span3{width:206px;}
 input.span2, textarea.span2, .uneditable-input.span2{width:126px;}
