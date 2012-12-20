@@ -5,7 +5,7 @@
 {% block title %}Login{% endblock %}
 
 {% block navbar %}
-    <li class="nav-header">Username</li>
+    <li class="nav-header"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> {{ user.username }} <b class="caret"></b></a></li>
          <li><a href="{% url edit_profile %}"> Edit Profile</a></li>
          <li><a href="{% url create_event %}"> Add Event</a></li>
          <li><a href="{% url my_events %}"> Manage your Events</a></li>
