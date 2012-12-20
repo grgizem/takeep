@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from apps.place.models import Place
+from django.forms import ModelForm
 
 
 class Event(models.Model):
@@ -16,7 +17,7 @@ class Event(models.Model):
     """
     The title of the event
     """
-    description = models.CharField(max_length='255')
+    details = models.CharField(max_length='255')
     """
     The description of the event
     """
@@ -79,4 +80,9 @@ class Participant(models.Model):
         unique_together = ('event', 'guest')
         """
         Since the user will be attend a particular event for once
+
         """
+
+    
+
+
