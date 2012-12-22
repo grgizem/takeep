@@ -54,12 +54,7 @@ def edit_event(request, event_id):
             else:
                 return render(request, 'edit_event.html', {'form': eventform})
         else:
-            eventform = EventForm({'title': event.title,
-                'details': event.details,
-                'location': event.location,
-                'privacy': event.is_private,
-                'start_time': event.start_time,
-                'end_time': event.end_time})
+            eventform = EventForm(event)
             return render(request, 'edit_event.html',
                 {'event_id': event_id, 'form': eventform})
     else:
