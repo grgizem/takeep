@@ -14,7 +14,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 PROJECT_DIR = BASE_DIR
 
-# Django settings for event project.
+# Django settings for takeep project.
 
 ADMINS = (
     ('Gizem Gür', 'grgizem@gmail.com'),
@@ -98,9 +98,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'event.urls'
+ROOT_URLCONF = 'takeep.urls'
 
-WSGI_APPLICATION = 'event.wsgi.application'
+WSGI_APPLICATION = 'takeep.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or
@@ -121,7 +121,7 @@ INSTALLED_APPS = (
     # 3rd party apps:
     'django_extensions',
     # apps:
-    'apps.event_app',
+    'apps.event',
     'apps.place',
     'apps.account',
 )

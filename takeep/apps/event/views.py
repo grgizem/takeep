@@ -3,8 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
-from event_app.forms import EventForm
-from event_app.models import Event
+from apps.event.forms import EventForm
+from apps.event.models import Event
 
 
 @login_required
