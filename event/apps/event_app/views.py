@@ -43,11 +43,12 @@ def edit_event(request, event_id):
     To edit an existence event
     """
     event = get_object_or_404(Event, id=event_id)
-    if request.user.id == event.host.id:
+    user = request.user
+    if user.id == event.host.id:
         if request.POST:
             eventform = EventForm(request.POST)
             if eventform.is_valid():
-                eventform.save()
+                eventform.save(user)
                 messages.add_message(request, messages.WARNING,
                     'Your event changed as your requested.')
                 return HttpResponseRedirect('/')
