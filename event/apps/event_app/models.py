@@ -16,7 +16,7 @@ class Event(models.Model):
     """
     The title of the event
     """
-    details = models.CharField(max_length='255')
+    description = models.CharField(max_length='255')
     """
     The description of the event
     """
