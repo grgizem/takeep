@@ -1,13 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 from apps.place.models import Place
-from django.forms import ModelForm
 
 
 class Event(models.Model):
     host = models.ForeignKey(User, related_name='is_host',
-                               blank=True,
-                               null=True)
+                             blank=True,
+                             null=True)
     """
     The host of the event;
     - if event is a hosted by someone, this will be that user
@@ -80,9 +79,4 @@ class Participant(models.Model):
         unique_together = ('event', 'guest')
         """
         Since the user will be attend a particular event for once
-
         """
-
-    
-
-
