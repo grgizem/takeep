@@ -123,7 +123,7 @@ INSTALLED_APPS = (
     # apps:
     'apps.event',
     'apps.place',
-    'apps.account',
+    'apps.accounts',
 )
 
 # A sample logging configuration. The only tangible logging
