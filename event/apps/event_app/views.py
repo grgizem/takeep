@@ -1,56 +1,68 @@
-from django.http import HttpResponseRedirect
-from django.contrib.auth import logout as auth_logout
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.template import RequestContext
-from django.shortcuts import render_to_response, redirect, get_object_or_404
-from django.contrib.messages.api import get_messages
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404
 
-import random
-
-from event_app.models import Event, Participant 
-from django.contrib.auth.models import User
-from social_auth.utils import setting
-
-#logout
-@login_required
-def logout(request):
-    auth_logout(request)
-    return HttpResponseRedirect("/")
+from event_app.forms import EventForm
+from event_app.models import Event
 
 
-# profile page:
 @login_required
 def profile(request):
-    return render_to_response('profile.html', RequestContext(request))
+    """
+    Profle page of logged-in user
+    """
+    return render(request, 'profile.html')
+
 
 def events(request):
-	
+    """
+    All events page
+    """
     return render(request, 'events.html')
 
 
 def event(request):
+    """
+    Particular events page
+    """
     return render(request, 'event.html')
 
 
+@login_required
 def create_event(request):
+    """
+    To create an event
+    """
     return render(request, 'create_event.html')
 
 
-#edit event
 @login_required
-def edit_event(request,event_id):
-    e = get_object_or_404(Event, id=event_id)
-    if request.user.id == e.host.id:
+def edit_event(request, event_id):
+    """
+    To edit an existence event
+    """
+    event = get_object_or_404(Event, id=event_id)
+    if request.user.id == event.host.id:
         if request.POST:
             eventform = EventForm(request.POST)
             if eventform.is_valid():
-		eventform.save_as(request,e)
-		messages.add_message(request, messages.WARNING, 'Your post is waiting for approvement.')
+                eventform.save()
+                messages.add_message(request, messages.WARNING,
+                    'Your event changed as your requested.')
                 return HttpResponseRedirect('/')
+            else:
+                return render(request, 'edit_event.html', {'form': eventform})
         else:
-            eventform = EventForm({'title' : e.title, 'content' : e.content})
-            return render_to_response('edit_event.html', {'event_id' : event_id, 'form' : eventform}, RequestContext(request))
+            eventform = EventForm({'title': event.title,
+                'details': event.details,
+                'location': event.location,
+                'privacy': event.is_private,
+                'start_time': event.start_time,
+                'end_time': event.end_time})
+            return render(request, 'edit_event.html',
+                {'event_id': event_id, 'form': eventform})
     else:
-        messages.add_message(request, messages.ERROR, 'You can not edit this post, because you are not the host of it.')
+        messages.add_message(request, messages.ERROR,
+            'You can not edit this event, because you are not the host of it.')
         return HttpResponseRedirect('/')
-    return render(request, 'edit_event.html')
