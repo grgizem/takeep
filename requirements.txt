@@ -1,5 +1,6 @@
 django
 django_extensions
+django-registration
 django-debug-toolbar
 ipython>=0.10
 ipdb
