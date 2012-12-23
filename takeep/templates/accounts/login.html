@@ -9,12 +9,28 @@
 
 {% block content %}
 	 <!-- Login form -->
-         <form class="form-horizontal well" actions=".">
+   {% if form.errors %}
+        <div class="alert alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <strong>:( </strong>There has been occured a problem. Please, try again later.
+        </div>
+        {{ form.non_field_errors }}
+   {% endif %}
+         <form class="form-horizontal well" actions="." method="post">
           {% csrf_token %}
         	 <fieldset>
-            <table>
-               {form.as_p}
-            </table>
+            <div class="control-group">
+               <label class="control-label" for="id_username">Username:</label>
+               <div class="controls">
+                    <input id="id_username" type="text" name="username" maxlength="30" />
+               </div>
+            </div>
+            <div class="control-group">
+               <label class="control-label" for="id_password">Password:</label>
+               <div class="controls">
+                    <input type="password" name="password" id="id_password" />
+               </div>
+            </div>
                 <div class="control-group">
             		 <label class="control-label" for="optionsCheckbox"></label>
             			 <div class="controls">
