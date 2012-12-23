@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+<!-- Main Container
+================================================== -->
+{% block title %}Login{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+	 <!-- Login form -->
+   {% if form.errors %}
+        <div class="alert alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <strong>:( </strong>There has been occured a problem. Please, try again later.
+        </div>
+        {{ form.non_field_errors }}
+   {% endif %}
+         <form class="form-horizontal well" actions="." method="post">
+          {% csrf_token %}
+        	 <fieldset>
+            <div class="control-group">
+               <label class="control-label" for="id_username">Username:</label>
+               <div class="controls">
+                    <input id="id_username" type="text" name="username" maxlength="30" />
+               </div>
+            </div>
+            <div class="control-group">
+               <label class="control-label" for="id_password">Password:</label>
+               <div class="controls">
+                    <input type="password" name="password" id="id_password" />
+               </div>
+            </div>
+                <div class="control-group">
+            		 <label class="control-label" for="optionsCheckbox"></label>
+            			 <div class="controls">
+              				 <label class="checkbox">
+                				 <input type="checkbox" id="optionsCheckbox" value="option1">
+                				 Remember me
+              				 </label>
+              				 <br />
+            				 <button type="submit" class="btn btn-inverse">Join</button>
+            				 <button type="submit" class="btn btn-inverse">Cancel</button>
+            			</div>
+          		 </div>
+        	 </fieldset>
+      	 	 </form>
+
+{% endblock %}

@@ -6,12 +6,11 @@ urlpatterns = patterns('apps.accounts.views',
     url(r'^edit_profile/', 'edit_profile', name='edit_profile'),
     url(r'^my_events/', 'my_events', name='my_events'),
     url(r'^my_event/(?P<event_id>\d+)/$', 'my_event', name='my_event'),
-
-    url(r'^login/', 'login', name='login'),
-
 )
 
 urlpatterns += patterns('',
+    url(r'^login/$', 'django.contrib.auth.views.login',
+        {'template_name' : 'accounts/login.html'}, name='login'),
     # to logout
     url(r'^logout/$', 'django.contrib.auth.views.logout_then_login',
         name="logout"),
