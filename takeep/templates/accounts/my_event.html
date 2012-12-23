@@ -1,0 +1,71 @@
+{% extends 'base.html' %}    
+
+<!-- Main Container
+================================================== -->
+{% block title %}{{ event.title }}{% endblock %}
+
+{% block navbar %}
+    <li class="nav-header">{{ user.username }}</li>
+         <li><a href="{% url edit_profile %}"> Edit Profile</a></li>
+         <li><a href="{% url create_event %}"> Add Event</a></li>
+         <li><a href="{% url my_events %}"> Manage your Events</a></li>
+    <li class="nav-header"> History</li>
+         <li><a href="events1.html">Past Event #1</a></li>
+         <li><a href="events2.html">Past Event #2</a></li>
+{% endblock %}
+
+{% block content %}
+    <div class="hero-unit">
+        <h2>{{ event.title }}</h2>
+        <p>{{ event.location.name }}</p>
+        <p>{{ event.start_time }}</p>        
+        <p>{{ event.end_time }}</p>
+        <p>{{ event.description }}</p>
+        <p> <a class="btn btn-inverse btn-small" href="{% url edit_event event.id %}"> Edit this Event &raquo;</a></p>
+        <p> <a class="btn btn-inverse btn-small" href="{% url cancel_event event.id %}"> Cancel this Event &raquo;</a></p>
+    </div>
+    {% if event.is_private %}
+          <table class="table table-bordered table-striped table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Username</th>
+              <th>Approvement</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for participate in participations %}
+            <tr>
+              <td>{{ forloop.counter }}</td>
+              <td>{{ participate.guest.username }}</td>
+              {% if participate.is_approved %}
+              <td> <img src"" width="10" height="10" alt="OK"> </td>
+              <td> <a class="btn btn-inverse btn-small" href="{% url disapprove event.id participate.guest.id %}">Disapprove</a> </td>
+              {% else %}
+              <td><img src"" width="10" height="10" alt="?"> </td>
+              <td> <a class="btn btn-inverse btn-small" href="{% url approve event.id participate.guest.id %}">Approve</a> </td>
+              {% endif %}
+            </tr>
+            {% endfor %}
+          </tbody>
+          </table>
+    {% else %}
+          <table class="table table-bordered table-striped table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for participate in participations %}
+            <tr>
+              <td>{{ forloop.counter }}</td>
+              <td>{{ participate.guest.username }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+          </table>
+    {% endif %}
+{% endblock %}
