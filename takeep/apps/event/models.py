@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 from django.contrib.auth.models import User
 from apps.place.models import Place
@@ -7,6 +9,21 @@ class Event(models.Model):
     host = models.ForeignKey(User, related_name='is_host',
                              blank=True,
                              null=True)
+    """
+    Event has status options as it below.
+    """
+    OPEN = 'O'
+    CLOSED = 'C'
+    CANCELLED = 'Q'
+
+    STATE_CHOICES = (
+        # the event will take place.
+        (OPEN, 'OPEN'),
+        # the event is expired.
+        (CLOSED, 'CLOSED'),
+        # the event is cancelled.
+        (CANCELLED, 'CANCELLED'),
+    )
     """
     The host of the event;
     - if event is a hosted by someone, this will be that user
@@ -45,6 +62,12 @@ class Event(models.Model):
     """
     The end time of the event as date and time
     """
+    status = models.CharField(max_length=1,
+                          choices=STATE_CHOICES,
+                          default=OPEN)
+    """
+    The status of an event, choices above.
+    """
 
     def upload_to(self, filename):
             return 'events/%s/%s' % (self.title, filename)
@@ -53,9 +76,34 @@ class Event(models.Model):
     """
     The banner photo of the event
     """
+    def get_active_participants(self):
+        return self.participants.filter(is_approved=True)
+
+    active_participants = property(get_active_participants)
+    """
+    Active participants of certain event.
+    """
 
     def __unicode__(self):
         return self.title
+
+    """
+    Update status of an event.
+    """
+    def update_status(self):
+        if self.status == self.CANCELLED:
+            pass
+        elif datetime.datetime.now(self.time.tzinfo) > self.end_statime:
+            self.status = self.CLOSED
+        self.save()
+        return self
+
+    """
+    Cancel an event.
+    """
+    def cancel(self):
+        self.status = self.CANCELLED
+        self.save()
 
 
 class Participant(models.Model):
