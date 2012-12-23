@@ -7,14 +7,6 @@ from apps.event.forms import EventForm
 from apps.event.models import Event
 
 
-@login_required
-def profile(request):
-    """
-    Profle page of logged-in user
-    """
-    return render(request, 'profile.html')
-
-
 def events(request):
     """
     All events page
@@ -22,11 +14,13 @@ def events(request):
     return render(request, 'events.html')
 
 
-def event(request):
+@login_required
+def event(request, event_id):
     """
     Particular events page
     """
-    return render(request, 'event.html')
+    event = get_object_or_404(Event, id=event_id)
+    return render(request, 'event.html', {'event': event})
 
 
 @login_required
@@ -34,7 +28,21 @@ def create_event(request):
     """
     To create an event
     """
-    return render(request, 'create_event.html')
+    user = request.user
+    if request.POST:
+        eventform = EventForm(request.POST)
+        if eventform.is_valid():
+            eventform.save(user)
+            messages.add_message(request, messages.WARNING,
+                'Your event created as your requested.')
+            return HttpResponseRedirect('/')
+        else:
+            return render(request, 'create_event.html',
+                {'form': eventform})
+    else:
+        eventform = EventForm()
+        return render(request, 'create_event.html',
+            {'form': eventform})
 
 
 @login_required
