@@ -10,7 +10,9 @@ class Event(models.Model):
                              blank=True,
                              null=True)
     """
-    Event has status options as it below.
+    The host of the event;
+    - if event is a hosted by someone, this will be that user
+    - in other events this field will be blank
     """
     OPEN = 'O'
     CLOSED = 'C'
@@ -25,9 +27,7 @@ class Event(models.Model):
         (CANCELLED, 'CANCELLED'),
     )
     """
-    The host of the event;
-    - if event is a hosted by someone, this will be that user
-    - in other events this field will be blank
+    The Event has status options as it below.
     """
     title = models.CharField(max_length='100')
     """
