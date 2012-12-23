@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+<!-- Main Container
+================================================== -->
+{% block title %}Login{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+	 <!-- Login form -->
+         <form class="form-horizontal well" actions=".">
+          {% csrf_token %}
+        	 <fieldset>
+            <table>
+               {form.as_p}
+            </table>
+                <div class="control-group">
+            		 <label class="control-label" for="optionsCheckbox"></label>
+            			 <div class="controls">
+              				 <label class="checkbox">
+                				 <input type="checkbox" id="optionsCheckbox" value="option1">
+                				 Remember me
+              				 </label>
+              				 <br />
+            				 <button type="submit" class="btn btn-inverse">Join</button>
+            				 <button type="submit" class="btn btn-inverse">Cancel</button>
+            			</div>
+          		 </div>
+        	 </fieldset>
+      	 	 </form>
+
+{% endblock %}
