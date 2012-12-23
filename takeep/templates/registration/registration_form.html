@@ -1,0 +1,82 @@
+{% extends 'base.html' %}    
+
+<!-- Main Container
+================================================== -->
+{% block title %}Sign up <h4> or <a href="{% url login %}"> Login </a> </h4>{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+        {% if form.errors %}
+        <div class="alert alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <strong>:( </strong>There has been occured a problem. Please, try again later.
+        </div>
+        {{ form.non_field_errors }}
+        {% endif %}
+                <form class="form-horizontal well" method="post" action="{% url registration_register %}" id="registrationForm">
+                {% csrf_token %}
+                    <fieldset>
+                <div class="control-group">
+                    <label class="control-label" for="input01"> Username:</label>
+                         <div class="controls">
+                             <input type="text" class="input-xlarge" id="input01">
+                         </div>
+                 </div>
+
+                 <div class="control-group">
+                     <label class="control-label" for="input02"> First Name:</label>
+                         <div class="controls">
+                         <input type="text" class="input-xlarge" id="input02">
+                     </div>
+                 </div>
+
+                 <div class="control-group">
+                     <label class="control-label" for="input03"> Last Name:</label>
+                         <div class="controls">
+                             <input type="text" class="input-xlarge" id="input03">
+                         </div>
+                     </div>
+
+                 <div class="control-group">
+                     <label class="control-label" for="input03"> Email:</label>
+                         <div class="controls">
+                             <input type="email" class="input-xlarge" id="input04">
+                         </div>
+                     </div>
+
+                 <div class="control-group">
+                     <label class="control-label" for="input03"> Password: </label>
+                         <div class="controls">
+                             <input type="password" class="input-xlarge" id="input05">
+                         </div>
+                    </div>
+
+                 <div class="control-group">
+                     <label class="control-label" for="optionsCheckbox"></label>
+                         <div class="controls">
+                             <label class="checkbox">
+                                 <input type="checkbox" id="optionsCheckbox" value="option1">
+                                 I accept the terms of use.
+                             </label>
+                       <br />
+                             <button type="submit" class="btn btn-inverse">Join</button>
+                             <button type="submit" class="btn btn-inverse">Cancel</button>
+                        </div>
+                 </div>
+             </fieldset>
+                </form>
+<script>
+$(document).ready(function() {
+        $("span.error").each(function() {
+                var $this = $(this);
+                if ("" != $this.text()) {
+                    $this.next().find("input[type=text]").addClass("error");
+                    $this.appendTo($this.prev());
+                }
+        });
+        $("input.error").trigger("focus");
+});
+</script>
+{% endblock %}

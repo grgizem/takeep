@@ -1,0 +1,11 @@
+Membership Activation Mail
+
+Hello,
+
+To complete your membership to takeep.com, please click the following link.
+
+http://{{site.domain}}/accounts/activate/{{ activation_key }}/
+
+Do not forget, there is a {{ expiration_days }} days to complete before your request has been expired.
+
+takeep.com
