@@ -1,35 +1,38 @@
-from django.contrib.auth import logout as auth_logout
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+
+from apps.event.models import Event, Participant
 
 
+@login_required
 def profile(request):
-    return render(request, 'profile.html')
+    participations = Participant.objects.filter(user=request.user)
+    return render(request, 'profile.html', {'participate': participations})
 
 
+@login_required
 def edit_profile(request):
     return render(request, 'edit_profile.html')
 
 
+@login_required
 def my_events(request):
-    return render(request, 'my_events.html')
+    events = Event.objects.filter(host=request.user)
+    return render(request, 'my_events.html', {'events': events})
 
 
-def my_event(request):
-    return render(request, 'my_event.html')
+@login_required
+def my_event(request, event_id):
+    event = get_object_or_404(Event, id=event_id)
+    if event.host.id == request.user.id:
+        return render(request, 'my_event.html', {'event': event})
+    else:
+        messages.add_message(request, messages.ERROR,
+            'You can not edit this event, because you are not the host of it.')
+        return HttpResponseRedirect('/')
 
 
 def login(request):
     return render(request, 'login.html')
-
-
-def register(request):
-    return render(request, 'register.html')
-
-
-#logout
-@login_required
-def logout(request):
-    auth_logout(request)
-    return HttpResponseRedirect("/")
