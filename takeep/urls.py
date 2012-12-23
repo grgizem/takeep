@@ -10,12 +10,7 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('apps.accounts.urls')),
     url(r'^event/', include('apps.event.urls')),
     url(r'^place/', include('apps.place.urls')),
-    """
-    Application urls
-    """
 
-    (r'^accounts/', include('registration.backends.default.urls')),
-    """
-    registration module urls
-    """
+    url(r'^accounts/', include('registration.backends.default.urls')),
+
 )
