@@ -8,8 +8,13 @@ from apps.event.models import Event, Participant
 
 @login_required
 def profile(request):
-    participations = Participant.objects.filter(guest=request.user, event.status="O")
-    return render(request, 'accounts/profile.html', {'participate': participations})
+    participations = Participant.objects.filter(
+        guest=request.user, event__status="O")
+    suggestions = Participant.objects.exclude(
+        guest=request.user).filter(event__status="O")
+    return render(request, 'accounts/profile.html',
+        {'participations': participations,
+        'suggestions': suggestions})
 
 
 @login_required
