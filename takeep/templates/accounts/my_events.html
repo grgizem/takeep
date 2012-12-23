@@ -1,0 +1,31 @@
+{% extends 'base.html' %}    
+
+<!-- Main Container
+================================================== -->
+{% block title %}Your Events{% endblock %}
+
+{% block navbar %}
+    <li class="nav-header">{{ user.username }}</li>
+         <li><a href="{% url edit_profile %}"> Edit Profile</a></li>
+         <li><a href="{% url create_event %}"> Add Event</a></li>
+         <li><a href="{% url my_events %}"> Manage your Events</a></li>
+    <li class="nav-header"> History</li>
+         <li><a href="events1.html">Past Event #1</a></li>
+         <li><a href="events2.html">Past Event #2</a></li>
+{% endblock %}
+
+{% block content %}
+{% if events %}
+    <h3>Your events:</h3>
+    {% for event in events %}
+    <div class="hero-unit">
+        <h2>{{ event.title }}</h2>
+        <p>{{ event.location.name }}</p>
+        <p>{{ event.start_time }}</p>        
+        <p>{{ event.end_time }}</p>
+        <p>{{ event.description }}</p>
+        <p> <a class="btn btn-inverse btn-small" href="{% url edit_event event.id %}"> Edit this Event &raquo;</a></p>
+    </div>
+    {% endfor %}
+{% endif %}
+{% endblock %}

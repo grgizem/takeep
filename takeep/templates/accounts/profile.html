@@ -1,0 +1,67 @@
+{% extends 'base.html' %}    
+
+<!-- Main Container
+================================================== -->
+{% block title %}Profile Page{% endblock %}
+
+{% block navbar %}
+    <li class="nav-header">{{ user.username }}</li>
+         <li><a href="{% url edit_profile %}"> Edit Profile</a></li>
+         <li><a href="{% url create_event %}"> Add Event</a></li>
+         <li><a href="{% url my_events %}"> Manage your Events</a></li>
+    <li class="nav-header"> History</li>
+         <li><a href="events1.html">Past Event #1</a></li>
+         <li><a href="events2.html">Past Event #2</a></li>
+{% endblock %}
+
+{% block content %}
+<fieldset>
+    <table class="table table-hover">
+        <tr><th>Username</th><td>{{ user.username }}</td></tr>
+        {% if user.first_name %}
+        <tr><th>First Name</th><td>{{ user.first_name }}</td></tr>
+        {% endif %}
+        {% if user.last_name %}
+        <tr><th>Last Name</th><td>{{ user.last_name }}</td></tr>
+        {% endif %}
+        {% if user.get_profile.gender %}
+        <tr><th>Gender</th><td>{{ user.get_profile.gender }}</td></tr>
+        {% endif %}
+        {% if user.get_profile.birthday %}
+        <tr><th>Birthday</th><td>{{ user.get_profile.birthday }}</td></tr>
+        {% endif %}
+        {% if user.get_profile.address %}
+        <tr><th>Address</th><td>{{ user.get_profile.address }}</td></tr>
+        {% endif %}
+        {% if user.get_profile.bio %}
+        <tr><th>Biography</th><td>{{ user.get_profile.bio }}</td></tr>
+        {% endif %}
+    </table>
+</fieldset>
+{% if participations %}
+    <div class="span45">
+        <h3>Your upcoming events:</h3>
+    {% for participate in participations %}
+    <div class="hero-unit">
+        <h2>{{ participate.event.title }}</h2>
+        <p>{{ participate.event.start_time }}</p>
+        <p>{{ participate.event.end_time }}</p>
+        <p> <a class="btn btn-inverse btn-small" href="{% url event participate.event.id %}"> View details &raquo;</a></p>
+    </div>
+    {% endfor %}
+    </div>
+{% endif %}
+{% if suggestions %}
+    <div class="span45">
+        <h3>Suggested events:</h3>
+    {% for suggested_event in suggestions %}
+    <div class="hero-unit">
+        <h2>{{ suggested_event.title }}</h2>
+        <p>{{ suggested_event.start_time }}</p>
+        <p>{{ suggested_event.end_time }}</p>
+        <p> <a class="btn btn-inverse btn-small" href="{% url event suggested_event.id %}"> View details &raquo;</a></p>
+    </div>
+    {% endfor %}
+    </div>
+{% endif %}
+{% endblock %}
