@@ -20,7 +20,7 @@ def event(request, event_id):
     Particular events page
     """
     event = get_object_or_404(Event, id=event_id)
-    return render(request, 'event.html', {'event': event})
+    return render(request, 'event/event.html', {'event': event})
 
 
 @login_required
@@ -37,11 +37,11 @@ def create_event(request):
                 'Your event created as your requested.')
             return HttpResponseRedirect('/')
         else:
-            return render(request, 'create_event.html',
+            return render(request, 'event/create_event.html',
                 {'form': eventform})
     else:
         eventform = EventForm()
-        return render(request, 'create_event.html',
+        return render(request, 'event/create_event.html',
             {'form': eventform})
 
 
@@ -53,6 +53,9 @@ def edit_event(request, event_id):
     event = get_object_or_404(Event, id=event_id)
     user = request.user
     if user.id == event.host.id:
+        """
+        The user can edit the event if he/she is the host of it
+        """
         if request.POST:
             eventform = EventForm(request.POST)
             if eventform.is_valid():
@@ -61,10 +64,11 @@ def edit_event(request, event_id):
                     'Your event changed as your requested.')
                 return HttpResponseRedirect('/')
             else:
-                return render(request, 'edit_event.html', {'form': eventform})
+                return render(request, 'event/edit_event.html',
+                    {'form': eventform})
         else:
             eventform = EventForm(event)
-            return render(request, 'edit_event.html',
+            return render(request, 'event/edit_event.html',
                 {'event_id': event_id, 'form': eventform})
     else:
         messages.add_message(request, messages.ERROR,
