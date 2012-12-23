@@ -127,6 +127,11 @@ INSTALLED_APPS = (
     'apps.accounts',
 )
 
+AUTH_PROFILE_MODULE = 'accounts.UserProfile'
+
+# Expire day for registration module
+ACCOUNT_ACTIVATION_DAYS = 7
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error.
