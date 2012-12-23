@@ -1,4 +1,4 @@
-event-app
+takeep
 =========
 
 Event application based on Django
