@@ -3,8 +3,9 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
+from apps.accounts.views import my_event
 from apps.event.forms import EventForm
-from apps.event.models import Event
+from apps.event.models import Event, Participant
 
 
 def events(request):
@@ -60,7 +61,7 @@ def edit_event(request, event_id):
             eventform = EventForm(request.POST)
             if eventform.is_valid():
                 eventform.save(user)
-                messages.add_message(request, messages.WARNING,
+                messages.add_message(request, messages.SUCCESS,
                     'Your event changed as your requested.')
                 return HttpResponseRedirect('/')
             else:
@@ -75,20 +76,52 @@ def edit_event(request, event_id):
             'You can not edit this event, because you are not the host of it.')
         return HttpResponseRedirect('/')
 
+
+@login_required
 def approve(request, event_id, user_id):
     """
-    All events page
+    Approvement action
     """
-    return render(request, 'events.html')
+    event = get_object_or_404(Event, id=event_id)
+    if request.user.id == event.host.id:
+        """
+        Then the requested user can approve the partcipation
+        """
+        participant = Participant(event__id=event_id, host__id=user_id)
+        participant.is_approved = True
+        participant.save()
+        messages.add_message(request, messages.SUCCESS,
+                    'The invtation approved as your requested.')
+    else:
+        messages.add_message(request, messages.ERROR,
+            'You can not edit this event, because you are not the host of it.')
+        return HttpResponseRedirect('/')
+    return my_event(request, event_id)
 
 
+@login_required
 def disapprove(request, event_id, user_id):
     """
-    All events page
+    Approvement action
     """
-    return render(request, 'events.html')
+    event = get_object_or_404(Event, id=event_id)
+    if request.user.id == event.host.id:
+        """
+        Then the requested user can approve the partcipation
+        """
+        participant = Participant(event__id=event_id, host__id=user_id)
+        participant.is_approved = False
+        participant.save()
+        messages.add_message(request, messages.SUCCESS,
+                    'The invitation disapproved as your requested.')
+    else:
+        messages.add_message(request, messages.ERROR,
+            'You can not edit this event, because you are not the host of it.')
+        return HttpResponseRedirect('/')
+    return my_event(request, event_id)
 
 
+@login_required
 def cancel_event(request):
     """
     All events page
