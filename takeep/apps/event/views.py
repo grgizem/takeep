@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
@@ -91,9 +92,8 @@ def approve(request, event_id, user_id):
         """
         Then the requested user can approve the partcipation
         """
-        participant = Participant(event__id=event_id, host__id=user_id)
-        participant.is_approved = True
-        participant.save()
+        user = User.objects.get(id=user_id)
+        Participant.objects.filter(event=event, guest=user).update(is_approved=True)
         messages.add_message(request, messages.SUCCESS,
                     'The invtation approved as your requested.')
     else:
@@ -113,9 +113,8 @@ def disapprove(request, event_id, user_id):
         """
         Then the requested user can approve the partcipation
         """
-        participant = Participant(event__id=event_id, host__id=user_id)
-        participant.is_approved = False
-        participant.save()
+        user = User.objects.get(id=user_id)
+        Participant.objects.filter(event=event, guest=user).update(is_approved=False)
         messages.add_message(request, messages.SUCCESS,
                     'The invitation disapproved as your requested.')
     else:
