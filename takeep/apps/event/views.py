@@ -9,10 +9,11 @@ from apps.event.models import Event, Participant
 
 
 def events(request):
-    """
-    All events page
-    """
-    return render(request, 'event/events.html')
+    upcoming_events = Event.objects.filter(status="O")
+    past_events = Event.objects.filter(status="C")
+    return render(request, 'event/events.html',
+        {'upcoming_events': upcoming_events,
+        'past_events': past_events})
 
 
 @login_required
@@ -21,7 +22,10 @@ def event(request, event_id):
     Particular events page
     """
     event = get_object_or_404(Event, id=event_id)
-    return render(request, 'event/event.html', {'event': event})
+    participations = Participant.objects.filter(event=event)
+    return render(request, 'event/event.html',
+        {'event': event,
+        'participations': participations})
 
 
 @login_required
@@ -124,15 +128,25 @@ def disapprove(request, event_id, user_id):
 @login_required
 def cancel_event(request, event_id):
     """
-    All events page
+    Cancel an event
     """
-    return render(request, 'events.html')
+    event = get_object_or_404(Event, id=event_id)
+    if request.user.id ==event.host.id:
+        """
+        can cancel the event
+        """
+        event.status = "Q"
+        event.save()
+    else:
+        messages.add_message(request, messages.ERROR,
+            'You can not edit this event, because you are not the host of it.')
+    return HttpResponseRedirect('/')
 
 
 @login_required
 def join(request, event_id):
     event = get_object_or_404(Event, id=event_id)
-    participate_tuple = Participant.get_or_create(user=request.user, event=event)
+    participate_tuple = Participant.objects.get_or_create(guest=request.user, event=event)
     participate = participate_tuple[0]
     result = participate_tuple[1]
     if not result:
@@ -149,4 +163,7 @@ def join(request, event_id):
         else:
             participate.is_approved = True
             participate.save()
-    return event(request, event_id)
+    participations = Participant.objects.filter(event=event)
+    return render(request, 'event/event.html',
+        {'event': event,
+        'participations': participations})
