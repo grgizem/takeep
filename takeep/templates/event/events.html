@@ -9,6 +9,7 @@
 {% endblock %}
 
 {% block content %}
+
 {% if upcoming_events %}
     <div class="span45">
         <h3>Upcoming events:</h3>
@@ -24,6 +25,7 @@
     {% endfor %}
     </div>
 {% endif %}
+
 {% if past_events %}
     <div class="span45">
         <h3>Past events:</h3>
@@ -36,4 +38,5 @@
     {% endfor %}
     </div>
 {% endif %}
+
 {% endblock %}

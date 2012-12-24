@@ -9,7 +9,6 @@
 
 {% block content %}
     <div class="hero-unit">
-        <h2>{{ event.title }}</h2>
         <p>{{ event.location.name }}</p>
         <p>{{ event.start_time }}</p>        
         <p>{{ event.end_time }}</p>
@@ -20,7 +19,7 @@
       <div class="controls">
     {% ifequal event.status "O" %}
         <a class="btn btn-inverse btn-small" href="{% url join event.id %}">I will Join</a> 
-    {% endif %}
+    {% endifequal %}
       </div>
     </div>
 
