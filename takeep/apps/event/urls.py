@@ -6,6 +6,8 @@ urlpatterns = patterns('apps.event.views',
 	url(r'^event/(?P<event_id>\d+)/$', 'event', name='event'),
     url(r'^create_event/', 'create_event', name='create_event'),
 
+    url(r'^join/(?P<event_id>\d+)/$', 'join', name='join'),
+
 	url(r'^edit_event/(?P<event_id>\d+)/$', 'edit_event', name='edit_event'),
     url(r'^cancel_event/(?P<event_id>\d+)/$', 'cancel_event', name='cancel_event'),
 
