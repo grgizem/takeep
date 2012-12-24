@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+<!-- Main Container
+================================================== -->
+{% block title %}Events{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+{% if upcoming_events %}
+    <div class="span45">
+        <h3>Upcoming events:</h3>
+    {% for event in upcoming_events %}
+    <div class="hero-unit">
+        <h2>{{ event.title }}</h2>
+        <p>{{ event.start_time }}</p>
+        <p>{{ event.end_time }}</p>
+        <p>{{ event.description }}</p>
+        <p> <a class="btn btn-inverse btn-small" href="{% url event event.id %}"> View details &raquo;</a></p>
+        <p> <a class="btn btn-inverse btn-small" href="{% url join event.id %}"> Join &raquo;</a></p>
+    </div>
+    {% endfor %}
+    </div>
+{% endif %}
+{% if past_events %}
+    <div class="span45">
+        <h3>Past events:</h3>
+    {% for event in past_events %}
+    <div class="hero-unit">
+        <h2>{{ event.title }}</h2>
+        <p>{{ event.description }}</p>
+        <p> <a class="btn btn-inverse btn-small" href="{% url event event.id %}"> View details &raquo;</a></p>
+    </div>
+    {% endfor %}
+    </div>
+{% endif %}
+{% endblock %}
