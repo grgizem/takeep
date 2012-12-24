@@ -52,7 +52,10 @@ def my_event(request, event_id):
     """
     event = get_object_or_404(Event, id=event_id)
     if event.host.id == request.user.id:
-        return render(request, 'accounts/my_event.html', {'event': event})
+        participations = Participant.objects.filter(event=event)
+        return render(request, 'accounts/my_event.html',
+            {'event': event,
+            'participations': participations})
     else:
         messages.add_message(request, messages.ERROR,
             'You can not edit this event, because you are not the host of it.')
