@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+<!-- Main Container
+================================================== -->
+{% block title %}Edit Event{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+   {% if form.errors %}
+        <div class="alert alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <strong>:( </strong>There has been occured a problem. Please, try again later.
+        </div>
+        {{ form.non_field_errors }}
+   {% endif %}
+
+         <form class="form-horizontal well" method="post" action=".">
+         <fieldset>
+          {% csrf_token %}
+          <div class="control-group">
+            <label class="control-label" for="id_title">Title:</label>
+            <div class="controls">
+              <input id="id_title" type="text" name="title" maxlength="100" />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="id_description">Description:</label>
+            <div class="controls">
+              <input id="id_description" type="text" name="description" maxlength="255" />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="id_location">Location:</label>
+            <div class="controls">
+              <select name="location" id="id_location">
+                 <option value="" selected="selected">---------</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="id_is_private">Is private:</label>
+            <div class="controls">
+              <input type="checkbox" name="is_private" id="id_is_private" />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="id_tags">Tags:</label>
+            <div class="controls">
+              <input id="id_tags" type="text" name="tags" maxlength="255" />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="id_start_time">Start time:</label>
+            <div class="controls">
+              <input type="date" name="start_time" id="id_start_time" />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="id_end_time">End time:</label>
+            <div class="controls">
+              <input type="date" name="end_time" id="id_end_time" />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="id_banner">Banner:</label>
+            <div class="controls">
+              <input type="file" name="banner" id="id_banner" />
+            </div>
+          </div>
+              <div class="control-group">
+                <div class="controls">
+                     <button type="submit" class="btn btn-inverse">Create</button>
+                     <button type="cancel" class="btn btn-inverse">Cancel</button>
+                </div>
+               </div>
+                   </div>  
+               </div>
+            
+         </fieldset>
+         </form>
+{% endblock %}
