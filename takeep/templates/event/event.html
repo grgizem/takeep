@@ -1,0 +1,45 @@
+{% extends 'base.html' %}    
+
+<!-- Main Container
+================================================== -->
+{% block title %}{{ event.title }}{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+    <div class="hero-unit">
+        <h2>{{ event.title }}</h2>
+        <p>{{ event.location.name }}</p>
+        <p>{{ event.start_time }}</p>        
+        <p>{{ event.end_time }}</p>
+        <p>{{ event.description }}</p>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+    {% ifequal event.status "O" %}
+        <a class="btn btn-inverse btn-small" href="{% url join event.id %}">I will Join</a> 
+    {% endif %}
+      </div>
+    </div>
+
+    <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for participate in participations %}
+      {% if participate.is_approved %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ participate.guest.username }}</td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
