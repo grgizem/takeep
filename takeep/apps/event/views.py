@@ -74,3 +74,23 @@ def edit_event(request, event_id):
         messages.add_message(request, messages.ERROR,
             'You can not edit this event, because you are not the host of it.')
         return HttpResponseRedirect('/')
+
+def approve(request, event_id, user_id):
+    """
+    All events page
+    """
+    return render(request, 'events.html')
+
+
+def disapprove(request, event_id, user_id):
+    """
+    All events page
+    """
+    return render(request, 'events.html')
+
+
+def cancel_event(request):
+    """
+    All events page
+    """
+    return render(request, 'events.html')
