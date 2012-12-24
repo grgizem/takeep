@@ -12,7 +12,7 @@ def events(request):
     """
     All events page
     """
-    return render(request, 'events.html')
+    return render(request, 'event/events.html')
 
 
 @login_required
@@ -122,8 +122,31 @@ def disapprove(request, event_id, user_id):
 
 
 @login_required
-def cancel_event(request):
+def cancel_event(request, event_id):
     """
     All events page
     """
     return render(request, 'events.html')
+
+
+@login_required
+def join(request, event_id):
+    event = get_object_or_404(Event, id=event_id)
+    participate_tuple = Participant.get_or_create(user=request.user, event=event)
+    participate = participate_tuple[0]
+    result = participate_tuple[1]
+    if not result:
+        if participate.is_approved:
+            messages.add_message(request, messages.ERROR,
+                'You are already attending to this event.')
+        else:
+            messages.add_message(request, messages.ERROR,
+                'You already have a not approved request for this event.')
+    else:
+        if event.is_private:
+            messages.add_message(request, messages.ERROR,
+                'You request is waiting approval by the host of the event.')
+        else:
+            participate.is_approved = True
+            participate.save()
+    return event(request, event_id)
