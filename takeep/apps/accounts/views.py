@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
 from apps.event.models import Event, Participant
-from apps.accounts.forms import UserProfileForm
+from apps.accounts.forms import UserForm, UserProfileForm
 
 
 @login_required
@@ -30,20 +30,24 @@ def profile(request):
 
 @login_required
 def edit_profile(request):
-    if request.POST:
-        profileform = UserProfileForm(request.POST)
-        if profileform.is_valid():
-            profileform.save()
+    if request.method == 'POST':
+        user_form = UserForm(request.POST,
+                             instance=request.user)
+        profile_form = UserProfileForm(request.POST,
+                                   instance=request.user.get_profile())
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
             messages.add_message(request, messages.SUCCESS,
-                'Your event changed as your requested.')
+                                 ("Your profile has been updated."))
             return HttpResponseRedirect('/accounts/profile/')
-        else:
-            return render(request, 'accounts/edit_profile.html',
-                {'form': profileform})
     else:
-        profileform = UserProfileForm(instance=request.user)
-        return render(request, 'accounts/edit_profile.html',
-            {'form': profileform})
+        user_form = UserForm(instance=request.user)
+        profile_form = UserProfileForm(instance=request.user.get_profile())
+    return render(request,
+                  'accounts/edit_profile.html',
+                  {'user_form': user_form,
+                   'profile_form': profile_form})
 
 
 @login_required
