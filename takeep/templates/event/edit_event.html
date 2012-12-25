@@ -22,51 +22,49 @@
           <div class="control-group">
             <label class="control-label" for="id_title">Title:</label>
             <div class="controls">
-              <input id="id_title" type="text" name="title" maxlength="100" />
+              {{ form.title }}
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="id_description">Description:</label>
             <div class="controls">
-              <input id="id_description" type="text" name="description" maxlength="255" />
+              {{ form.description }}
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="id_location">Location:</label>
             <div class="controls">
-              <select name="location" id="id_location">
-                 <option value="" selected="selected">---------</option>
-              </select>
+              {{ form.location }}
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="id_is_private">Is private:</label>
             <div class="controls">
-              <input type="checkbox" name="is_private" id="id_is_private" />
+              {{ form.is_private }}
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="id_tags">Tags:</label>
             <div class="controls">
-              <input id="id_tags" type="text" name="tags" maxlength="255" />
+              {{ form.tags }}
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="id_start_time">Start time:</label>
             <div class="controls">
-              <input type="date" name="start_time" id="id_start_time" />
+              {{ form.start_time }}
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="id_end_time">End time:</label>
             <div class="controls">
-              <input type="date" name="end_time" id="id_end_time" />
+              {{ form.end_time }}
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="id_banner">Banner:</label>
             <div class="controls">
-              <input type="file" name="banner" id="id_banner" />
+              {{ form.banner }}
             </div>
           </div>
               <div class="control-group">
@@ -80,4 +78,33 @@
             
          </fieldset>
          </form>
+<script>
+$(document).ready(function() {
+    $.extend($.fn.datepicker.defaults, {
+      parse: function (string) {
+          var matches;
+          if ((matches = string.match(/^(\d{2,2})\/(\d{2,2})\/(\d{4,4})$/))) {
+              return new Date(matches[3], matches[1] - 1, matches[2]);
+          } else {
+              return null;
+          }
+        }, format: function (date) {
+          var month = (date.getMonth() + 1).toString(),
+              dom = date.getDate().toString();
+          if (month.length === 1) {
+              month = "0" + month;
+          }
+          if (dom.length === 1) {
+              dom = "0" + dom;
+          }
+          
+          return dom + "." + month + "." + date.getFullYear();
+        }
+    });
+    $("#id_start_time").datepicker().on("changeDate", function(event) {
+    });
+    $("#id_end_time").datepicker().on("changeDate", function(event) {
+    });
+}
+</script>
 {% endblock %}
