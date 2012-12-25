@@ -5,7 +5,7 @@ from apps.event.models import Event
 
 class EventForm(forms.ModelForm):
     start_time = forms.DateField()
-    end_time = forms.DateField(widget=forms.DateInput(format = '%d.%m.%Y'), input_formats=('%d.%m.%Y',))
+    end_time = forms.DateField()
 
     class Meta:
         model = Event
