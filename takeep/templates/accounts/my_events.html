@@ -20,10 +20,13 @@
     {% for event in events %}
     <div class="hero-unit">
         <h2>{{ event.title }}</h2>
-        <p>{{ event.location.name }}</p>
-        <p>{{ event.start_time }}</p>        
-        <p>{{ event.end_time }}</p>
-        <p>{{ event.description }}</p>
+        <p><i class="icon-map-marker"></i> {{ event.location.name }}</p>
+        <h5><i class="icon-time"></i> {{ event.start_time }}
+            <br />
+        <i class="icon-time"></i> {{ event.end_time }}</h5>
+            <br />
+        <h6><i class="icon-info-sign"></i> {{ event.description }}</h6>
+          <br />
         <p> <a class="btn btn-inverse btn-small" href="{% url edit_event event.id %}"> Edit this Event &raquo;</a></p>
     </div>
     {% endfor %}

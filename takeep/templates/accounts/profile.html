@@ -6,9 +6,9 @@
 
 {% block navbar %}
     <li class="nav-header">{{ user.username }}</li>
-         <li><a href="{% url edit_profile %}"> Edit Profile</a></li>
-         <li><a href="{% url create_event %}"> Add Event</a></li>
-         <li><a href="{% url my_events %}"> Manage your Events</a></li>
+         <li><a href="{% url edit_profile %}"><i class="icon-edit"></i> Edit Profile</a></li>
+         <li><a href="{% url create_event %}"><i class="icon-map-marker"></i> Add Event</a></li>
+         <li><a href="{% url my_events %}"><i class="icon-calendar"></i> Manage Events</a></li>
     <li class="nav-header"> History</li>
          <li><a href="events1.html">Past Event #1</a></li>
          <li><a href="events2.html">Past Event #2</a></li>
@@ -44,8 +44,10 @@
     {% for participate in participations %}
     <div class="hero-unit">
         <h2>{{ participate.event.title }}</h2>
-        <p>{{ participate.event.start_time }}</p>
-        <p>{{ participate.event.end_time }}</p>
+        <p><i class="icon-map-marker"></i> {{ participate.event.location.name }}</p>
+        <h5><i class="icon-time"></i> {{ participate.event.start_time }}
+            </br>
+        <i class="icon-time"></i> {{ participate.event.end_time }}</h5>
         <p> <a class="btn btn-inverse btn-small" href="{% url event participate.event.id %}"> View details &raquo;</a></p>
     </div>
     {% endfor %}
@@ -54,12 +56,14 @@
 {% if suggestions %}
     <div class="span45">
         <h3>Suggested events:</h3>
-    {% for suggested_event in suggestions %}
+    {% for event in suggestions %}
     <div class="hero-unit">
-        <h2>{{ suggested_event.title }}</h2>
-        <p>{{ suggested_event.start_time }}</p>
-        <p>{{ suggested_event.end_time }}</p>
-        <p> <a class="btn btn-inverse btn-small" href="{% url event suggested_event.id %}"> View details &raquo;</a></p>
+        <h2>{{ event.title }}</h2>
+        <p><i class="icon-map-marker"></i> {{ event.location.name }}</p>
+        <h5><i class="icon-time"></i> {{ event.start_time }}
+            <br />
+        <i class="icon-time"></i> {{ event.end_time }}</h5>
+        <p> <a class="btn btn-inverse btn-small" href="{% url event event.id %}"> View details &raquo;</a></p>
     </div>
     {% endfor %}
     </div>

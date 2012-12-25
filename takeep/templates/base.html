@@ -38,13 +38,13 @@
                  {% if user.is_authenticated %}
                  <ul class="nav pull-right">
                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.username }}<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"></i> {{ user.username }}<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                          <li><a href="{% url profile %}">Profile Page</a></li>
-                          <li><a href="{% url edit_profile %}">Edit your Profile</a></li>
+                          <li><a href="{% url profile %}"><i class="icon-user"></i> Profile Page</a></li>
+                          <li><a href="{% url edit_profile %}"><i class="icon-edit"></i> Edit your Profile</a></li>
                           <li class="divider"></li>
-                          <li><a href="{% url create_event %}">Add Event</a></li>
-                          <li><a href="{% url my_events %}">Manage your Events</a></li>
+                          <li><a href="{% url create_event %}"><i class="icon-map-marker"></i> Add Event</a></li>
+                          <li><a href="{% url my_events %}"><i class="icon-calendar"></i> Manage Events</a></li>
                         </ul>
                       </li>
                    <li><a href="{% url logout %}">Logout</a></li>

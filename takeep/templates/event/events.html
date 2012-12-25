@@ -16,9 +16,13 @@
     {% for event in upcoming_events %}
     <div class="hero-unit">
         <h2>{{ event.title }}</h2>
-        <p>{{ event.start_time }}</p>
-        <p>{{ event.end_time }}</p>
-        <p>{{ event.description }}</p>
+        <p><i class="icon-map-marker"></i> {{ event.location.name }}</p>
+        <h5><i class="icon-time"></i> {{ event.start_time }}
+            <br />
+        <i class="icon-time"></i> {{ event.end_time }}</h5>
+            <br />
+        <h6><i class="icon-info-sign"></i> {{ event.description }}</h6>
+          <br />
         <p> <a class="btn btn-inverse btn-small" href="{% url event event.id %}"> View details &raquo;</a></p>
         <p> <a class="btn btn-inverse btn-small" href="{% url join event.id %}"> Join &raquo;</a></p>
     </div>
@@ -32,7 +36,10 @@
     {% for event in past_events %}
     <div class="hero-unit">
         <h2>{{ event.title }}</h2>
-        <p>{{ event.description }}</p>
+        <p><i class="icon-map-marker"></i> {{ event.location.name }}</p>
+          <br />
+        <h6><i class="icon-info-sign"></i> {{ event.description }}</h6>
+          <br />
         <p> <a class="btn btn-inverse btn-small" href="{% url event event.id %}"> View details &raquo;</a></p>
     </div>
     {% endfor %}
