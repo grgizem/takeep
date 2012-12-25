@@ -8,51 +8,70 @@
 {% endblock %}
 
 {% block content %}
-   {% if form.errors %}
+   {% if profile_form.errors %}
         <div class="alert alert-error">
         <button class="close" data-dismiss="alert">×</button>
         <strong>:( </strong>There has been occured a problem. Please, try again later.
         </div>
-        {{ form.non_field_errors }}
+        {{ profile_form.non_field_errors }}
+   {% endif %}
+   {% if user_form.errors %}
+        <div class="alert alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <strong>:( </strong>There has been occured a problem. Please, try again later.
+        </div>
+        {{ user_form.non_field_errors }}
    {% endif %}
 
          <form class="form-horizontal well" method="post" action=".">
          <fieldset>
           {% csrf_token %}
           <div class="control-group">
+            <label class="control-label" for="id_gender">First Name:</label>
+            <div class="controls">
+              {{ user_form.first_name }}
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="id_birthdate">Last Name:</label>
+            <div class="controls">
+              {{ user_form.last_name }}
+            </div>
+          </div>
+          <div class="control-group">
             <label class="control-label" for="id_gender">Gender:</label>
             <div class="controls">
-              {{ form.gender }}
+              {{ profile_form.gender }}
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="id_birthdate">Birthdate:</label>
             <div class="controls">
-              {{ form.birthdate }}
+              {{ profile_form.birthdate }}
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="id_address">Address:</label>
             <div class="controls">
-              {{ form.address }}
+              {{ profile_form.address }}
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="id_photo">Photo:</label>
             <div class="controls">
-              {{ form.photo }}
+              {{ profile_form.photo }}
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="id_location">Location:</label>
             <div class="controls">
-              {{ form.location }}
+              {{ profile_form.location }}
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="id_bio">Bio:</label>
             <div class="controls">
-              {{ form.bio }}
+              {{ profile_form.bio }}
             </div>
           </div>
               <div class="control-group">
