@@ -1,9 +1,12 @@
-from django.forms import ModelForm
+from django import forms
 
 from apps.event.models import Event
 
 
-class EventForm(ModelForm):
+class EventForm(forms.ModelForm):
+    start_time = forms.DateField()
+    end_time = forms.DateField(widget=forms.DateInput(format = '%d.%m.%Y'), input_formats=('%d.%m.%Y',))
+
     class Meta:
         model = Event
         exclude = ["host", "status"]
