@@ -16,8 +16,9 @@ def profile(request):
     """
     will include the events that user will attend
     """
-    suggestions = Participant.objects.exclude(
-        guest=request.user).filter(event__status="O")
+    participated_events = Event.objects.filter(status="O", participants__guest=request.user)
+    open_events = Event.objects.filter(status="O").exclude(host=request.user)
+    suggestions = set(open_events).difference(set(participated_events))
     """
     will include the suggested events
     """
