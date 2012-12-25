@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+<!-- Main Container
+================================================== -->
+{% block title %}Edit Profile{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+   {% if form.errors %}
+        <div class="alert alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <strong>:( </strong>There has been occured a problem. Please, try again later.
+        </div>
+        {{ form.non_field_errors }}
+   {% endif %}
+
+         <form class="form-horizontal well" method="post" action=".">
+         <fieldset>
+          {% csrf_token %}
+          <div class="control-group">
+            <label class="control-label" for="id_gender">Gender:</label>
+            <div class="controls">
+              {{ form.gender }}
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="id_birthdate">Birthdate:</label>
+            <div class="controls">
+              {{ form.birthdate }}
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="id_address">Address:</label>
+            <div class="controls">
+              {{ form.address }}
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="id_photo">Photo:</label>
+            <div class="controls">
+              {{ form.photo }}
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="id_location">Location:</label>
+            <div class="controls">
+              {{ form.location }}
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="id_bio">Bio:</label>
+            <div class="controls">
+              {{ form.bio }}
+            </div>
+          </div>
+              <div class="control-group">
+                <div class="controls">
+                     <button type="submit" class="btn btn-inverse">Create</button>
+                     <button type="cancel" class="btn btn-inverse">Cancel</button>
+                </div>
+               </div>
+                   </div>  
+               </div>
+            
+         </fieldset>
+         </form>
+{% endblock %}
