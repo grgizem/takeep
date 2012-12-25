@@ -27,7 +27,7 @@
             <br />
         <h6><i class="icon-info-sign"></i> {{ event.description }}</h6>
           <br />
-        <p> <a class="btn btn-inverse btn-small" href="{% url edit_event event.id %}"> Edit this Event &raquo;</a></p>
+        <p> <a class="btn btn-inverse btn-small" href="{% url my_event event.id %}"> Manage this Event &raquo;</a></p>
     </div>
     {% endfor %}
 {% endif %}
