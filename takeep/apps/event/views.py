@@ -73,7 +73,7 @@ def edit_event(request, event_id):
                 return render(request, 'event/edit_event.html',
                     {'form': eventform})
         else:
-            eventform = EventForm(event)
+            eventform = EventForm(instance=event)
             return render(request, 'event/edit_event.html',
                 {'event_id': event_id, 'form': eventform})
     else:
