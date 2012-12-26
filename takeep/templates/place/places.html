@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+
+<!-- Main Container
+================================================== -->
+{% block title %}Places{% endblock %}
+
+{% block navbar %}
+    <li class="nav-header">{{ user.username }}</li>
+         <li><a href="{% url create_place %}"><i class="icon-home"></i> Add Place</a></li>
+    <li class="nav-header"> Favorite Places</li>
+          {% for place in favorite_places %}
+         <li><a href="{% url place place.id %}">{{ place.name }}</a></li>
+         {% endfor %}
+{% endblock %}
+
+{% block content %}
+<center>
+<form class="search" action="">
+      <input type="text" class="search-query span2" placeholder="Places">
+      <a class="btn btn-inverse" href=""> Search &raquo;</a>
+</form>
+</center>
+<hr />
+    {% for place in places %}
+    <div class="hero-unit">
+        <h2>{{ place.name }}</h2>
+        {% if place.address %}
+        <p> <i class="icon-map-marker"></i>
+          {{ place.address }}
+        </p>
+        {% endif %}
+        {% if place.coordinates %}
+        <p> <i class="icon-globe"></i>
+          {{ place.coordinates }}
+        </p>
+        {% endif %}
+
+        <h5>
+          {% if place.email %}
+          <i class="icon-envelope"></i>
+          {{ place.email }}
+          <br />
+          {% endif %}
+          {% if place.phone_number %}
+          <i class="icon-signal"></i>
+          {{ place.phone_number }}
+          <br />
+          {% endif %}
+          {% if place.webpage %}
+          <i class="icon-home"></i>
+          {{ place.webpage }}
+          {% endif %}
+        </h5>
+        <br />
+        <h6>
+          {% if place.description %}
+          <i class="icon-info-sign"></i>
+          {{ place.description }}
+          {% endif %}
+        </h6>
+    </div>
+    {% endfor %}
+
+{% endblock %}
