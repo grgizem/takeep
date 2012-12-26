@@ -54,7 +54,7 @@ def edit_profile(request):
 
 @login_required
 def my_events(request):
-    events = Event.objects.filter(host=request.user)
+    events = Event.objects.filter(host=request.user).select_related()
     """
     will show the events of requested user
     """
@@ -70,7 +70,7 @@ def my_event(request, event_id):
     """
     event = get_object_or_404(Event, id=event_id)
     if event.host.id == request.user.id:
-        participations = Participant.objects.filter(event=event)
+        participations = Participant.objects.filter(event=event).select_related()
         return render(request, 'accounts/my_event.html',
             {'event': event,
             'participations': participations})
