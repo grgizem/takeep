@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
@@ -17,7 +18,8 @@ def profile(request):
     """
     will include the events that user will attend
     """
-    participated_events = Event.objects.filter(status="O", participants__guest=request.user)
+    participated_events = Event.objects.filter(status="O",
+        participants__guest=request.user)
     open_events = Event.objects.filter(status="O").exclude(host=request.user)
     suggestions = set(open_events).difference(set(participated_events))
     """
@@ -76,3 +78,15 @@ def my_event(request, event_id):
         messages.add_message(request, messages.ERROR,
             'You can not edit this event, because you are not the host of it.')
         return HttpResponseRedirect('/')
+
+
+@login_required
+def deactivate(request):
+    """
+    To deactivate the user account
+    """
+    user = request.user
+    user.is_active = False
+    user.save()
+    auth_logout(request)
+    HttpResponseRedirect('/')
