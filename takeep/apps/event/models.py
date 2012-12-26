@@ -145,3 +145,7 @@ class EventReport(models.Model):
     """
     The compliment reason
     """
+    is_considered = models.BooleanField(default=False)
+    """
+    The process of the report
+    """
