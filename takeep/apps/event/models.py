@@ -128,3 +128,20 @@ class Participant(models.Model):
         """
         Since the user will be attend a particular event for once
         """
+
+class EventReport(models.Model):
+    """
+    Event report table required for complainment of events
+    """
+    user = models.OneToOneField(User)
+    """
+    The user who reported
+    """
+    event = models.ForeignKey(Event)
+    """
+    The event that reported about
+    """
+    reason = models.CharField(max_length=255)
+    """
+    The compliment reason
+    """
