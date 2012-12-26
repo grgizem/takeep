@@ -10,8 +10,10 @@ from apps.event.models import Event, Participant
 
 
 def events(request):
-    upcoming_events = Event.objects.filter(status="O")
-    past_events = Event.objects.filter(status="C")
+    upcoming_events = Event.objects.filter(
+        status="O").select_related()
+    past_events = Event.objects.filter(
+        status="C").select_related()
     return render(request, 'event/events.html',
         {'upcoming_events': upcoming_events,
         'past_events': past_events})
