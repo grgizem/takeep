@@ -22,7 +22,7 @@
     {% for event in upcoming_events %}
     <div class="hero-unit">
         <h2>{{ event.title }}</h2>
-        <p><i class="icon-map-marker"></i> {{ event.location.name }}</p>
+        <p><i class="icon-map-marker"></i> <a href="{% url place event.location.id %}">{{ event.location.name }}</a></p>
         <h5><i class="icon-time"></i> {{ event.start_time }}
             <br />
         <i class="icon-time"></i> {{ event.end_time }}</h5>
@@ -46,7 +46,7 @@
     {% for event in past_events %}
     <div class="hero-unit">
         <h2>{{ event.title }}</h2>
-        <p><i class="icon-map-marker"></i> {{ event.location.name }}</p>
+        <p><i class="icon-map-marker"></i> <a href="{% url place event.location.id %}">{{ event.location.name }}</a></p>
           <br />
         <h6><i class="icon-info-sign"></i> {{ event.description }}</h6>
           <br />

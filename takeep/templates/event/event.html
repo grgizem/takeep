@@ -4,12 +4,13 @@
 {% block title %}{{ event.title }}{% endblock %}
 
 {% block navbar %}
+    <li><a href="{% url report event.id %}"><i class="icon-flag"></i> Report Event</a></li>
 {% endblock %}
 
 {% block content %}
 <div class="hero-unit">
   <p> <i class="icon-map-marker"></i>
-    {{ event.location.name }}
+    <a href="{% url place event.location.id %}">{{ event.location.name }}</a>
   </p>
   <h5> <i class="icon-time"></i>
     {{ event.start_time }}
