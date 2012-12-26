@@ -1,5 +1,4 @@
-{% extends 'base.html' %}    
-
+{% extends 'base.html' %}
 <!-- Main Container
 ================================================== -->
 {% block title %}{{ event.title }}{% endblock %}
@@ -8,40 +7,49 @@
 {% endblock %}
 
 {% block content %}
-    <div class="hero-unit">
-        <p><i class="icon-map-marker"></i> {{ event.location.name }}</p>
-        <h5><i class="icon-time"></i> {{ event.start_time }}
-            <br />
-        <i class="icon-time"></i> {{ event.end_time }}</h5>
-            <br />
-        <h6><i class="icon-info-sign"></i> {{ event.description }}</h6>
-          <br />
-    </div>
-
-    <div class="control-group">
-      <div class="controls">
+<div class="hero-unit">
+  <p> <i class="icon-map-marker"></i>
+    {{ event.location.name }}
+  </p>
+  <h5> <i class="icon-time"></i>
+    {{ event.start_time }}
+    <br />
+    <i class="icon-time"></i>
+    {{ event.end_time }}
+  </h5>
+  <br />
+  <h6>
+    <i class="icon-info-sign"></i>
+    {{ event.description }}
+  </h6>
+  <br />
+  <div class="control-group">
+  <div class="controls">
     {% ifequal event.status "O" %}
-        <a class="btn btn-inverse btn-small" href="{% url join event.id %}">I will Join</a> 
+    <a class="btn btn-success btn-small" href="{% url join event.id %}">I will Join</a>
     {% endifequal %}
-      </div>
-    </div>
+  </div>
+</div>
+</div>
 
-    <table class="table table-bordered table-striped table-hover">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Username</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for participate in participations %}
+
+
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for participate in participations %}
       {% if participate.is_approved %}
-      <tr>
-        <td>{{ forloop.counter }}</td>
-        <td>{{ participate.guest.username }}</td>
-      </tr>
-      {% endif %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ participate.guest.username }}</td>
+    </tr>
+    {% endif %}
       {% endfor %}
-    </tbody>
-  </table>
+  </tbody>
+</table>
 {% endblock %}
