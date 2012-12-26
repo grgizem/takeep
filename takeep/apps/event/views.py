@@ -166,3 +166,8 @@ def join(request, event_id):
     return render(request, 'event/event.html',
         {'event': event,
         'participations': participations})
+
+
+@login_required
+def report(request, event_id):
+    return render(request, 'event/report.html')
