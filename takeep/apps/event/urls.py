@@ -13,4 +13,6 @@ urlpatterns = patterns('apps.event.views',
 
     url(r'^approve/(?P<event_id>\d+)(?P<user_id>\d+)/$', 'approve', name='approve'),
     url(r'^disapprove/(?P<event_id>\d+)(?P<user_id>\d+)/$', 'disapprove', name='disapprove'),
+
+    url(r'^report/(?P<event_id>\d+)/$', 'report', name='report'),
 )
