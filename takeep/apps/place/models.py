@@ -39,6 +39,10 @@ class Place(models.Model):
     """
     The Webpage of the place.
     """
+    is_approved = models.BooleanField(default=False)
+    """
+    The approval status of the place
+    """
 
     def upload_to(self, filename):
             return 'organizations/%s/%s' % (self.name, filename)
