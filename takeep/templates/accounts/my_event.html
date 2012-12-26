@@ -1,4 +1,4 @@
-{% extends 'base.html' %}    
+{% extends 'base.html' %}
 
 <!-- Main Container
 ================================================== -->
@@ -6,9 +6,10 @@
 
 {% block navbar %}
     <li class="nav-header">{{ user.username }}</li>
-         <li><a href="{% url edit_profile %}"> Edit Profile</a></li>
-         <li><a href="{% url create_event %}"> Add Event</a></li>
-         <li><a href="{% url my_events %}"> Manage your Events</a></li>
+         <li><a href="{% url create_event %}"><i class="icon-map-marker"></i> Add Event</a></li>
+         <li><a href="{% url my_events %}"><i class="icon-calendar"></i> Manage Events</a></li>
+         <li><a href="{% url edit_event event.id %}"><i class="icon-edit"></i> Edit Event</a></li>
+         <li><a href="{% url cancel_event event.id %}"><i class="icon-ban-circle"></i> Cancel Event</a></li>
     <li class="nav-header"> History</li>
          <li><a href="events1.html">Past Event #1</a></li>
          <li><a href="events2.html">Past Event #2</a></li>
@@ -23,9 +24,6 @@
             <i class="icon-time"></i> {{ event.end_time }}</h5>
           <br />
         <h6><i class="icon-info-sign"></i> {{ event.description }}</h6>
-          <br />
-        <p> <a class="btn btn-inverse btn-small" href="{% url edit_event event.id %}"> Edit this Event &raquo;</a></p>
-        <p> <a class="btn btn-inverse btn-small" href="{% url cancel_event event.id %}"> Cancel this Event &raquo;</a></p>
     </div>
     {% if event.is_private %}
           <table class="table table-bordered table-striped table-hover">

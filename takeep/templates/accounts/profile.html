@@ -1,4 +1,4 @@
-{% extends 'base.html' %}    
+{% extends 'base.html' %}
 
 <!-- Main Container
 ================================================== -->
@@ -6,9 +6,11 @@
 
 {% block navbar %}
     <li class="nav-header">{{ user.username }}</li>
-         <li><a href="{% url edit_profile %}"><i class="icon-edit"></i> Edit Profile</a></li>
          <li><a href="{% url create_event %}"><i class="icon-map-marker"></i> Add Event</a></li>
          <li><a href="{% url my_events %}"><i class="icon-calendar"></i> Manage Events</a></li>
+         <li><a href="{% url edit_profile %}"><i class="icon-edit"></i> Edit Profile</a></li>
+         <li><a href="{% url password_change %}"><i class="icon-lock"></i>Change Password</a></li>
+         <li><a href="{% url deactivate %}"><i class="icon-ban-circle"></i>Deactivate</a></li>
     <li class="nav-header"> History</li>
          <li><a href="events1.html">Past Event #1</a></li>
          <li><a href="events2.html">Past Event #2</a></li>
@@ -38,6 +40,7 @@
         {% endif %}
     </table>
 </fieldset>
+
 {% if participations %}
     <div class="span45">
         <h3>Your upcoming events:</h3>
@@ -46,7 +49,7 @@
         <h2>{{ participate.event.title }}</h2>
         <p><i class="icon-map-marker"></i> {{ participate.event.location.name }}</p>
         <h5><i class="icon-time"></i> {{ participate.event.start_time }}
-            </br>
+            <br />
         <i class="icon-time"></i> {{ participate.event.end_time }}</h5>
         <p> <a class="btn btn-inverse btn-small" href="{% url event participate.event.id %}"> View details &raquo;</a></p>
     </div>
