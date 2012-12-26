@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
 from apps.accounts.views import my_event
-from apps.event.forms import EventForm
+from apps.event.forms import EventForm, EventReportForm
 from apps.event.models import Event, Participant
 
 
@@ -132,7 +132,7 @@ def cancel_event(request, event_id):
     Cancel an event
     """
     event = get_object_or_404(Event, id=event_id)
-    if request.user.id ==event.host.id:
+    if request.user.id == event.host.id:
         """
         can cancel the event
         """
@@ -172,4 +172,22 @@ def join(request, event_id):
 
 @login_required
 def report(request, event_id):
-    return render(request, 'event/report.html')
+    """
+    To report the event
+    """
+    event = get_object_or_404(Event, id=event_id)
+    user = request.user
+    if request.POST:
+        reportform = EventReportForm(request.POST)
+        if reportform.is_valid():
+            reportform.save(user, event)
+            messages.add_message(request, messages.WARNING,
+                'Your event created as your requested.')
+            return HttpResponseRedirect('/')
+        else:
+            return render(request, 'event/report.html',
+                {'form': reportform})
+    else:
+        reportform = EventReportForm()
+        return render(request, 'event/report.html',
+            {'form': reportform})
