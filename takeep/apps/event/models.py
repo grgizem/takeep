@@ -72,7 +72,7 @@ class Event(models.Model):
     def upload_to(self, filename):
             return 'events/%s/%s' % (self.title, filename)
 
-    banner = models.ImageField(upload_to=upload_to)
+    banner = models.ImageField(upload_to=upload_to, null=True, blank=True)
     """
     The banner photo of the event
     """

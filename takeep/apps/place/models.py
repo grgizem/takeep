@@ -47,7 +47,7 @@ class Place(models.Model):
     def upload_to(self, filename):
             return 'organizations/%s/%s' % (self.name, filename)
 
-    banner = models.ImageField(upload_to=upload_to)
+    banner = models.ImageField(upload_to=upload_to, null=True, blank=True)
     """
     The banner photo of the place.
     """
