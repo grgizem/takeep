@@ -8,32 +8,43 @@
 {% endblock %}
 
 {% block content %}
-<div class="hero-unit">
-  <p> <i class="icon-map-marker"></i>
-    <a href="{% url place event.location.id %}">{{ event.location.name }}</a>
-  </p>
-  <h5> <i class="icon-time"></i>
-    {{ event.start_time }}
-    <br />
-    <i class="icon-time"></i>
-    {{ event.end_time }}
-  </h5>
-  <br />
-  <h6>
-    <i class="icon-info-sign"></i>
-    {{ event.description }}
-  </h6>
-  <br />
-  <div class="control-group">
-  <div class="controls">
-    {% ifequal event.status "O" %}
-    <a class="btn btn-success btn-small" href="{% url join event.id %}">I will Join</a>
-    {% endifequal %}
-  </div>
-</div>
-</div>
-
-
+    <div class="well">
+      <div class="row">
+        <div class="span1">
+        </div>
+        <div class="span5">
+          <p> <i class="icon-map-marker"></i>
+              <a href="{% url place event.location.id %}">{{ event.location.name }}</a>
+            </p>
+            <h5> <i class="icon-time"></i>
+              {{ event.start_time }}
+              <br />
+              <i class="icon-time"></i>
+              {{ event.end_time }}
+            </h5>
+            <br />
+            <h6>
+              <i class="icon-info-sign"></i>
+              {{ event.description }}
+            </h6>
+            <br />
+            <div class="control-group">
+            <div class="controls">
+              {% ifequal event.status "O" %}
+              <a class="btn btn-success btn-small" href="{% url join event.id %}">I will Join</a>
+              {% endifequal %}
+            </div>
+          </div>
+      </div>
+      <div class="span1">
+        </div>
+      <div class="span4">
+        {% if event.location.coordinates %}
+        <iframe width="270" height="225" frameborder="3" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?ie=UTF8&amp;ll={{ event.location.coordinates }}&amp;z=16&amp;iwloc=T&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?ie=UTF8&amp;ll={{ event.location.coordinates }}&amp;z=16&amp;iwloc=T&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+        {% endif %}
+      </div>
+      </div>
+    </div>
 
 <table class="table table-bordered table-striped table-hover">
   <thead>

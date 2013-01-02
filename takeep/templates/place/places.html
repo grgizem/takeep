@@ -15,24 +15,21 @@
 {% endblock %}
 
 {% block content %}
-<center>
-<form class="search" action="">
-      <input type="text" class="search-query span2" placeholder="Places">
-      <a class="btn btn-inverse" href=""> Search &raquo;</a>
+<form class="well form-search">
+        <input type="text" class="input-medium search-query">
+        <button type="submit" class="btn btn-inverse">Search</button>
 </form>
-</center>
 <hr />
     {% for place in places %}
-    <div class="hero-unit">
-        <h2>{{ place.name }}</h2>
+    <div class="well">
+        <center><h2>{{ place.name }}</h2></center>
+      <div class="row">
+        <div class="span1">
+        </div>
+        <div class="span5">
         {% if place.address %}
         <p> <i class="icon-map-marker"></i>
           {{ place.address }}
-        </p>
-        {% endif %}
-        {% if place.coordinates %}
-        <p> <i class="icon-globe"></i>
-          {{ place.coordinates }}
         </p>
         {% endif %}
 
@@ -59,7 +56,37 @@
           {{ place.description }}
           {% endif %}
         </h6>
+      </div>
+      <div class="span1">
+        </div>
+      <div class="span4">
+        {% if place.coordinates %}
+        <iframe width="270" height="225" frameborder="3" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?ie=UTF8&amp;ll={{ place.coordinates }}&amp;z=16&amp;iwloc=T&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?ie=UTF8&amp;ll={{ place.coordinates }}&amp;z=16&amp;iwloc=T&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+        {% endif %}
+      </div>
+      </div>
     </div>
     {% endfor %}
+
+<div class="span9">
+  <span class="current">
+    <b>Page {{ places.number }} of {{ places.paginator.num_pages }}</b>
+  </span>
+<br>
+
+  <ul class="pager">  
+        {% if places.has_previous %}
+            <li class="previous"><a href="?page={{ places.previous_page_number }}">&larr; Previous</a></li>
+        {% else %}
+            <li class="previous disabled"><a href="#">&larr; Previous</a></li>
+        {% endif %}
+
+        {% if places.has_next %}
+            <li class="next"><a href="?page={{ places.next_page_number }}">Next &rarr;</a></li>
+        {% else %}
+            <li class"next disabled"><a href="#">Next &rarr;</a></li>
+        {% endif %}
+  </ul>
+</div>
 
 {% endblock %}

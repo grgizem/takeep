@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+
+<!-- Main Container
+================================================== -->
+{% block title %}Past Events{% endblock %}
+
+{% block navbar %}
+    <li class="nav-header">{{ user.username }}</li>
+         <li><a href="{% url create_event %}"><i class="icon-map-marker"></i> Add Event</a></li>
+         <li><a href="{% url my_events %}"><i class="icon-calendar"></i> Manage Events</a></li>
+    <li class="nav-header"> History</li>
+         <li><a href="events1.html">Past Event #1</a></li>
+         <li><a href="events2.html">Past Event #2</a></li>
+{% endblock %}
+
+{% block content %}
+
+<div class="span45">
+{% for event in past_events %}
+    <div class="hero-unit">
+        <h2>{{ event.title }}</h2>
+        <p><i class="icon-map-marker"></i> <a href="{% url place event.location.id %}">{{ event.location.name }}</a></p>
+        <h5><i class="icon-time"></i> {{ event.start_time }}
+            <br />
+        <i class="icon-time"></i> {{ event.end_time }}</h5>
+            <br />
+        <h6><i class="icon-info-sign"></i> {{ event.description }}</h6>
+    </div>
+   {% if forloop.last %}
+     </div>
+   {% else %}
+     {% if forloop.counter|divisibleby:"5" %}
+       </div><div class="span45">
+     {% endif %}
+   {% endif %}
+{% endfor %}
+
+<div class="span9">
+  <span class="current">
+    <b>Page {{ past_events.number }} of {{ past_events.paginator.num_pages }}</b>
+  </span>
+<br>
+
+  <ul class="pager">  
+        {% if past_events.has_previous %}
+            <li class="previous"><a href="?page={{ past_events.previous_page_number }}">&larr; Previous</a></li>
+        {% else %}
+            <li class="previous disabled"><a href="#">&larr; Previous</a></li>
+        {% endif %}
+
+        {% if past_events.has_next %}
+            <li class="next"><a href="?page={{ past_events.next_page_number }}">Next &rarr;</a></li>
+        {% else %}
+            <li class"next disabled"><a href="#">Next &rarr;</a></li>
+        {% endif %}
+  </ul>
+</div>
+
+{% endblock %}

@@ -1,4 +1,6 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, EmptyPage, InvalidPage
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
@@ -7,8 +9,19 @@ from apps.place.forms import PlaceForm
 from apps.place.models import Place
 
 
+@login_required
 def places(request):
-    places = Place.objects.all()
+    all_places = Place.objects.all()
+    paginator = Paginator(all_places, 5)
+    try:
+        page = int(request.GET.get('page','1'))
+    except ValueError:
+        page = 1
+    try:
+        places = paginator.page(page)
+    except (EmptyPage, InvalidPage):
+        places = paginator.page(paginator.num_pages)
+
     events = Event.objects.filter(participants__guest=request.user)
     favorite_places_multi = Place.objects.filter(had_events__in=events)
     favorite_places = set(favorite_places_multi).intersection(set(places))
@@ -16,6 +29,7 @@ def places(request):
         {'places': places, 'favorite_places': favorite_places})
 
 
+@login_required
 def place(request, place_id):
     place = get_object_or_404(Place, id=place_id)
     events = place.had_events.all()
@@ -23,15 +37,15 @@ def place(request, place_id):
         {'place': place, 'events': events})
 
 
+@login_required
 def create_place(request):
     """
     To create a place
     """
-    user = request.user
     if request.POST:
         placeform = PlaceForm(request.POST)
         if placeform.is_valid():
-            placeform.save(user)
+            placeform.save()
             messages.add_message(request, messages.WARNING,
                 'Place created as your requested, waiting for approvement.')
             return HttpResponseRedirect('/')
@@ -44,5 +58,6 @@ def create_place(request):
             {'form': placeform})
 
 
+@login_required
 def flag(request, place_id):
     return render(request, 'place/flag.html')

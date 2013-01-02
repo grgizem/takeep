@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.core.paginator import Paginator, EmptyPage, InvalidPage
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
@@ -10,13 +11,35 @@ from apps.event.models import Event, Participant
 
 
 def events(request):
-    upcoming_events = Event.objects.filter(
+    all_events = Event.objects.filter(
         status="O").select_related()
-    past_events = Event.objects.filter(
-        status="C").select_related()
+    paginator = Paginator(all_events, 10)
+    try:
+        page = int(request.GET.get('page','1'))
+    except ValueError:
+        page = 1
+    try:
+        upcoming_events = paginator.page(page)
+    except (EmptyPage, InvalidPage):
+        upcoming_events = paginator.page(paginator.num_pages)
     return render(request, 'event/events.html',
-        {'upcoming_events': upcoming_events,
-        'past_events': past_events})
+        {'upcoming_events': upcoming_events})
+
+
+def past_events(request):
+    all_events = Event.objects.filter(
+        status="C").select_related()
+    paginator = Paginator(all_events, 10)
+    try:
+        page = int(request.GET.get('page','1'))
+    except ValueError:
+        page = 1
+    try:
+        past_events = paginator.page(page)
+    except (EmptyPage, InvalidPage):
+        past_events = paginator.page(paginator.num_pages)
+    return render(request, 'event/past_events.html',
+        {'past_events': past_events})
 
 
 @login_required
@@ -36,11 +59,10 @@ def create_event(request):
     """
     To create an event
     """
-    user = request.user
     if request.POST:
         eventform = EventForm(request.POST)
         if eventform.is_valid():
-            eventform.save(user)
+            eventform.save(request)
             messages.add_message(request, messages.WARNING,
                 'Your event created as your requested.')
             return HttpResponseRedirect('/')
