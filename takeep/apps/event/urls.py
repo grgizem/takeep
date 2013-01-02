@@ -3,6 +3,7 @@ from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('apps.event.views',
 	url(r'^events/', 'events', name='events'),
+	url(r'^past_events/', 'past_events', name='past_events'),
 	url(r'^event/(?P<event_id>\d+)/$', 'event', name='event'),
     url(r'^create_event/', 'create_event', name='create_event'),
 
