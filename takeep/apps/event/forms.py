@@ -11,8 +11,9 @@ class EventForm(forms.ModelForm):
         model = Event
         exclude = ["host", "status"]
 
-    def save(self, user, commit=True):
+    def save(self, request, commit=True):
         instance = super(EventForm, self).save(commit=False)
+        user = request.user
         instance.host = user
         instance.status = "O"
         if commit:
