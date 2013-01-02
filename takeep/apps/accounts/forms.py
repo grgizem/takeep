@@ -44,6 +44,6 @@ class UserProfileForm(forms.ModelForm):
     def save(self):
         super(UserProfileForm, self).save()
         self.instance.user.gender = self.cleaned_data.get('gender')
-        self.instance.user.birthdate = self.check_birthdate(self.cleaned_data.get('birthdate'))
+        self.instance.user.birthdate = self.cleaned_data.get('birthdate')
         self.instance.user.bio = self.cleaned_data.get('bio')
         self.instance.user.save()
