@@ -1,0 +1,67 @@
+
+TAKEEP
+This is the documentation for the new web site called TAKEEP, which was created on spring term of 2012. 
+The meaning of the website is similar to following. 
+Summary of Contents
+Takeep  is designed on purpose of searching events. 
+There is a map which shows all events on chosen area on home page.
+Users  see more information about any event  then decide as the case may be attend .
+Users also create their own new (public/private) events.
+Each event (attend/create) of users are written on their user page. 
+The following three sections discuss (1) the design goals, (2) maintaining the site, and (3) other things
+1. Goals
+When designing the new web site, here are the goals we had in mind:
+ A.Provide a "public" home page with info for external visitors
+·  Only include content that makes sense to external visitors
+·	Make the appearance clean.
+·	Include google map to show all events on areas in the center of the page.
+·	Include search area that name of searching event to be expected.
+·	Include login and register buton.
+·	Include “what’s new” table which shows upcoming events
+·	Use real text in the sidebar, rather than gif or jpg files that contain images of the text.
+·	Organize the sidebar items in some logical fashion.
+·	Try to make it clear what each item on the page page means.
+B. Provide a "local" user page with info for registered people
+·	Include all the links that appear on the external page except map. In addition, provide things local users need.
+·	Include direct links to events that user attend or create as a table.
+·	Include logout button.
+·	Provide “create a new event” link that user to direct create event page.
+·	Provide edit profile link if users want to make changes on their profile.
+C. Visual design:
+·	Provide a uniform look-and-feel for all pages on the site.
+·	Use colors compatible with the UMD logo (red, yellow, black, white).
+·	Don't use frames.
+·	Make the pages usable even on small (800-pixel-width) screens.
+·	Try to make the page layout work for multiple web browsers and multiple platforms. 
+D. Maintenance:
+·	Try to clean up the directory structure for the site.
+·	Use modular structure for page elements, to facilitate updating of the pages.
+·	Try to make it easy to edit the pages with text editors.
+2. Maintaining the Site
+Our main tool for building the new site has been Django.
+Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+Developed in 2003 by a fast-moving online-news operation, Django was designed to handle two challenges: the intensive deadlines of a newsroom and the stringent requirements of the experienced Web developers who wrote it. It lets you build high-performing, elegant Web applications quickly.
+Django is an Open Source web framework that enables you to build clean and feature-rich web applications with minimal time and effort.
+
+Benefits of using Django in the development of  our website:
+
+1. Human readable website URLs.
+Django promotes the use of human readable urls.
+
+2. Flexibility.
+Django offers the flexibility to customize pieces of the web site to suit the needs of the project at hand instead of relying on pre-built applications.
+Using Django, we can customize that widget to display what we want, how we want.
+
+3. Higher level of security.
+Because of the way that Django is developed and installed, you have a greater level of security when you compare it to a web site that was developed with PHP for example.
+ This is because the source code, excluding the html and css files, for your web site are not directly exposed to the Internet and your viewers online.
+ In most cases the web pages are dynamically generated and then sent to your browser using templates.
+
+4. Unique design.
+.The templates that we develop are for creating a look and feel specific to your web site.
+ We are not just filling in information in a template that we downloaded off of another site.
+Therefore you are guaranteed that the site we develop for you will look unique.
+ This is one of the big features of Django. 
+
+5. Easy to update.
+Using this template structure makes it much easier for us to add additional pages as well as make site wide, visual or code changes. The template structure also ensures that your website will have a consistent look and feel throughout the entire site.
