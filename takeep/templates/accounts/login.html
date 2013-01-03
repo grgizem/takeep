@@ -12,9 +12,9 @@
    {% if form.errors %}
         <div class="alert alert-error">
         <button class="close" data-dismiss="alert">×</button>
-        <strong>:( </strong>There has been occured a problem. Please, try again later.
-        </div>
         {{ form.non_field_errors }}
+        </div>
+        
    {% endif %}
          <form class="form-horizontal well" actions="." method="post">
           {% csrf_token %}
@@ -39,6 +39,8 @@
                 				 Remember me
               				 </label>
               				 <br />
+                       <a href={% url password_reset %}>Forgot your password?</a>
+                       <br /><br />
             				 <button type="submit" class="btn btn-inverse">Join</button>
             				 <button type="submit" class="btn btn-inverse">Cancel</button>
             			</div>
