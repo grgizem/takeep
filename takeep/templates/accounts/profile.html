@@ -2,7 +2,8 @@
 
 <!-- Main Container
 ================================================== -->
-{% block title %}Profile Page{% endblock %}
+{% load gravatar %}
+{% block title %}Profile Page {% show_gravatar user.email 48 %} {% endblock %}
 
 {% block navbar %}
     <li class="nav-header">{{ user.username }}</li>
