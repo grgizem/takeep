@@ -16,6 +16,7 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('first_name', 'last_name')
+        bio = forms.CharField(widget=forms.Textarea(attrs={'rows': '4'}))
 
     def __init__(self, *args, **kwargs):
         super(UserForm, self).__init__(*args, **kwargs)
@@ -29,7 +30,7 @@ class UserProfileForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ('gender', 'birthdate', 'address', 'photo',
+        fields = ('gender', 'birthdate', 'address',
             'location', 'bio')
         widgets = {
             'birthdate': SelectDateWidget(years=BIRTHDATE_YEARS),
