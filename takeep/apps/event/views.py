@@ -6,6 +6,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
 from apps.accounts.views import my_event
+from apps.accounts.actions import (send_joinrequest_mail, send_eventchange_mail,
+    send_approval_mail, send_disapproval_mail, send_cancellation_mail)
 from apps.event.forms import EventForm, EventReportForm
 from apps.event.models import Event, Participant
 
@@ -25,7 +27,7 @@ def events(request):
     return render(request, 'event/events.html',
         {'upcoming_events': upcoming_events})
 
-
+@login_required
 def past_events(request):
     all_events = Event.objects.filter(
         status="C").select_related()
@@ -90,6 +92,7 @@ def edit_event(request, event_id):
             eventform = EventForm(request.POST)
             if eventform.is_valid():
                 eventform.save(user)
+                send_eventchange_mail(event_id)
                 messages.add_message(request, messages.SUCCESS,
                     'Your event changed as your requested.')
                 return HttpResponseRedirect('/')
@@ -118,6 +121,7 @@ def approve(request, event_id, user_id):
         """
         user = User.objects.get(id=user_id)
         Participant.objects.filter(event=event, guest=user).update(is_approved=True)
+        send_approval_mail(event_id, user_id)
         messages.add_message(request, messages.SUCCESS,
                     'The invtation approved as your requested.')
     else:
@@ -139,6 +143,7 @@ def disapprove(request, event_id, user_id):
         """
         user = User.objects.get(id=user_id)
         Participant.objects.filter(event=event, guest=user).update(is_approved=False)
+        send_disapproval_mail(event_id, user_id)
         messages.add_message(request, messages.SUCCESS,
                     'The invitation disapproved as your requested.')
     else:
@@ -160,6 +165,7 @@ def cancel_event(request, event_id):
         """
         event.status = "Q"
         event.save()
+        send_cancellation_mail(event_id)
     else:
         messages.add_message(request, messages.ERROR,
             'You can not edit this event, because you are not the host of it.')
@@ -181,6 +187,7 @@ def join(request, event_id):
                 'You already have a not approved request for this event.')
     else:
         if event.is_private:
+            send_joinrequest_mail(request.user, event_id)
             messages.add_message(request, messages.ERROR,
                 'You request is waiting approval by the host of the event.')
         else:
