@@ -56,12 +56,18 @@
           {{ place.description }}
           {% endif %}
         </h6>
+        <br />  
+        <div class="control-group">
+            <div class="controls">
+              <a class="btn btn-inverse btn-small" href="{% url place place.id %}"> View Details &raquo;</a>
+            </div>
+        </div>
       </div>
       <div class="span1">
         </div>
       <div class="span4">
         {% if place.coordinates %}
-        <iframe width="270" height="225" frameborder="3" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?ie=UTF8&amp;ll={{ place.coordinates }}&amp;z=16&amp;iwloc=T&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?ie=UTF8&amp;ll={{ place.coordinates }}&amp;z=16&amp;iwloc=T&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+        <iframe width="250" height="225" frameborder="3" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?ie=UTF8&amp;ll={{ place.coordinates }}&amp;z=16&amp;iwloc=T&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?ie=UTF8&amp;ll={{ place.coordinates }}&amp;z=16&amp;iwloc=T&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
         {% endif %}
       </div>
       </div>
