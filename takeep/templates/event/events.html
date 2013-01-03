@@ -3,7 +3,7 @@
 
 <!-- Main Container
 ================================================== -->
-{% block title %}Events{% endblock %}
+{% block title %}<div class="hero-unit"><h2>Events</h2></div>{% endblock %}
 
 {% block navbar %}
     <li><a href="{% url past_events %}"><i class="icon-calendar"></i> Past Events</a></li>
@@ -23,7 +23,11 @@
 <li class="span45">
 {% for event in upcoming_events %}
                 <div class="thumbnail">
+                  {% if event.banner %}
+                  <img data-src="holder.js/300x200" alt="" src="{{ event.banner.url }}">
+                  {% else %}
                   <img data-src="holder.js/300x200" alt="">
+                  {% endif %}
                   <div class="caption">
                     <h3>{{ event.title }}</h3>
                     <p><i class="icon-map-marker"></i> <a href="{% url place event.location.id %}">{{ event.location.name }}</a></p>

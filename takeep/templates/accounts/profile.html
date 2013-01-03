@@ -3,7 +3,7 @@
 <!-- Main Container
 ================================================== -->
 {% load gravatar %}
-{% block title %}Profile Page {% show_gravatar user.email 48 %} {% endblock %}
+{% block title %}<div class="hero-unit"><h2>Profile Page {% show_gravatar user.email 48 %}</h2></div>{% endblock %}
 
 {% block navbar %}
     <li class="nav-header">{{ user.username }}</li>

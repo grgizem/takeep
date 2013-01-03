@@ -3,7 +3,7 @@
 
 <!-- Main Container
 ================================================== -->
-{% block title %}Past Events{% endblock %}
+{% block title %}<div class="hero-unit"><h2>Past Events</h2></div>{% endblock %}
 
 {% block navbar %}
     <li class="nav-header">{{ user.username }}</li>
@@ -19,7 +19,7 @@
 <div class="span45">
 {% for event in past_events %}
     <div class="hero-unit">
-        <h2>{{ event.title }}</h2>
+        <h3>{{ event.title }}</h3>
         <p><i class="icon-map-marker"></i> <a href="{% url place event.location.id %}">{{ event.location.name }}</a></p>
         <h5><i class="icon-time"></i> {{ event.start_time }}
             <br />

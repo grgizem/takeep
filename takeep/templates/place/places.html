@@ -3,7 +3,7 @@
 
 <!-- Main Container
 ================================================== -->
-{% block title %}Places{% endblock %}
+{% block title %}<div class="hero-unit"><h2>Places</h2></div>{% endblock %}
 
 {% block navbar %}
     <li class="nav-header">{{ user.username }}</li>
@@ -22,7 +22,7 @@
 <hr />
     {% for place in places %}
     <div class="well">
-        <center><h2>{{ place.name }}</h2></center>
+        <center><h3>{{ place.name }}</h3></center>
       <div class="row">
         <div class="span1">
         </div>
