@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
 from apps.accounts.views import my_event
-from apps.accounts.actions import (send_joinrequest_mail, send_eventchange_mail,
+from apps.event.actions import (send_joinrequest_mail, send_eventchange_mail,
     send_approval_mail, send_disapproval_mail, send_cancellation_mail)
 from apps.event.forms import EventForm, EventReportForm
 from apps.event.models import Event, Participant

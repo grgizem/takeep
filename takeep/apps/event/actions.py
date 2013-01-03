@@ -4,7 +4,7 @@ from django.contrib.sites.models import Site
 from django.core.mail import EmailMultiAlternatives
 from django.template import loader, Context
 
-from apps.events.models import Event, Participant
+from apps.event.models import Event, Participant
 
 
 def send_joinrequest_mail(participant, event_id):
