@@ -36,7 +36,7 @@ def send_eventchange_mail(event_id):
     recipients = []
     for participant in participants:
         recipients.append(participant.guest.email)
-        context = Context({'name': participant.username,
+        context = Context({'name': participant.guest.username,
                  'event_title': event.title,
                  'event_id': event.id,
                  'site': Site.objects.get_current()})

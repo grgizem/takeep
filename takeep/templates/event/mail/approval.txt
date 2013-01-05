@@ -1,0 +1,10 @@
+Hello {{ name }},
+
+Your request to join {{ event_title }} event has been approved by its host.
+
+You can check the event details from here,
+
+http://{{site.domain}}/events/event/{{ event_id }}/
+
+
+takeep.com

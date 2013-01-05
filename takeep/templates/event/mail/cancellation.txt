@@ -1,0 +1,6 @@
+Hello {{ name }},
+
+Unfortunately, {{ event_title }} event that you marked as going has been cancelled by its host.
+
+
+takeep.com

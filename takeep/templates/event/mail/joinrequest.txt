@@ -1,0 +1,21 @@
+Hello {{ name }},
+
+{{ participant_name }} sent a request to join your event "{{ event_title }}". If you can reply quickly the request as positive or negative, we would be happy.
+
+The regardless urls to approve or disapprove are below.
+
+To approve,
+
+http://{{site.domain}}/event/approve/{{ event_id }}/
+
+To disapprove,
+
+http://{{site.domain}}/event/disapprove/{{ event_id }}/
+
+
+In any cases, you can change your mind and approval status in any time you want from this url,
+
+http://{{site.domain}}/accounts/my_event/{{ event_id }}/
+
+
+takeep.com

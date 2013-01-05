@@ -1,0 +1,8 @@
+Hello {{ name }},
+
+Unfortunately, your request to join {{ event_title }} event has been disapproved by its host.
+
+If the host changes the status, we will let you know.
+
+
+takeep.com

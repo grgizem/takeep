@@ -1,0 +1,10 @@
+Hello {{ name }},
+
+{{ event_title }} event that you marked as going changed by its host. That can be a minor change on its description. However we suggest that you should check the events time and place.
+
+You can check the event from here,
+
+http://{{site.domain}}/events/event/{{ event_id }}/
+
+
+takeep.com
