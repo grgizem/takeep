@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+C:\Users\Kemal\Documents\School\Comp332\takeep\takeep-mobile\android\.metadata\.plugins\org.eclipse.jdt.core
+1367872983.index
+2699091894.index
+3674700819.index
