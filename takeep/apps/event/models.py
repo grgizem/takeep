@@ -87,10 +87,10 @@ class Event(models.Model):
     def __unicode__(self):
         return self.title
 
-    """
-    Update status of an event.
-    """
     def update_status(self):
+        """
+        Update status of an event.
+        """
         if self.status == self.CANCELLED:
             pass
         elif datetime.datetime.now(self.time.tzinfo) > self.end_statime:
@@ -98,10 +98,10 @@ class Event(models.Model):
         self.save()
         return self
 
-    """
-    Cancel an event.
-    """
     def cancel(self):
+        """
+        Cancel an event.
+        """
         self.status = self.CANCELLED
         self.save()
 
@@ -133,7 +133,7 @@ class EventReport(models.Model):
     """
     Event report table required for complainment of events
     """
-    user = models.OneToOneField(User)
+    user = models.ForeignKey(User)
     """
     The user who reported
     """
@@ -149,3 +149,6 @@ class EventReport(models.Model):
     """
     The process of the report
     """
+
+    def __unicode__(self):
+        return self.event.title

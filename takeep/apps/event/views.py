@@ -227,7 +227,7 @@ def report(request, event_id):
         if reportform.is_valid():
             reportform.save(user, event)
             messages.add_message(request, messages.WARNING,
-                'Your event created as your requested.')
+                'Your report sent as your requested.')
             return HttpResponseRedirect('/')
         else:
             return render(request, 'event/report.html',
