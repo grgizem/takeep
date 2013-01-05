@@ -91,7 +91,7 @@ def edit_event(request, event_id):
         if request.POST:
             eventform = EventForm(request.POST)
             if eventform.is_valid():
-                eventform.save(user)
+                eventform.save(request)
                 send_eventchange_mail(event_id)
                 messages.add_message(request, messages.SUCCESS,
                     'Your event changed as your requested.')
