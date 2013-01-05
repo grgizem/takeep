@@ -13,6 +13,9 @@ from apps.event.models import Event, Participant
 
 
 def events(request):
+    """
+    Shows all open events with pagination
+    """
     all_events = Event.objects.filter(
         status="O").select_related()
     paginator = Paginator(all_events, 8)
@@ -29,6 +32,9 @@ def events(request):
 
 @login_required
 def past_events(request):
+    """
+    Show all closed(past) events with pagination
+    """
     all_events = Event.objects.filter(
         status="C").select_related()
     paginator = Paginator(all_events, 8)
@@ -47,7 +53,7 @@ def past_events(request):
 @login_required
 def event(request, event_id):
     """
-    Particular events page
+    Particular event page and partipant users
     """
     event = get_object_or_404(Event, id=event_id)
     participations = Participant.objects.filter(event=event)
@@ -117,16 +123,16 @@ def approve(request, event_id, user_id):
     event = get_object_or_404(Event, id=event_id)
     if request.user.id == event.host.id:
         """
-        Then the requested user can approve the partcipation
+        Only the host user can approve the participation
         """
         user = User.objects.get(id=user_id)
         Participant.objects.filter(event=event, guest=user).update(is_approved=True)
         send_approval_mail(event_id, user_id)
         messages.add_message(request, messages.SUCCESS,
-                    'The invtation approved as your requested.')
+                    'The join request approved as your requested.')
     else:
         messages.add_message(request, messages.ERROR,
-            'You can not edit this event, because you are not the host of it.')
+            'You can not approve the join request, because you are not the host of it.')
         return HttpResponseRedirect('/')
     return my_event(request, event_id)
 
@@ -134,21 +140,21 @@ def approve(request, event_id, user_id):
 @login_required
 def disapprove(request, event_id, user_id):
     """
-    Approvement action
+    Disapprovement action
     """
     event = get_object_or_404(Event, id=event_id)
     if request.user.id == event.host.id:
         """
-        Then the requested user can approve the partcipation
+        Only the host can disapprove the participation
         """
         user = User.objects.get(id=user_id)
         Participant.objects.filter(event=event, guest=user).update(is_approved=False)
         send_disapproval_mail(event_id, user_id)
         messages.add_message(request, messages.SUCCESS,
-                    'The invitation disapproved as your requested.')
+                    'The join request disapproved as your requested.')
     else:
         messages.add_message(request, messages.ERROR,
-            'You can not edit this event, because you are not the host of it.')
+            'You can not disapprove the join request, because you are not the host of it.')
         return HttpResponseRedirect('/')
     return my_event(request, event_id)
 
@@ -161,14 +167,14 @@ def cancel_event(request, event_id):
     event = get_object_or_404(Event, id=event_id)
     if request.user.id == event.host.id:
         """
-        can cancel the event
+        Only the host can cancel the event
         """
         event.status = "Q"
         event.save()
         send_cancellation_mail(event_id)
     else:
         messages.add_message(request, messages.ERROR,
-            'You can not edit this event, because you are not the host of it.')
+            'You can not cancel this event, because you are not the host of it.')
     return HttpResponseRedirect('/')
 
 
@@ -180,13 +186,23 @@ def join(request, event_id):
     result = participate_tuple[1]
     if not result:
         if participate.is_approved:
+            """
+            Join request is already approved
+            """
             messages.add_message(request, messages.ERROR,
                 'You are already attending to this event.')
         else:
+            """
+            Join request is already disapproved or not considered by host
+            """
             messages.add_message(request, messages.ERROR,
                 'You already have a not approved request for this event.')
     else:
         if event.is_private:
+            """
+            Join request created and
+            send an information e-mail to the host of the event
+            """
             send_joinrequest_mail(request.user, event_id)
             messages.add_message(request, messages.ERROR,
                 'You request is waiting approval by the host of the event.')
@@ -215,8 +231,8 @@ def report(request, event_id):
             return HttpResponseRedirect('/')
         else:
             return render(request, 'event/report.html',
-                {'form': reportform})
+                {'event': event, 'form': reportform})
     else:
         reportform = EventReportForm()
         return render(request, 'event/report.html',
-            {'form': reportform})
+            {'event': event, 'form': reportform})

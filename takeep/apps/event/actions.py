@@ -8,6 +8,11 @@ from apps.event.models import Event, Participant
 
 
 def send_joinrequest_mail(participant, event_id):
+    """
+    Send e-mail to the host of the event
+    when another user send a request to
+    join that hosts private event
+    """
     event = Event.objects.get(id=event_id)
 
     sender = getattr(settings, 'EMAIL_HOST_USER', [])
@@ -28,6 +33,10 @@ def send_joinrequest_mail(participant, event_id):
 
 
 def send_eventchange_mail(event_id):
+    """
+    Sends e-mail to participants to inform them
+    about the event changes
+    """
     event = Event.objects.get(id=event_id)
     participants = Participant.objects.filter(event__id=event_id)
     
@@ -50,6 +59,10 @@ def send_eventchange_mail(event_id):
 
 
 def send_approval_mail(event_id, user_id):
+    """
+    Sends e-mail to the user when his/her request to
+    join an event approved by its host.
+    """
     event = Event.objects.get(id=event_id)
     user = User.objects.get(id=user_id)
 
@@ -69,6 +82,10 @@ def send_approval_mail(event_id, user_id):
 
 
 def send_disapproval_mail(event_id, user_id):
+    """
+    Sends e-mail to the user when his/her request to
+    join an event disapproved by its host.
+    """
     event = Event.objects.get(id=event_id)
     user = User.objects.get(id=user_id)
 
@@ -88,6 +105,10 @@ def send_disapproval_mail(event_id, user_id):
 
 
 def send_cancellation_mail(event_id):
+    """
+    Sends e-mail to participants to inform them
+    about the event cancelled
+    """
     event = Event.objects.get(id=event_id)
     participants = Participant.objects.filter(event__id=event_id)
     
@@ -112,6 +133,10 @@ def send_cancellation_mail(event_id):
 def send_html_email(email_subject,
                     email_from, email_to,
                     email_context, email_template):
+    """
+    Sends e-mail with the rendering
+    the given template with given context elements
+    """
     plain_email = loader.get_template("%s.txt" % email_template)
     html_email = loader.get_template("%s.html" % email_template)
     plain_content = plain_email.render(email_context)
