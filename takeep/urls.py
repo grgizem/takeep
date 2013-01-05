@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
+from django.conf import settings
 
 
 admin.autodiscover()
@@ -15,7 +16,6 @@ urlpatterns = patterns('',
 
 )
 
-from django.conf import settings
 if settings.DEBUG:
     # static files (images, css, javascript, etc.)
     urlpatterns += patterns('',
