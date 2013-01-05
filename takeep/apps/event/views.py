@@ -20,7 +20,7 @@ def events(request):
         status="O").select_related()
     paginator = Paginator(all_events, 8)
     try:
-        page = int(request.GET.get('page','1'))
+        page = int(request.GET.get('page', '1'))
     except ValueError:
         page = 1
     try:
@@ -29,6 +29,7 @@ def events(request):
         upcoming_events = paginator.page(paginator.num_pages)
     return render(request, 'event/events.html',
         {'upcoming_events': upcoming_events})
+
 
 @login_required
 def past_events(request):
@@ -39,7 +40,7 @@ def past_events(request):
         status="C").select_related()
     paginator = Paginator(all_events, 8)
     try:
-        page = int(request.GET.get('page','1'))
+        page = int(request.GET.get('page', '1'))
     except ValueError:
         page = 1
     try:
@@ -126,7 +127,8 @@ def approve(request, event_id, user_id):
         Only the host user can approve the participation
         """
         user = User.objects.get(id=user_id)
-        Participant.objects.filter(event=event, guest=user).update(is_approved=True)
+        Participant.objects.filter(
+            event=event, guest=user).update(is_approved=True)
         send_approval_mail(event_id, user_id)
         messages.add_message(request, messages.SUCCESS,
                     'The join request approved as your requested.')
@@ -148,7 +150,8 @@ def disapprove(request, event_id, user_id):
         Only the host can disapprove the participation
         """
         user = User.objects.get(id=user_id)
-        Participant.objects.filter(event=event, guest=user).update(is_approved=False)
+        Participant.objects.filter(
+            event=event, guest=user).update(is_approved=False)
         send_disapproval_mail(event_id, user_id)
         messages.add_message(request, messages.SUCCESS,
                     'The join request disapproved as your requested.')
@@ -181,7 +184,8 @@ def cancel_event(request, event_id):
 @login_required
 def join(request, event_id):
     event = get_object_or_404(Event, id=event_id)
-    participate_tuple = Participant.objects.get_or_create(guest=request.user, event=event)
+    participate_tuple = Participant.objects.get_or_create(
+        guest=request.user, event=event)
     participate = participate_tuple[0]
     result = participate_tuple[1]
     if not result:

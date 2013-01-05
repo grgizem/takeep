@@ -57,7 +57,7 @@ class Place(models.Model):
 
 
 class FlagPlace(models.Model):
-    place = models.OneToOneField(Place)
+    place = models.ForeignKey(Place)
     """
     The reported place to be change
     """
@@ -98,9 +98,9 @@ class FlagPlace(models.Model):
     """
     The Webpage of the place.
     """
-    is_approved = models.BooleanField(default=False)
+    is_considered = models.BooleanField(default=False)
     """
-    The approval status of the place
+    The consideration status of the flag
     """
 
     def upload_to(self, filename):

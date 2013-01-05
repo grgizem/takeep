@@ -2,12 +2,60 @@
 
 <!-- Main Container
 ================================================== -->
-{% block title %}<div class="hero-unit"><h2>Add a New Place</h2></div>{% endblock %}
+{% block title %}<div class="hero-unit"><h2>Flag Place</h2></div>{% endblock %}
 
 {% block navbar %}
 {% endblock %}
 
 {% block content %}
+
+    <div class="well">
+      <div class="row">
+        <center><h3>{{ place.name }}</h3></center>
+        <div class="span1">
+        </div>
+        <div class="span5">
+        {% if place.address %}
+        <p> <i class="icon-map-marker"></i>
+          {{ place.address }}
+        </p>
+        {% endif %}
+
+        <h5>
+          {% if place.email %}
+          <i class="icon-envelope"></i>
+          {{ place.email }}
+          <br />
+          {% endif %}
+          {% if place.phone_number %}
+          <i class="icon-signal"></i>
+          {{ place.phone_number }}
+          <br />
+          {% endif %}
+          {% if place.webpage %}
+          <i class="icon-home"></i>
+          {{ place.webpage }}
+          {% endif %}
+        </h5>
+        <br />
+        <h6>
+          {% if place.description %}
+          <i class="icon-info-sign"></i>
+          {{ place.description }}
+          {% endif %}
+        </h6>
+      </div>
+      <div class="span1">
+        </div>
+      <div class="span4">
+        {% if place.coordinates %}
+        <iframe width="250" height="225" frameborder="3" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?ie=UTF8&amp;ll={{ place.coordinates }}&amp;z=16&amp;iwloc=T&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?ie=UTF8&amp;ll={{ place.coordinates }}&amp;z=16&amp;iwloc=T&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+        {% endif %}
+      </div>
+      </div>
+    </div>
+
+
    {% if form.errors %}
         <div class="alert alert-error">
         <button class="close" data-dismiss="alert">×</button>

@@ -5,13 +5,16 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
 from apps.event.models import Event
-from apps.place.forms import PlaceForm
+from apps.place.forms import PlaceForm, FlagPlaceForm
 from apps.place.models import Place
 
 
 @login_required
 def places(request):
-    all_places = Place.objects.all()
+    """
+    Shows all places with pagination and favorite places at the nav bar
+    """
+    all_places = Place.objects.filter(is_approved=True)
     paginator = Paginator(all_places, 5)
     try:
         page = int(request.GET.get('page','1'))
@@ -31,10 +34,22 @@ def places(request):
 
 @login_required
 def place(request, place_id):
+    """
+    Show details of a specific place and events on that location
+    """
     place = get_object_or_404(Place, id=place_id)
-    events = place.had_events.all()
-    return render(request, 'place/place.html',
-        {'place': place, 'events': events})
+    if place.is_approved:
+        """
+        If the place is approved, shows details,
+        - otherwise shows an error
+        """
+        events = place.had_events.all()
+        return render(request, 'place/place.html',
+            {'place': place, 'events': events})
+    else:
+        messages.add_message(request, messages.WARNING,
+                'This place is waiting for the approvement.')
+        return HttpResponseRedirect('/')
 
 
 @login_required
@@ -60,4 +75,21 @@ def create_place(request):
 
 @login_required
 def flag(request, place_id):
-    return render(request, 'place/flag.html')
+    """
+    Flag the place to add extra information or correct misvalues
+    """
+    place = get_object_or_404(Place, id=place_id)
+    if request.POST:
+        flagform = FlagPlaceForm(request.POST, request.FILES)
+        if flagform.is_valid():
+            flagform.save(request, place)
+            messages.add_message(request, messages.WARNING,
+                'Place flag sent as your requested, waiting for approvement.')
+            return HttpResponseRedirect('/')
+        else:
+            return render(request, 'place/flag.html',
+                {'place': place, 'form': flagform})
+    else:
+        flagform = PlaceForm(instance=place)
+        return render(request, 'place/flag.html',
+            {'place': place, 'form': flagform})
