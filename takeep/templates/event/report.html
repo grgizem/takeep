@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+<!-- Main Container
+================================================== -->
+{% block title %}<div class="hero-unit" style="background: url({{ event.banner.url }}) no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div>{% endblock %}
+
+{% block navbar %}
+    <li><a href="{% url report event.id %}"><i class="icon-flag"></i> Report Event</a></li>
+{% endblock %}
+
+{% block content %}
+    <div class="well">
+      <div class="row">
+        <center><h3>{{ event.title }}</h3></center>
+        <div class="span1">
+        </div>
+        <div class="span5">
+          <p> <i class="icon-map-marker"></i>
+              <a href="{% url place event.location.id %}">{{ event.location.name }}</a>
+            </p>
+            <h5> <i class="icon-time"></i>
+              {{ event.start_time }}
+              <br />
+              <i class="icon-time"></i>
+              {{ event.end_time }}
+            </h5>
+            <br />
+            <h6>
+              <i class="icon-info-sign"></i>
+              {{ event.description }}
+            </h6>
+            <br />
+            <div class="control-group">
+            <div class="controls">
+              {% ifequal event.status "O" %}
+              <a class="btn btn-success btn-small" href="{% url join event.id %}">I will Join</a>
+              {% endifequal %}
+            </div>
+          </div>
+      </div>
+      <div class="span1">
+        </div>
+      <div class="span4">
+        {% if event.location.coordinates %}
+        <iframe width="250" height="225" frameborder="3" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?ie=UTF8&amp;ll={{ event.location.coordinates }}&amp;z=16&amp;iwloc=T&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?ie=UTF8&amp;ll={{ event.location.coordinates }}&amp;z=16&amp;iwloc=T&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+        {% endif %}
+      </div>
+
+      </div>
+    </div>
+
+<form enctype="multipart/form-data" class="form-horizontal well" method="post" action=".">
+         <fieldset>
+          {% csrf_token %}
+          <div class="control-group">
+            <label class="control-label" for="id_reason">Reason:</label>
+            <div class="controls">
+              {{ form.reason }}
+            </div>
+          </div>
+
+              <div class="control-group">
+                <div class="controls">
+                     <button type="submit" class="btn btn-inverse">Send</button>
+                     <button type="cancel" class="btn btn-inverse">Cancel</button>
+                </div>
+               </div>
+                   </div>  
+               </div>
+            
+         </fieldset>
+</form>
+{% endblock %}
