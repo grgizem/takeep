@@ -44,24 +44,26 @@
 
 <h4>Your upcoming events</h4>
 <div class="bs-docs-example">
-<div class="tabbable tabs-left">
-              <ul class="nav nav-tabs">
-                {% for participate in participations %}
-                <li><a href="#{{ forloop.counter }}" data-toggle="tab">{{ participate.event.title }}</a></li>
-                {% endfor %}
-              </ul>
-              <div class="tab-content">
-                {% for participate in participations %}
-                <div class="tab-pane" id="{{ forloop.counter }}">
-                  <h4>{{ participate.event.title }}</h4>
-                    <p><i class="icon-map-marker"></i> <a href="{% url place participate.event.location.id %}">{{ participate.event.location.name }}</a></p>
-                    <h5><i class="icon-time"></i> {{ participate.event.start_time }}
-                        <br />
-                    <i class="icon-time"></i> {{ participate.event.end_time }}</h5>
-                    <p> <a class="btn btn-inverse btn-small" href="{% url event participate.event.id %}"> View details &raquo;</a></p>
-                </div>
-                {% endfor %}
-              </div>
+    <div class="tabbable tabs-left">
+          <ul class="nav nav-tabs">
+            {% for participate in participations %}
+            <li><a href="#{{ forloop.counter }}" data-toggle="tab">{{ participate.event.title }}</a></li>
+            {% endfor %}
+          </ul>
+          <div class="tab-content">
+            {% for participate in participations %}
+            <div class="tab-pane" id="{{ forloop.counter }}">
+              <h4>{{ participate.event.title }}</h4>
+                <p><i class="icon-map-marker"></i> <a href="{% url place participate.event.location.id %}">{{ participate.event.location.name }}</a></p>
+                <h5><i class="icon-time"></i> {{ participate.event.start_time }}
+                    <br />
+                <i class="icon-time"></i> {{ participate.event.end_time }}</h5>
+                <p> <a class="btn btn-inverse btn-small" href="{% url event participate.event.id %}"> View details &raquo;</a></p>
+            </div>
+            {% endfor %}
+    </div>
 </div> <!-- /tabbable -->
 </div>
+
+<small>* We use gravatar photos as profile pictures, if you want to add or change your profile photo, you can do that from <a href="http://www.gravatar.com">http://www.gravatar.com</a></small>
 {% endblock %}
