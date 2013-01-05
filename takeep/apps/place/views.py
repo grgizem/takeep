@@ -43,7 +43,7 @@ def create_place(request):
     To create a place
     """
     if request.POST:
-        placeform = PlaceForm(request.POST)
+        placeform = PlaceForm(request.POST, request.FILES)
         if placeform.is_valid():
             placeform.save()
             messages.add_message(request, messages.WARNING,

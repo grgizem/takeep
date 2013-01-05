@@ -16,7 +16,7 @@
         {{ form.non_field_errors }}
    {% endif %}
 
-         <form class="form-horizontal well" method="post" action=".">
+         <form enctype="multipart/form-data" class="form-horizontal well" method="post" action=".">
          <fieldset>
           {% csrf_token %}
           <div class="control-group">

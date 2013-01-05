@@ -62,7 +62,7 @@ def create_event(request):
     To create an event
     """
     if request.POST:
-        eventform = EventForm(request.POST)
+        eventform = EventForm(request.POST, request.FILES)
         if eventform.is_valid():
             eventform.save(request)
             messages.add_message(request, messages.WARNING,
@@ -89,7 +89,7 @@ def edit_event(request, event_id):
         The user can edit the event if he/she is the host of it
         """
         if request.POST:
-            eventform = EventForm(request.POST)
+            eventform = EventForm(request.POST, request.FILES, instance=event)
             if eventform.is_valid():
                 eventform.save(request)
                 send_eventchange_mail(event_id)
