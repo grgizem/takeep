@@ -15,7 +15,7 @@ from apps.event.models import Event, Participant
 def events(request):
     all_events = Event.objects.filter(
         status="O").select_related()
-    paginator = Paginator(all_events, 10)
+    paginator = Paginator(all_events, 8)
     try:
         page = int(request.GET.get('page','1'))
     except ValueError:
@@ -31,7 +31,7 @@ def events(request):
 def past_events(request):
     all_events = Event.objects.filter(
         status="C").select_related()
-    paginator = Paginator(all_events, 10)
+    paginator = Paginator(all_events, 8)
     try:
         page = int(request.GET.get('page','1'))
     except ValueError:
