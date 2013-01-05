@@ -82,7 +82,15 @@
         <div class="span9">
           
             {% block title %}{% endblock %}
-
+        {% if messages %}
+          <div class="alert alert-info">
+            <ul>
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+  {% endif %}
         {% block content %}{% endblock %}
     </div>
    </div>
