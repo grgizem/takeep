@@ -12,6 +12,10 @@ from apps.event.forms import EventForm, EventReportForm
 from apps.event.models import Event, Participant
 
 
+def index(request):
+    return render(request, 'index.html')
+
+
 def events(request):
     """
     Shows all open events with pagination
