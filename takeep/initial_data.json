@@ -1033,13 +1033,13 @@
         "model": "event.event",
         "fields": {
             "status": "O",
-            "description": " Geveze & Zeliha Sunal : Neseli Masrapa",
+            "description": " Geveze - Zeliha Sunal : Neseli Masrapa",
             "tags": "",
             "start_time": "2013-01-25T21:00:00",
-            "title": " Geveze & Zeliha Sunal : Neseli Masrapa",
+            "title": " Geveze - Zeliha Sunal : Neseli Masrapa",
             "host": 1,
             "location": 42,
-            "banner": "events/ Geveze & Zeliha Sunal : Neseli Masrapa/zeliha_geveze.jpg",
+            "banner": "events/ Geveze - Zeliha Sunal : Neseli Masrapa/zeliha_geveze.jpg",
             "is_private": false,
             "end_time": "2013-01-25T00:00:00"
         }
