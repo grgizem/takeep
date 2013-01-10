@@ -154,3 +154,7 @@ LOGGING = {
         },
     }
 }
+
+
+# Tastypie 3rd party app options:
+TASTYPIE_FULL_DEBUG = True
