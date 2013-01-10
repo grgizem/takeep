@@ -677,6 +677,36 @@
         }
     },
     {
+        "pk": 43,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "02122512020",
+            "is_approved": true,
+            "name": "AFM Fitas",
+            "webpage": "http://www.afm.com.tr/",
+            "coordinates": "41.035835,28.983011",
+            "address": "Fitas Pasaj\u0131,  Istiklal Caddesi 24-26 Istanbul",
+            "banner": "organizations/AFM Fitas/afm.jpg",
+            "email": "",
+            "description": "Just below Taksim Square, this US-style multiplex has 11 screens, showing a mix of Hollywood hits, indie and Turkish film. The IF Festival takes place here early in the year."
+        }
+    },
+    {
+        "pk": 44,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "02163458798",
+            "is_approved": true,
+            "name": "Buddha Bar",
+            "webpage": "http://www.kadikoybuddha.com/",
+            "coordinates": "40.986675,29.026608",
+            "address": "Kadife Sokak 14/1,  Kad\u0131k\u00f6y",
+            "banner": "organizations/Buddha Bar/Buddha.jpg",
+            "email": "",
+            "description": "This popular student hangout on two floors issupplemented with a pleasant garden in summer. It gets busy early, with crowds turning up for passable Britpop and rock cover bands. The beer is cheap, the atmosphere convivial and relaxed."
+        }
+    },
+    {
         "pk": 3,
         "model": "event.event",
         "fields": {
@@ -1106,6 +1136,38 @@
             "banner": "events/Big Beats Big Times Vol.1/bigbeatsbigtimes.jpg",
             "is_private": false,
             "end_time": "2013-01-05T00:00:00"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "Launched in 2002, this slick, hugely popular event is run by the cinema chain AFM. The programming is distinctly right-on, with strands dedicated to digital, political, and gay/lesbian cinema, plus hardcore sex and violence. Try to book tickets in advance",
+            "tags": "",
+            "start_time": "2013-02-14T06:00:00",
+            "title": "IF AFM Independent Film Festival",
+            "host": 1,
+            "location": 43,
+            "banner": "events/IF AFM Independent Film Festival/if_istanbul_2012.jpg",
+            "is_private": false,
+            "end_time": "2013-02-24T18:00:00"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "First Saturday of every month ku-ng-fu in on the stage at Buddha Bar.",
+            "tags": "",
+            "start_time": "2013-02-02T22:00:00",
+            "title": "Kungfu",
+            "host": 1,
+            "location": 44,
+            "banner": "events/Kungfu/kungfu_n.jpg",
+            "is_private": false,
+            "end_time": "2013-02-03T02:30:00"
         }
     },
     {

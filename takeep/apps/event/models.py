@@ -33,7 +33,7 @@ class Event(models.Model):
     """
     The title of the event
     """
-    description = models.CharField(max_length='255')
+    description = models.CharField(max_length='500')
     """
     The description of the event
     """

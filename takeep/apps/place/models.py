@@ -6,7 +6,7 @@ class Place(models.Model):
     """
     The Name of the place.
     """
-    description = models.CharField("Description", max_length='255')
+    description = models.CharField("Description", max_length='500')
     """
     The Description of the place.
     """
