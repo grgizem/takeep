@@ -1,1 +1,1129 @@
-[{"pk": 2, "model": "place.place", "fields": {"phone_number": "", "is_approved": true, "name": "Arsen Lupen Bar", "webpage": "", "coordinates": "41.035887,28.981665", "address": "Istiklal cad. Ayhan Isik Sokak, Beyoglu", "banner": "organizations/Arsen Lupen Bar/218398_160_120.jpg", "email": "", "description": "Arsen Lupen is known for its friendly staff and relaxed atmosphere. This Taksim bar is a popular hangout for intellectuals and plays a range of alternative music from rock to punk, metal, indie and more."}}, {"pk": 3, "model": "place.place", "fields": {"phone_number": "212-4491725", "is_approved": true, "name": "Karga Bar", "webpage": "", "coordinates": "40.986799,29.026819", "address": "Kadife Sok. No: 16, Kadikoy - Asian side", "banner": "organizations/Karga Bar/187495_204_145.jpg", "email": "", "description": "Spread over four floors in an Addams Family-esque stone mansion, Karga ('Crow') is one of the Asian side's best loved bars."}}, {"pk": 4, "model": "place.place", "fields": {"phone_number": "216-3497363", "is_approved": true, "name": "Murphy's Dance Bar", "webpage": "", "coordinates": "40.978788,29.040415", "address": "Setur Marina B Iskelesi Ucu, Kalamis, Fenerbahce", "banner": "organizations/Murphy's Dance Bar/188104_239_211.jpg", "email": "", "description": "Set on the Kalamis marina on Istanbul's Asian side, Murphy's Dance Bar makes the most of its spectacular location."}}, {"pk": 5, "model": "place.place", "fields": {"phone_number": "2122927368", "is_approved": true, "name": "Babylon", "webpage": "http://www.babylon.com.tr/", "coordinates": "41.02969,28.97412", "address": "Seyhbender Sokak 3 Tunel-Asmalimescit T\u00fcnel, Asmalimescit Istanbul 80040 ", "banner": "organizations/Babylon/436562.jpeg", "email": "info@babylon.com.tr", "description": "Babylon, designed as a multipurpose performance space, is the premier award-winning live music venue in Turkey, that is offering both some of Turkey's most popular artists and some very special international bands and musicians at fairly reasonable rates."}}, {"pk": 6, "model": "place.place", "fields": {"phone_number": "212 3272844", "is_approved": true, "name": "Anjelique", "webpage": "http://www.anjelique.com.tr/", "coordinates": "41.04756, 29.02515", "address": "Muallim Naci Caddesi 10, Istanbul, Istanbul", "banner": "organizations/Anjelique/365x270.orig.01.jpg", "email": "", "description": "Chilled and summery, Anjelique revels in its majestic view of Bosphorus, something the mirrored interior only enhances. Though the upper floors house a pleasant dining area, in the main people come here to party."}}, {"pk": 7, "model": "place.place", "fields": {"phone_number": "2122314105", "is_approved": true, "name": "Biber Bar", "webpage": "http://www.biberbar.com/", "coordinates": "41.050716,28.99165", "address": "No 36 Harmantepe Mh., Abdi Ipekci Caddesi 3, Istanbul", "banner": "organizations/Biber Bar/365x270.orig.00.jpg", "email": "", "description": "With its tasteful modern design, the re-opened Biber Bar is located in one of Istanbul\u2019s smartest districts. The interior is sleek and contemporary with wood floors, bold wall art and a well-stocked bar; the perfect place, in fact, for an after-work drink"}}, {"pk": 8, "model": "place.place", "fields": {"phone_number": "212 2367256", "is_approved": true, "name": "Blackk", "webpage": "http://www.blackk.net/", "coordinates": "41.05073, 29.03233", "address": "Muallim Naci Caddesi 71, Istanbul", "banner": "organizations/Blackk/365x270.orig.00.jpg", "email": "", "description": "Given the name it\u2019s no real surprise that pretty much everything in this elegant Istanbul nightclub is black: floors, curtains, tables, seating (though there is art on the walls and pools of blue light to break up the monotony). "}}, {"pk": 9, "model": "place.place", "fields": {"phone_number": "212 2595919", "is_approved": true, "name": "Reina", "webpage": "http://www.reina.com.tr/", "coordinates": "41.051525,29.032302", "address": "Muallim Naci Caddesi 10 Ortak\u00f6y, Istanbul", "banner": "organizations/212 236 7256/365x270.orig.00.jpg", "email": "", "description": "Reina is less of a club than a vast entertainment emporium that includes several bars, restaurants and dance floors that can accommodate more than 2500 people. "}}, {"pk": 10, "model": "place.place", "fields": {"phone_number": "212 3582929", "is_approved": true, "name": "Ulus 29", "webpage": "http://www.group-29.com/", "coordinates": "41.06470, 29.03217", "address": "Adnan Saygun Cad, Ulus Parki Ici 1, Istanbul", "banner": "organizations/Ulus 29/365x270.orig.01.jpg", "email": "", "description": "Ulus 29 has become a fixture amid Istanbul's rapidly changing nightlife scene. This place is here for keeps. Blessed with a superb location on the hilltop of Ulus, the venue boasts nigh-on unbeatable views of the Bosphorus."}}, {"pk": 11, "model": "place.place", "fields": {"phone_number": "212 2274404", "is_approved": true, "name": "Vogue", "webpage": "http://www.voguerestaurant.com/", "coordinates": "41.043886,29.00166", "address": "Spor Caddesi, BJK Plaza A Blok Kat:13 Akaretler, Istanbul", "banner": "organizations/Vogue/365x270.orig.00.jpg", "email": "", "description": "Open for over a decade now, Vogue remains one of Istanbul's coolest destinations. The view of the Bosphorous is one of its chief attractions, but far from the only one, its sushi bar is also a big draw. "}}, {"pk": 12, "model": "place.place", "fields": {"phone_number": "531-3848080", "is_approved": true, "name": "Bronx Pi Sahne", "webpage": "", "coordinates": "41.03099,28.97545", "address": "Terkoz \u00c7k. No:8, T\u00fcnel - Asmalimescit", "banner": "organizations/Bronx Pi Sahne/188071_244_134.jpg", "email": "", "description": "Bronx Pi Sahne regularly hosts big local and international music acts, theatrical and dance performances, workshops and film screenings. This multi-purpose venue is part of the Kafe Pi Group."}}, {"pk": 13, "model": "place.place", "fields": {"phone_number": "212-2449147", "is_approved": true, "name": "Dogzstar", "webpage": "", "coordinates": "41.03360,28.97846", "address": "Kartal Sok. No:3, Kat:3, Galatasaray", "banner": "organizations/Dogzstar/187491_150_150.jpg", "email": "", "description": "Opened in 2004, Dogzstar has been welcoming local and international artists, writers, musicians and music appreciators ever since. This alternative arts and music venue boasts new technical equipment, architectural and acoustic design. "}}, {"pk": 14, "model": "place.place", "fields": {"phone_number": "212-2432927", "is_approved": true, "name": "Mojo", "webpage": "", "coordinates": "41.03481,28.98245", "address": "B\u00fcy\u00fckparmakkapi Sok. No: 26, Beyoglu", "banner": "organizations/Mojo/187892_204_145.jpg", "email": "", "description": "Hosting a wide range of jazz, blues, rock and more, Mojo Live Music Bar Istanbul has been up and running since 1997. Open Wednesdays, Thursdays, Fridays and Saturdays, entrance prices range between 10 and 25 Lira depending on the day of the week."}}, {"pk": 15, "model": "place.place", "fields": {"phone_number": "212-2520694", "is_approved": true, "name": "Line Music Club", "webpage": "", "coordinates": "41.03465,28.98258", "address": "B\u00fcy\u00fckparmakkapi Sok. No:14/A, Taksim", "banner": "organizations/Line Music Club/187626_96_49.jpg", "email": "", "description": "Offering up a feast of live music each evening, Line Music Club in Taksim is a great place to see bands in action on weekdays when entrance is free."}}, {"pk": 16, "model": "place.place", "fields": {"phone_number": "2122444499", "is_approved": true, "name": "Garajistanbul", "webpage": "", "coordinates": "41.03239,28.97738", "address": "Tomtom Mahallesi Yenicarsi Caddesi Kaymakam Resat , Galatasaray", "banner": "organizations/Garajistanbul/71837_638_365.jpg", "email": "info@garajistanbul.org", "description": "An open-minded, progressive collective of artists turned this old garage located on the backstreets of the Galatasaray district into a non-profit space dedicated for every kind of aesthetic manifestation."}}, {"pk": 17, "model": "place.place", "fields": {"phone_number": "212-2448736", "is_approved": true, "name": "The Hall Istanbul", "webpage": "", "coordinates": "41.03537,28.97926", "address": "K\u00fcc\u00fckbayram Sok. No:7, Beyoglu", "banner": "organizations/The Hall Istanbul/187821_200_302.jpg", "email": "", "description": "Set inside a beautiful historic church, The Hall is Istanbul's alternative performance centre, hosting a variety of performances, parties, exhibitions, wokrshops and more."}}, {"pk": 18, "model": "place.place", "fields": {"phone_number": "", "is_approved": true, "name": " Haymatlos Bar and Performance Venue", "webpage": "", "coordinates": "41.03554, 28.98101", "address": "Rumeli Han C Blok, No:96 Kat:2, Istiklal Street", "banner": "organizations/ Haymatlos Bar and Performance Venue/216061_677_450.jpg", "email": "", "description": "Haymatlos is one of Istiklal Street's best kept nightlife secrets. Tucked away down a dark passage, this large venue hosts regular rock, R&B, jazz and ethnic music concerts."}}, {"pk": 19, "model": "place.place", "fields": {"phone_number": "212-3117309", "is_approved": true, "name": "Tamirane", "webpage": "", "coordinates": "41.07013, 28.94616", "address": "Eski Silahtaraga Elektrik Santrali, Kazim Karabekir Cad. No: 2/8 , Eyup", "banner": "organizations/Tamirane/187953_177_147.jpg", "email": "", "description": "Set inside an old warehouse on Istanbul's Golden Horn. Tamirane is one of the city's most unique venues.Tamirane is part of Santral Istanbul, a contemporary arts, culture and education centre which is home to a scattering of restaurants, bars and a museum"}}, {"pk": 20, "model": "place.place", "fields": {"phone_number": "212-2456070", "is_approved": true, "name": "Nu Pera", "webpage": "", "coordinates": "41.03152, 28.97474", "address": "Mesrutiyet Cad. No:67 , Beyoglu", "banner": "organizations/Nu Pera/187487_128_88.jpg", "email": "", "description": "Voted one of the World's Best Bars, Nu Pera is actually a complex of dining and entertainment venues."}}, {"pk": 21, "model": "place.place", "fields": {"phone_number": "", "is_approved": true, "name": "Jolly Joker Balans", "webpage": "", "coordinates": "41.03497, 28.97837", "address": "Istiklal cad. Balo Sokak 22, Istiklal Street", "banner": "organizations/Jolly Joker Balans/437371_404_604.jpg", "email": "", "description": "This multi-storey pub hosts a range of live music acts including rock, pop, metal and indie, and DJ's also feature. This unique bar is lined with artwork and jesters. The upstairs balcony, with glass floor and seating, is popular."}}, {"pk": 22, "model": "place.place", "fields": {"phone_number": "", "is_approved": true, "name": "Araf Cafe Bar", "webpage": "", "coordinates": "41.03533, 28.97835", "address": "Istiklal Caddesi Balo Sokak no:32, Istiklal Street", "banner": "organizations/Araf Cafe Bar/238446_500_375.jpg", "email": "", "description": "Araf, named after the mythical land between heaven and hell- purgatory- is a busy and popular nightlife spot favoured by Istanbul\u2019s expat community as well as its locals."}}, {"pk": 23, "model": "place.place", "fields": {"phone_number": "", "is_approved": true, "name": "360 Istanbul", "webpage": "", "coordinates": "41.03230,28.97639", "address": "Istiklal Cad. Misir Apart. K.8 F311, Istiklal Street", "banner": "organizations/360 Istanbul/244616_485_376.jpg", "email": "", "description": "360 Istanbul enjoys a 360 degree panoramic view of the city, the Marmara Sea, Bosphorus and the Golden Horn . This funkily-decorated glass penthouse, located on the top of a 19th century apartment block, contains a restaurant, bar and gallery."}}, {"pk": 24, "model": "place.place", "fields": {"phone_number": "", "is_approved": true, "name": "Sortie Nightclub", "webpage": "", "coordinates": "41.05214,29.03375", "address": "Muallim Naci Cad. 141, Kurucesme", "banner": "organizations/Sortie Nightclub/214657_500_345.jpg", "email": "", "description": "Sortie is home to a variety of swanky restaurants serving world cuisine alongside the pumping nightclub. This popular Ortakoy nightlife venue is only open during the summer months. Sortie is open from 6pm - 4am every day."}}, {"pk": 25, "model": "place.place", "fields": {"phone_number": "212-2423813", "is_approved": true, "name": "Sadberk Hanim Museum", "webpage": "", "coordinates": "41.16299,29.04767", "address": "B\u00fcy\u00fckdere Piyasa Cad. No: 27- 29, Sariyer", "banner": "organizations/Sadberk Hanim Museum/305611_588_435.jpg", "email": "shm@mail.koc.net", "description": "This privately owned museum is dedicated to the late wife of Vehbi Koc, the self-made founder of the Koc dynasty, one of the wealthiest families in Turkey (who are also responsible for the Rahmi Koc Museum) . "}}, {"pk": 26, "model": "place.place", "fields": {"phone_number": "212-2927236", "is_approved": true, "name": "Gallery Apel", "webpage": "", "coordinates": "41.03185,28.97993", "address": "Hayriye Cad. No:5A, Galatasaray", "banner": "organizations/Gallery Apel/126725_220_175.jpg", "email": "info@galleryapel.com", "description": "Established in 1998 by the former gallery director of Ankara Tanbay and Urart Art Galleries, Mrs. Nuran Terzioglu, Gallery Apel Istanbul houses a noteworthy collection of Turkish, Ottoman and international art works."}}, {"pk": 27, "model": "place.place", "fields": {"phone_number": "212-2927605", "is_approved": true, "name": "SALT", "webpage": "http://saltonline.org/tr/anasayfa", "coordinates": "41.03215,28.97628", "address": "Istiklal Cad. No:136, Istiklal Street", "banner": "organizations/SALT/126693_414_300.jpg", "email": "salt@saltonline.org", "description": "Opened on April 9, 2011, SALT is a not-for-profit organisation founded by Garanti Bank.Welcoming a wide range of fields including art, architecture, urbanism, design and economic and social history, SALT assembles a variety of archives for research "}}, {"pk": 28, "model": "place.place", "fields": {"phone_number": "212-3347300", "is_approved": true, "name": "Istanbul Modern - Museum of Modern Art", "webpage": "", "coordinates": "41.02645,28.98418", "address": "Meclis-i Mebusan Cad. Antrepo No:4, Tophane", "banner": "organizations/Istanbul Modern - Museum of Modern Art/238103_500_333.jpg", "email": "info@istanbulmodern.org", "description": "In a city that prides itself on its history, Istanbul Modern is a refreshing alternative for those who want to see a piece of the \u2018new Istanbul.\u2019"}}, {"pk": 29, "model": "place.place", "fields": {"phone_number": "212-2447770", "is_approved": true, "name": " Dogancay Museum", "webpage": "http://www.dogancaymuseum.org/", "coordinates": "41.03570,28.97834", "address": "Istiklal cad. Balo Sok. no. 42, Istiklal Street", "banner": "organizations/ Dogancay Museum/26842_150_100.jpg", "email": "", "description": "Dogancay Museum, opened in 2004, was the first modern art museum in Turkey. It houses an extensive collection of art from father-son team Adil and Burhan Dogancay. The Museum is housed inside a 150-year old building just off Istiklal Street."}}, {"pk": 30, "model": "place.place", "fields": {"phone_number": "", "is_approved": true, "name": " Taksim Park", "webpage": "", "coordinates": "41.03764,28.98672", "address": "Taksim", "banner": "organizations/ Taksim Park/208086_645_430.jpg", "email": "", "description": "Situated right next to Taksim Square, Taksim Park is a small city park.It's certainly not the best park in town, but it's a nice place to take a breath of fresh air in the middle of crowded Taksim. Exhibitions & concerts take place here from time to time."}}, {"pk": 31, "model": "place.place", "fields": {"phone_number": "212-2963652", "is_approved": true, "name": "Harbiye Cemil Topuzlu Open Air Theatre", "webpage": "", "coordinates": "41.04599, 28.98987", "address": "Harbiye", "banner": "organizations/Harbiye Cemil Topuzlu Open Air Theatre/329595_490_308.jpg", "email": "", "description": "For a summer\u2019s night out to remember, head to the Cemil Topuzlu Open Air Theatre, a modern take on an ancient style amphitheatre. This stunning venue with tiered seating hosts a wide variety of musical and cultural performances during the warmer months. "}}, {"pk": 32, "model": "place.place", "fields": {"phone_number": "212-2315497", "is_approved": true, "name": "Cemal Resit Rey (CRR) Concert Hall", "webpage": "", "coordinates": "41.04690,28.98930", "address": "Dar\u00fclbedayi Cad., Harbiye", "banner": "organizations/Cemal Resit Rey (CRR) Concert Hall/453340_254_191.jpg", "email": "", "description": "Cemal Resit Rey is one of the main concert halls in Istanbul with seating capacity for 850 people. Its close proximity to Taksim Square makes it a popular venue. A wide range of concerts are held here, from classical performances to Turkish folk or Blues."}}, {"pk": 33, "model": "place.place", "fields": {"phone_number": "212-2313045", "is_approved": true, "name": "Kucukciftlik Park", "webpage": "http://kucukciftlikpark.com/", "coordinates": "41.04421,28.99225", "address": "Kadirgalar yokusu no:4, Macka", "banner": "organizations/Kucukciftlik Park/329602_599_242.jpg", "email": "info@kucukciftlikpark.com", "description": "Die-hard music fans take note: this open air park situated in the very heart of the city is one of the best places to experience a gig in Istanbul. "}}, {"pk": 34, "model": "place.place", "fields": {"phone_number": "212-2866686", "is_approved": true, "name": "Turker Inanoglu Maslak(TIM) Show Centre", "webpage": "", "coordinates": "41.12689,29.02652", "address": "B\u00fcy\u00fckdere Caddesi Derbent Mevkii , Maslak", "banner": "organizations/Turker Inanoglu Maslak(TIM) Show Centre/203825_454_248.jpg", "email": "", "description": "Turker Inanoglu Maslak (TIM) Show Centre in Maslak offers a range of venue options including a Grand Hall seating 1810, another theatre hall with capacity for 380, five meeting rooms suitable for small meetings and workshops and five movie theatres."}}, {"pk": 35, "model": "place.place", "fields": {"phone_number": "212-3363280", "is_approved": true, "name": "Borusan Kultur Sanat", "webpage": "http://www.borusansanat.com/default.aspx", "coordinates": "41.03038,28.97554", "address": "Orhan Adli Apaydin Sokak No:1, Istiklal Street", "banner": "organizations/Borusan Kultur Sanat/210423_650_432.jpg", "email": "", "description": "Offering a multi-purpose arts space at the centre of Beyoglu, Borusan Music & Art House is located inside a beautifully restored 19th century building. "}}, {"pk": 36, "model": "place.place", "fields": {"phone_number": "", "is_approved": true, "name": "Atat\u00fcrk Cultural Centre", "webpage": "", "coordinates": "41.03680,28.98753", "address": "Taksim", "banner": "organizations/Ataturk Cultural Centre/329591_500_333.jpg", "email": "", "description": "Situated at the centre of all the action in Taksim Square, there are few easier and cheaper ways to get a bit of culture in Istanbul than at the Ataturk Cultural Centre (AKM)."}}, {"pk": 37, "model": "place.place", "fields": {"phone_number": "212-2633983", "is_approved": true, "name": "Turkcell Kurucesme Arena", "webpage": "", "coordinates": "41.05622,29.03539", "address": "Muallim Naci Cad. No:60, Kurucesme", "banner": "organizations/Turkcell Kurucesme Arena/329553_800_416.jpg", "email": "bkm@bkmonline.ne", "description": "With some of the best live acts around and an even better view of the Bosphorus, what better way to fend off the balmy summer heat than to see a concert at the Kurucesme Arena. "}}, {"pk": 38, "model": "place.place", "fields": {"phone_number": "", "is_approved": true, "name": "Sureyya Opera House", "webpage": "http://www.sureyyaoperasi.org/", "coordinates": "40.994411,29.030571", "address": "Bahariye Cad., Kadikoy - Asian side", "banner": "organizations/ Sureyya Opera House/329561_657_498.jpg", "email": "", "description": "Though perhaps not usually associated with Turkey, opera is nevertheless alive and well at Kadikoy\u2019s Surreya Opera House, offering up an enchanting array of musical treats in the heart of Istanbul\u2019s Asian side."}}, {"pk": 39, "model": "place.place", "fields": {"phone_number": "212-3161083", "is_approved": true, "name": "IS Sanat Arts and Culture Centre", "webpage": "", "coordinates": "41.08294,29.01102", "address": "Is Kuleleri 34330, Levent", "banner": "organizations/Is Sanat Arts and Culture Centre/210432_613_296.jpg", "email": "", "description": "Is Sanat is located inside the Isbank Towers. This beautiful venue regularly hosts classical music, jazz and traditional Turkish music performances as well as plays and poetry readings."}}, {"pk": 40, "model": "place.place", "fields": {"phone_number": "", "is_approved": true, "name": " Besiktas Kultur Merkezi", "webpage": "", "coordinates": "41.043249,29.006135", "address": "Sinanpasa Mah. Hasfirin Cad. No:75     Besiktas / Istanbul", "banner": "organizations/ Besiktas K\u00fclt\u00fcr Merkezi/BK.jpg", "email": "", "description": "The foremost centre for arts and culture in Istanbul, BKM was founded on the grounds of historic Mistik Theatre, in 1994, and by the initiatives of producer Necati Akpinar and actor/author Yilmaz Erdogan. "}}, {"pk": 41, "model": "place.place", "fields": {"phone_number": "", "is_approved": true, "name": "Mask Live Music Club", "webpage": "", "coordinates": "40.982619,28.736304", "address": "     Istiklal Cad. Bekar Sok. No: 10     TAKSIM / Istanbul", "banner": "organizations/Mask Live Music Club/GB.jpg", "email": "", "description": "Mask Live Music Club"}}, {"pk": 42, "model": "place.place", "fields": {"phone_number": "", "is_approved": true, "name": "Olimpia Event Hall", "webpage": "", "coordinates": "41.033981,28.976598", "address": "     Istiklal Cad. Acara Sok. No: 2 ( next to the Yapi Kredi K\u00fclt\u00fcr Merkezi)     GALATASARAY / Istanbul", "banner": "organizations/Olimpia Event Hall/XF.jpg", "email": "", "description": "Located centrally in Galatasaray, Taksim, Hakan K\u00fcf\u00fcnd\u00fcr's Olimpa organizes various party nights with themes ranging from 90s-parties to Gypsy music."}}][{"pk": 1, "model": "accounts.userprofile", "fields": {"bio": null, "gender": null, "address": null, "birthdate": null, "location": null, "photo": "", "user": 1}}, {"pk": 2, "model": "accounts.userprofile", "fields": {"bio": null, "gender": null, "address": null, "birthdate": null, "location": null, "photo": "", "user": 2}}][{"pk": 3, "model": "event.event", "fields": {"status": "O", "description": "Hassan Khan will be in Istanbul on January 03, 2013.", "tags": "", "start_time": "2013-01-03T06:00:00", "title": "Hassan Khan in Istanbul", "host": 1, "location": 33, "banner": "events/Hassan Khan in Istanbul/197488.Logo.20121222-134801.jpg", "is_private": false, "end_time": "2013-01-10T12:00:00"}}, {"pk": 4, "model": "event.event", "fields": {"status": "O", "description": "The Istanbul Modern will be presenting an anthology of portrait photography from the Bank of America private collection.", "tags": "", "start_time": "2012-10-03T12:00:00", "title": "Gaze - Changing Face of Portrait Photography", "host": 1, "location": 28, "banner": "events/Gaze - Changing Face of Portrait Photography/189212.Logo.20120823-195559.jpg", "is_private": false, "end_time": "2013-01-20T12:00:00"}}, {"pk": 5, "model": "event.event", "fields": {"status": "O", "description": "Better known as the lead singer of British Indie-Rock band Interpol, Paul Banks will be presenting his new solo project for two nights at Babylon.", "tags": "", "start_time": "2013-02-14T12:00:00", "title": "Paul Banks", "host": 1, "location": 5, "banner": "events/Paul Banks/191359.Logo.20120921-153752.jpg", "is_private": false, "end_time": "2013-02-15T06:00:00"}}, {"pk": 6, "model": "event.event", "fields": {"status": "C", "description": "Lenny Kravitz is getting ready to give one of the most memorable concerts of this autumn in Istanbul.", "tags": "", "start_time": "2012-10-04T21:00:00", "title": "Lenny Kravitz in Istanbul", "host": 1, "location": 37, "banner": "events/Lenny Kravitz in Istanbul/lenny-kravitz-212-266.jpg", "is_private": false, "end_time": "2012-10-05T06:00:00"}}, {"pk": 7, "model": "event.event", "fields": {"status": "O", "description": "SLASH Feat. Myles Kennedy & The Conspirators to perform at K\u00fcc\u00fckciftlik Park, Istanbul on February 2, 2012 Renowned as one of the best guitar players in Rock history, Slash will be performing in Istanbul on February 2nd 2012 with his new project.", "tags": "", "start_time": "2013-02-02T18:00:00", "title": "Slash Featuring Myles Kennedy and The Conspirators", "host": null, "location": 33, "banner": "events/Slash Featuring Myles Kennedy and The Conspirators/slash.jpg", "is_private": false, "end_time": "2013-02-02T00:00:00"}}, {"pk": 8, "model": "event.event", "fields": {"status": "O", "description": "Due to the overwhelming demand stand up comedian Tolga \u00c7evik is back on stage with his new show. ", "tags": "", "start_time": "2013-01-03T12:00:00", "title": "Tolga Cevik Komedi Dukkani - Arkadasim Hosgeldin", "host": 1, "location": 40, "banner": "events/Tolga Cevik Komedi Dukkani - Arkadasim Hosgeldin/tolgacevik_kd.jpg", "is_private": false, "end_time": "2013-01-22T12:00:00"}}, {"pk": 9, "model": "event.event", "fields": {"status": "O", "description": "Depeche Mode", "tags": "", "start_time": "2013-05-17T12:00:00", "title": "Depeche Mode", "host": 1, "location": 33, "banner": "events/Depeche Mode/depeche_mode_02.jpg", "is_private": false, "end_time": "2013-05-17T00:00:00"}}, {"pk": 10, "model": "event.event", "fields": {"status": "O", "description": "Russian-Canadian musician Chinawoman has a meeting with her fans on January 9 and 10 with the support of Radyo Eksen.. ", "tags": "", "start_time": "2013-01-09T12:00:00", "title": "Chinawoman", "host": 1, "location": 5, "banner": "events/Chinawoman/ScaleAndCrop.aspx.png", "is_private": false, "end_time": "2013-01-10T00:00:00"}}, {"pk": 11, "model": "event.event", "fields": {"status": "C", "description": " Carrying 20s\u2019 and 30s\u2019 soul to the modern world, Tobumusikizm is inviting you to share the fun with its wide electro-swing records! ", "tags": "", "start_time": "2013-01-04T22:00:00", "title": "Electro Swing Party", "host": null, "location": 5, "banner": "events/Electro Swing Party/ScaleAndCrop.aspx.png", "is_private": false, "end_time": "2013-01-05T06:00:00"}}, {"pk": 12, "model": "event.event", "fields": {"status": "O", "description": "All the way from Florida, the pop punk and alternative rock band Yellowcard will perform in Turkey for the first time at Babylon for two consecutive nights on 6th and 7th of February!", "tags": "", "start_time": "2013-02-06T20:30:00", "title": "Yellowcard", "host": 1, "location": 5, "banner": "events/Yellowcard/ScaleAndCrop.aspx.png", "is_private": false, "end_time": "2013-01-17T00:00:00"}}, {"pk": 13, "model": "event.event", "fields": {"status": "O", "description": "Malt at Bronx Pi Sahne ", "tags": "", "start_time": "2013-01-05T23:30:00", "title": "Malt", "host": 1, "location": 12, "banner": "events/Malt/malt-bronx.jpg", "is_private": false, "end_time": "2013-01-06T06:00:00"}}, {"pk": 14, "model": "event.event", "fields": {"status": "C", "description": "GROOVE OLDIES PARTY  Canli Grup SOUL SENSATION  ", "tags": "", "start_time": "2013-01-04T22:00:00", "title": "Soul Sensation", "host": 1, "location": 12, "banner": "events/Soul Sensation/349_dilan.jpg", "is_private": false, "end_time": "2013-01-04T00:00:00"}}, {"pk": 15, "model": "event.event", "fields": {"status": "O", "description": "Gurcan Ersoy", "tags": "", "start_time": "2013-01-11T22:00:00", "title": "Gurcan Ersoy", "host": 1, "location": 12, "banner": "events/Gurcan Ersoy/332_1101-rsoy-Background-1360x750.jpg", "is_private": false, "end_time": "2013-01-11T00:00:00"}}, {"pk": 16, "model": "event.event", "fields": {"status": "O", "description": "Flort", "tags": "", "start_time": "2013-01-19T22:00:00", "title": "Flort", "host": 1, "location": 12, "banner": "events/Flort/334_1901-Flort-Background-1360x750.jpg", "is_private": false, "end_time": "2013-01-19T00:00:00"}}, {"pk": 17, "model": "event.event", "fields": {"status": "O", "description": "MxPx - Second - Dinamit", "tags": "", "start_time": "2013-03-17T22:00:00", "title": "MxPx - Second - Dinamit", "host": 1, "location": 14, "banner": "events/MxPx - Second - Dinamit/mxpx.jpg", "is_private": false, "end_time": "2013-03-18T06:00:00"}}, {"pk": 18, "model": "event.event", "fields": {"status": "C", "description": "Iskender Paydas", "tags": "", "start_time": "2013-01-04T00:00:00", "title": "Iskender Paydas", "host": 1, "location": 41, "banner": "events/Iskender Paydas/iskender_paydas.jpg", "is_private": false, "end_time": "2013-01-05T06:00:00"}}, {"pk": 19, "model": "event.event", "fields": {"status": "O", "description": "\u00d6zge", "tags": "", "start_time": "2013-01-12T22:00:00", "title": "Ozge", "host": 1, "location": 41, "banner": "events/Ozge/ozge.jpg", "is_private": false, "end_time": "2013-01-13T02:00:00"}}, {"pk": 20, "model": "event.event", "fields": {"status": "O", "description": "Eski Bando", "tags": "", "start_time": "2013-01-11T22:30:00", "title": "Eski Bando", "host": 1, "location": 16, "banner": "events/Eski Bando/eski_bando.jpg", "is_private": false, "end_time": "2013-01-12T03:00:00"}}, {"pk": 21, "model": "event.event", "fields": {"status": "O", "description": "Orient Expressions", "tags": "", "start_time": "2013-01-26T22:00:00", "title": "Orient Expressions", "host": 1, "location": 16, "banner": "events/Orient Expressions/OrientExpressions.jpg", "is_private": false, "end_time": "2013-01-27T06:00:00"}}, {"pk": 22, "model": "event.event", "fields": {"status": "O", "description": "Alex Metric", "tags": "", "start_time": "2013-01-05T22:00:00", "title": "Alex Metric", "host": 1, "location": 17, "banner": "events/Alex Metric/alex_metric.jpg", "is_private": false, "end_time": "2013-01-06T02:00:00"}}, {"pk": 23, "model": "event.event", "fields": {"status": "O", "description": "  Australian drum and bass master Pendulum who was the headline of many important festivals of the worl incluiding Glastonbury will be at Turkey for the first time. Get your tickets to join this concert now!", "tags": "", "start_time": "2013-01-19T22:00:00", "title": "Pendulum DJ Set + MC Verse", "host": 1, "location": 17, "banner": "events/Pendulum DJ Set + MC Verse/pendulum_01.jpg", "is_private": false, "end_time": "2013-01-20T06:00:00"}}, {"pk": 24, "model": "event.event", "fields": {"status": "C", "description": "Amy Winehouse Tribute", "tags": "", "start_time": "2013-01-03T21:30:00", "title": "Amy Winehouse Tribute", "host": 1, "location": 42, "banner": "events/Amy Winehouse Tribute/ammy_merve_tribute.jpg", "is_private": false, "end_time": "2013-01-03T00:00:00"}}, {"pk": 25, "model": "event.event", "fields": {"status": "O", "description": " Geveze & Zeliha Sunal : Neseli Masrapa", "tags": "", "start_time": "2013-01-25T21:00:00", "title": " Geveze & Zeliha Sunal : Neseli Masrapa", "host": 1, "location": 42, "banner": "events/ Geveze & Zeliha Sunal : Neseli Masrapa/zeliha_geveze.jpg", "is_private": false, "end_time": "2013-01-25T00:00:00"}}, {"pk": 26, "model": "event.event", "fields": {"status": "C", "description": "Cem Adrian", "tags": "", "start_time": "2013-01-03T22:00:00", "title": "Cem Adrian", "host": 1, "location": 21, "banner": "events/Cem Adrian/cem_adrian_yeni.jpg", "is_private": false, "end_time": "2013-01-03T00:00:00"}}, {"pk": 27, "model": "event.event", "fields": {"status": "O", "description": "Rock band Gripin, started off together in 1999 playing mostly cover at bars not only included Britpop, but also featured examples of American Alternative rock. They had a considerably huge group of fans before they even released an album.", "tags": "", "start_time": "2013-01-12T22:00:00", "title": "Gripin", "host": 1, "location": 21, "banner": "events/Gripin/gripin_jollyjoker.jpg", "is_private": false, "end_time": "2013-01-12T00:00:00"}}, {"pk": 28, "model": "event.event", "fields": {"status": "O", "description": "Cheerful, alive and rhythmic\u2026Get ready for a splendid musical journey with one of the world\u2019s foremost jazz vocalists, Kurt Elling and Istanbul Superband, one of the the most privileged Big Bands of Turkey. ", "tags": "", "start_time": "2013-03-24T20:00:00", "title": "Kurt Elling & Istanbul Superband", "host": 1, "location": 39, "banner": "events/Kurt Elling & Istanbul Superband/kurt_elling.jpg", "is_private": false, "end_time": "2013-03-24T00:00:00"}}, {"pk": 29, "model": "event.event", "fields": {"status": "C", "description": "Big Beats Big Times Vol.1", "tags": "", "start_time": "2013-01-05T21:30:00", "title": "Big Beats Big Times Vol.1", "host": 1, "location": 35, "banner": "events/Big Beats Big Times Vol.1/bigbeatsbigtimes.jpg", "is_private": false, "end_time": "2013-01-05T00:00:00"}}, {"pk": 2, "model": "event.participant", "fields": {"is_approved": true, "event": 5, "guest": 1}}, {"pk": 3, "model": "event.participant", "fields": {"is_approved": true, "event": 10, "guest": 1}}]
+[
+    {
+        "pk": 1,
+        "model": "auth.user",
+        "fields": {
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": true,
+            "is_staff": true,
+            "last_login": "2013-01-10T18:54:31.070",
+            "groups": [],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$0URQp6RArVEv$bJoJYzdzz6dsAwBPhAEP/q6X7wl5KOQCW83Uc+I8SwA=",
+            "email": "admin@admin.com",
+            "date_joined": "2013-01-01T23:54:15.621"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "auth.user",
+        "fields": {
+            "username": "test1",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": false,
+            "is_staff": false,
+            "last_login": "2013-01-01T23:55:03.083",
+            "groups": [],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$n6Ve4uvYbAdT$XVag+4DaMsp4fZW49fstHbdHLg8IPGvg6T2q+I2rjjc=",
+            "email": "",
+            "date_joined": "2013-01-01T23:55:03.083"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "accounts.userprofile",
+        "fields": {
+            "bio": null,
+            "gender": null,
+            "address": null,
+            "birthdate": null,
+            "location": null,
+            "photo": "",
+            "user": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "accounts.userprofile",
+        "fields": {
+            "bio": null,
+            "gender": null,
+            "address": null,
+            "birthdate": null,
+            "location": null,
+            "photo": "",
+            "user": 2
+        }
+    },
+    {
+        "pk": 2,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "",
+            "is_approved": true,
+            "name": "Arsen Lupen Bar",
+            "webpage": "",
+            "coordinates": "41.035887,28.981665",
+            "address": "Istiklal cad. Ayhan Isik Sokak, Beyoglu",
+            "banner": "organizations/Arsen Lupen Bar/218398_160_120.jpg",
+            "email": "",
+            "description": "Arsen Lupen is known for its friendly staff and relaxed atmosphere. This Taksim bar is a popular hangout for intellectuals and plays a range of alternative music from rock to punk, metal, indie and more."
+        }
+    },
+    {
+        "pk": 3,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-4491725",
+            "is_approved": true,
+            "name": "Karga Bar",
+            "webpage": "",
+            "coordinates": "40.986799,29.026819",
+            "address": "Kadife Sok. No: 16, Kadikoy - Asian side",
+            "banner": "organizations/Karga Bar/187495_204_145.jpg",
+            "email": "",
+            "description": "Spread over four floors in an Addams Family-esque stone mansion, Karga ('Crow') is one of the Asian side's best loved bars."
+        }
+    },
+    {
+        "pk": 4,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "216-3497363",
+            "is_approved": true,
+            "name": "Murphy's Dance Bar",
+            "webpage": "",
+            "coordinates": "40.978788,29.040415",
+            "address": "Setur Marina B Iskelesi Ucu, Kalamis, Fenerbahce",
+            "banner": "organizations/Murphy's Dance Bar/188104_239_211.jpg",
+            "email": "",
+            "description": "Set on the Kalamis marina on Istanbul's Asian side, Murphy's Dance Bar makes the most of its spectacular location."
+        }
+    },
+    {
+        "pk": 5,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "2122927368",
+            "is_approved": true,
+            "name": "Babylon",
+            "webpage": "http://www.babylon.com.tr/",
+            "coordinates": "41.02969,28.97412",
+            "address": "Seyhbender Sokak 3 Tunel-Asmalimescit T\u00fcnel, Asmalimescit Istanbul 80040 ",
+            "banner": "organizations/Babylon/436562.jpeg",
+            "email": "info@babylon.com.tr",
+            "description": "Babylon, designed as a multipurpose performance space, is the premier award-winning live music venue in Turkey, that is offering both some of Turkey's most popular artists and some very special international bands and musicians at fairly reasonable rates."
+        }
+    },
+    {
+        "pk": 6,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212 3272844",
+            "is_approved": true,
+            "name": "Anjelique",
+            "webpage": "http://www.anjelique.com.tr/",
+            "coordinates": "41.04756, 29.02515",
+            "address": "Muallim Naci Caddesi 10, Istanbul, Istanbul",
+            "banner": "organizations/Anjelique/365x270.orig.01.jpg",
+            "email": "",
+            "description": "Chilled and summery, Anjelique revels in its majestic view of Bosphorus, something the mirrored interior only enhances. Though the upper floors house a pleasant dining area, in the main people come here to party."
+        }
+    },
+    {
+        "pk": 7,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "2122314105",
+            "is_approved": true,
+            "name": "Biber Bar",
+            "webpage": "http://www.biberbar.com/",
+            "coordinates": "41.050716,28.99165",
+            "address": "No 36 Harmantepe Mh., Abdi Ipekci Caddesi 3, Istanbul",
+            "banner": "organizations/Biber Bar/365x270.orig.00.jpg",
+            "email": "",
+            "description": "With its tasteful modern design, the re-opened Biber Bar is located in one of Istanbul\u2019s smartest districts. The interior is sleek and contemporary with wood floors, bold wall art and a well-stocked bar; the perfect place, in fact, for an after-work drink"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212 2367256",
+            "is_approved": true,
+            "name": "Blackk",
+            "webpage": "http://www.blackk.net/",
+            "coordinates": "41.05073, 29.03233",
+            "address": "Muallim Naci Caddesi 71, Istanbul",
+            "banner": "organizations/Blackk/365x270.orig.00.jpg",
+            "email": "",
+            "description": "Given the name it\u2019s no real surprise that pretty much everything in this elegant Istanbul nightclub is black: floors, curtains, tables, seating (though there is art on the walls and pools of blue light to break up the monotony). "
+        }
+    },
+    {
+        "pk": 9,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212 2595919",
+            "is_approved": true,
+            "name": "Reina",
+            "webpage": "http://www.reina.com.tr/",
+            "coordinates": "41.051525,29.032302",
+            "address": "Muallim Naci Caddesi 10 Ortak\u00f6y, Istanbul",
+            "banner": "organizations/212 236 7256/365x270.orig.00.jpg",
+            "email": "",
+            "description": "Reina is less of a club than a vast entertainment emporium that includes several bars, restaurants and dance floors that can accommodate more than 2500 people. "
+        }
+    },
+    {
+        "pk": 10,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212 3582929",
+            "is_approved": true,
+            "name": "Ulus 29",
+            "webpage": "http://www.group-29.com/",
+            "coordinates": "41.06470, 29.03217",
+            "address": "Adnan Saygun Cad, Ulus Parki Ici 1, Istanbul",
+            "banner": "organizations/Ulus 29/365x270.orig.01.jpg",
+            "email": "",
+            "description": "Ulus 29 has become a fixture amid Istanbul's rapidly changing nightlife scene. This place is here for keeps. Blessed with a superb location on the hilltop of Ulus, the venue boasts nigh-on unbeatable views of the Bosphorus."
+        }
+    },
+    {
+        "pk": 11,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212 2274404",
+            "is_approved": true,
+            "name": "Vogue",
+            "webpage": "http://www.voguerestaurant.com/",
+            "coordinates": "41.043886,29.00166",
+            "address": "Spor Caddesi, BJK Plaza A Blok Kat:13 Akaretler, Istanbul",
+            "banner": "organizations/Vogue/365x270.orig.00.jpg",
+            "email": "",
+            "description": "Open for over a decade now, Vogue remains one of Istanbul's coolest destinations. The view of the Bosphorous is one of its chief attractions, but far from the only one, its sushi bar is also a big draw. "
+        }
+    },
+    {
+        "pk": 12,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "531-3848080",
+            "is_approved": true,
+            "name": "Bronx Pi Sahne",
+            "webpage": "",
+            "coordinates": "41.03099,28.97545",
+            "address": "Terkoz \u00c7k. No:8, T\u00fcnel - Asmalimescit",
+            "banner": "organizations/Bronx Pi Sahne/188071_244_134.jpg",
+            "email": "",
+            "description": "Bronx Pi Sahne regularly hosts big local and international music acts, theatrical and dance performances, workshops and film screenings. This multi-purpose venue is part of the Kafe Pi Group."
+        }
+    },
+    {
+        "pk": 13,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2449147",
+            "is_approved": true,
+            "name": "Dogzstar",
+            "webpage": "",
+            "coordinates": "41.03360,28.97846",
+            "address": "Kartal Sok. No:3, Kat:3, Galatasaray",
+            "banner": "organizations/Dogzstar/187491_150_150.jpg",
+            "email": "",
+            "description": "Opened in 2004, Dogzstar has been welcoming local and international artists, writers, musicians and music appreciators ever since. This alternative arts and music venue boasts new technical equipment, architectural and acoustic design. "
+        }
+    },
+    {
+        "pk": 14,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2432927",
+            "is_approved": true,
+            "name": "Mojo",
+            "webpage": "",
+            "coordinates": "41.03481,28.98245",
+            "address": "B\u00fcy\u00fckparmakkapi Sok. No: 26, Beyoglu",
+            "banner": "organizations/Mojo/187892_204_145.jpg",
+            "email": "",
+            "description": "Hosting a wide range of jazz, blues, rock and more, Mojo Live Music Bar Istanbul has been up and running since 1997. Open Wednesdays, Thursdays, Fridays and Saturdays, entrance prices range between 10 and 25 Lira depending on the day of the week."
+        }
+    },
+    {
+        "pk": 15,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2520694",
+            "is_approved": true,
+            "name": "Line Music Club",
+            "webpage": "",
+            "coordinates": "41.03465,28.98258",
+            "address": "B\u00fcy\u00fckparmakkapi Sok. No:14/A, Taksim",
+            "banner": "organizations/Line Music Club/187626_96_49.jpg",
+            "email": "",
+            "description": "Offering up a feast of live music each evening, Line Music Club in Taksim is a great place to see bands in action on weekdays when entrance is free."
+        }
+    },
+    {
+        "pk": 16,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "2122444499",
+            "is_approved": true,
+            "name": "Garajistanbul",
+            "webpage": "",
+            "coordinates": "41.03239,28.97738",
+            "address": "Tomtom Mahallesi Yenicarsi Caddesi Kaymakam Resat , Galatasaray",
+            "banner": "organizations/Garajistanbul/71837_638_365.jpg",
+            "email": "info@garajistanbul.org",
+            "description": "An open-minded, progressive collective of artists turned this old garage located on the backstreets of the Galatasaray district into a non-profit space dedicated for every kind of aesthetic manifestation."
+        }
+    },
+    {
+        "pk": 17,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2448736",
+            "is_approved": true,
+            "name": "The Hall Istanbul",
+            "webpage": "",
+            "coordinates": "41.03537,28.97926",
+            "address": "K\u00fcc\u00fckbayram Sok. No:7, Beyoglu",
+            "banner": "organizations/The Hall Istanbul/187821_200_302.jpg",
+            "email": "",
+            "description": "Set inside a beautiful historic church, The Hall is Istanbul's alternative performance centre, hosting a variety of performances, parties, exhibitions, wokrshops and more."
+        }
+    },
+    {
+        "pk": 18,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "",
+            "is_approved": true,
+            "name": " Haymatlos Bar and Performance Venue",
+            "webpage": "",
+            "coordinates": "41.03554, 28.98101",
+            "address": "Rumeli Han C Blok, No:96 Kat:2, Istiklal Street",
+            "banner": "organizations/ Haymatlos Bar and Performance Venue/216061_677_450.jpg",
+            "email": "",
+            "description": "Haymatlos is one of Istiklal Street's best kept nightlife secrets. Tucked away down a dark passage, this large venue hosts regular rock, R&B, jazz and ethnic music concerts."
+        }
+    },
+    {
+        "pk": 19,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-3117309",
+            "is_approved": true,
+            "name": "Tamirane",
+            "webpage": "",
+            "coordinates": "41.07013, 28.94616",
+            "address": "Eski Silahtaraga Elektrik Santrali, Kazim Karabekir Cad. No: 2/8 , Eyup",
+            "banner": "organizations/Tamirane/187953_177_147.jpg",
+            "email": "",
+            "description": "Set inside an old warehouse on Istanbul's Golden Horn. Tamirane is one of the city's most unique venues.Tamirane is part of Santral Istanbul, a contemporary arts, culture and education centre which is home to a scattering of restaurants, bars and a museum"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2456070",
+            "is_approved": true,
+            "name": "Nu Pera",
+            "webpage": "",
+            "coordinates": "41.03152, 28.97474",
+            "address": "Mesrutiyet Cad. No:67 , Beyoglu",
+            "banner": "organizations/Nu Pera/187487_128_88.jpg",
+            "email": "",
+            "description": "Voted one of the World's Best Bars, Nu Pera is actually a complex of dining and entertainment venues."
+        }
+    },
+    {
+        "pk": 21,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "",
+            "is_approved": true,
+            "name": "Jolly Joker Balans",
+            "webpage": "",
+            "coordinates": "41.03497, 28.97837",
+            "address": "Istiklal cad. Balo Sokak 22, Istiklal Street",
+            "banner": "organizations/Jolly Joker Balans/437371_404_604.jpg",
+            "email": "",
+            "description": "This multi-storey pub hosts a range of live music acts including rock, pop, metal and indie, and DJ's also feature. This unique bar is lined with artwork and jesters. The upstairs balcony, with glass floor and seating, is popular."
+        }
+    },
+    {
+        "pk": 22,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "",
+            "is_approved": true,
+            "name": "Araf Cafe Bar",
+            "webpage": "",
+            "coordinates": "41.03533, 28.97835",
+            "address": "Istiklal Caddesi Balo Sokak no:32, Istiklal Street",
+            "banner": "organizations/Araf Cafe Bar/238446_500_375.jpg",
+            "email": "",
+            "description": "Araf, named after the mythical land between heaven and hell- purgatory- is a busy and popular nightlife spot favoured by Istanbul\u2019s expat community as well as its locals."
+        }
+    },
+    {
+        "pk": 23,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "",
+            "is_approved": true,
+            "name": "360 Istanbul",
+            "webpage": "",
+            "coordinates": "41.03230,28.97639",
+            "address": "Istiklal Cad. Misir Apart. K.8 F311, Istiklal Street",
+            "banner": "organizations/360 Istanbul/244616_485_376.jpg",
+            "email": "",
+            "description": "360 Istanbul enjoys a 360 degree panoramic view of the city, the Marmara Sea, Bosphorus and the Golden Horn . This funkily-decorated glass penthouse, located on the top of a 19th century apartment block, contains a restaurant, bar and gallery."
+        }
+    },
+    {
+        "pk": 24,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "",
+            "is_approved": true,
+            "name": "Sortie Nightclub",
+            "webpage": "",
+            "coordinates": "41.05214,29.03375",
+            "address": "Muallim Naci Cad. 141, Kurucesme",
+            "banner": "organizations/Sortie Nightclub/214657_500_345.jpg",
+            "email": "",
+            "description": "Sortie is home to a variety of swanky restaurants serving world cuisine alongside the pumping nightclub. This popular Ortakoy nightlife venue is only open during the summer months. Sortie is open from 6pm - 4am every day."
+        }
+    },
+    {
+        "pk": 25,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2423813",
+            "is_approved": true,
+            "name": "Sadberk Hanim Museum",
+            "webpage": "",
+            "coordinates": "41.16299,29.04767",
+            "address": "B\u00fcy\u00fckdere Piyasa Cad. No: 27- 29, Sariyer",
+            "banner": "organizations/Sadberk Hanim Museum/305611_588_435.jpg",
+            "email": "shm@mail.koc.net",
+            "description": "This privately owned museum is dedicated to the late wife of Vehbi Koc, the self-made founder of the Koc dynasty, one of the wealthiest families in Turkey (who are also responsible for the Rahmi Koc Museum) . "
+        }
+    },
+    {
+        "pk": 26,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2927236",
+            "is_approved": true,
+            "name": "Gallery Apel",
+            "webpage": "",
+            "coordinates": "41.03185,28.97993",
+            "address": "Hayriye Cad. No:5A, Galatasaray",
+            "banner": "organizations/Gallery Apel/126725_220_175.jpg",
+            "email": "info@galleryapel.com",
+            "description": "Established in 1998 by the former gallery director of Ankara Tanbay and Urart Art Galleries, Mrs. Nuran Terzioglu, Gallery Apel Istanbul houses a noteworthy collection of Turkish, Ottoman and international art works."
+        }
+    },
+    {
+        "pk": 27,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2927605",
+            "is_approved": true,
+            "name": "SALT",
+            "webpage": "http://saltonline.org/tr/anasayfa",
+            "coordinates": "41.03215,28.97628",
+            "address": "Istiklal Cad. No:136, Istiklal Street",
+            "banner": "organizations/SALT/126693_414_300.jpg",
+            "email": "salt@saltonline.org",
+            "description": "Opened on April 9, 2011, SALT is a not-for-profit organisation founded by Garanti Bank.Welcoming a wide range of fields including art, architecture, urbanism, design and economic and social history, SALT assembles a variety of archives for research "
+        }
+    },
+    {
+        "pk": 28,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-3347300",
+            "is_approved": true,
+            "name": "Istanbul Modern - Museum of Modern Art",
+            "webpage": "",
+            "coordinates": "41.02645,28.98418",
+            "address": "Meclis-i Mebusan Cad. Antrepo No:4, Tophane",
+            "banner": "organizations/Istanbul Modern - Museum of Modern Art/238103_500_333.jpg",
+            "email": "info@istanbulmodern.org",
+            "description": "In a city that prides itself on its history, Istanbul Modern is a refreshing alternative for those who want to see a piece of the \u2018new Istanbul.\u2019"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2447770",
+            "is_approved": true,
+            "name": " Dogancay Museum",
+            "webpage": "http://www.dogancaymuseum.org/",
+            "coordinates": "41.03570,28.97834",
+            "address": "Istiklal cad. Balo Sok. no. 42, Istiklal Street",
+            "banner": "organizations/ Dogancay Museum/26842_150_100.jpg",
+            "email": "",
+            "description": "Dogancay Museum, opened in 2004, was the first modern art museum in Turkey. It houses an extensive collection of art from father-son team Adil and Burhan Dogancay. The Museum is housed inside a 150-year old building just off Istiklal Street."
+        }
+    },
+    {
+        "pk": 30,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "",
+            "is_approved": true,
+            "name": " Taksim Park",
+            "webpage": "",
+            "coordinates": "41.03764,28.98672",
+            "address": "Taksim",
+            "banner": "organizations/ Taksim Park/208086_645_430.jpg",
+            "email": "",
+            "description": "Situated right next to Taksim Square, Taksim Park is a small city park.It's certainly not the best park in town, but it's a nice place to take a breath of fresh air in the middle of crowded Taksim. Exhibitions & concerts take place here from time to time."
+        }
+    },
+    {
+        "pk": 31,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2963652",
+            "is_approved": true,
+            "name": "Harbiye Cemil Topuzlu Open Air Theatre",
+            "webpage": "",
+            "coordinates": "41.04599, 28.98987",
+            "address": "Harbiye",
+            "banner": "organizations/Harbiye Cemil Topuzlu Open Air Theatre/329595_490_308.jpg",
+            "email": "",
+            "description": "For a summer\u2019s night out to remember, head to the Cemil Topuzlu Open Air Theatre, a modern take on an ancient style amphitheatre. This stunning venue with tiered seating hosts a wide variety of musical and cultural performances during the warmer months. "
+        }
+    },
+    {
+        "pk": 32,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2315497",
+            "is_approved": true,
+            "name": "Cemal Resit Rey (CRR) Concert Hall",
+            "webpage": "",
+            "coordinates": "41.04690,28.98930",
+            "address": "Dar\u00fclbedayi Cad., Harbiye",
+            "banner": "organizations/Cemal Resit Rey (CRR) Concert Hall/453340_254_191.jpg",
+            "email": "",
+            "description": "Cemal Resit Rey is one of the main concert halls in Istanbul with seating capacity for 850 people. Its close proximity to Taksim Square makes it a popular venue. A wide range of concerts are held here, from classical performances to Turkish folk or Blues."
+        }
+    },
+    {
+        "pk": 33,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2313045",
+            "is_approved": true,
+            "name": "Kucukciftlik Park",
+            "webpage": "http://kucukciftlikpark.com/",
+            "coordinates": "41.04421,28.99225",
+            "address": "Kadirgalar yokusu no:4, Macka",
+            "banner": "organizations/Kucukciftlik Park/329602_599_242.jpg",
+            "email": "info@kucukciftlikpark.com",
+            "description": "Die-hard music fans take note: this open air park situated in the very heart of the city is one of the best places to experience a gig in Istanbul. "
+        }
+    },
+    {
+        "pk": 34,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2866686",
+            "is_approved": true,
+            "name": "Turker Inanoglu Maslak(TIM) Show Centre",
+            "webpage": "",
+            "coordinates": "41.12689,29.02652",
+            "address": "B\u00fcy\u00fckdere Caddesi Derbent Mevkii , Maslak",
+            "banner": "organizations/Turker Inanoglu Maslak(TIM) Show Centre/203825_454_248.jpg",
+            "email": "",
+            "description": "Turker Inanoglu Maslak (TIM) Show Centre in Maslak offers a range of venue options including a Grand Hall seating 1810, another theatre hall with capacity for 380, five meeting rooms suitable for small meetings and workshops and five movie theatres."
+        }
+    },
+    {
+        "pk": 35,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-3363280",
+            "is_approved": true,
+            "name": "Borusan Kultur Sanat",
+            "webpage": "http://www.borusansanat.com/default.aspx",
+            "coordinates": "41.03038,28.97554",
+            "address": "Orhan Adli Apaydin Sokak No:1, Istiklal Street",
+            "banner": "organizations/Borusan Kultur Sanat/210423_650_432.jpg",
+            "email": "",
+            "description": "Offering a multi-purpose arts space at the centre of Beyoglu, Borusan Music & Art House is located inside a beautifully restored 19th century building. "
+        }
+    },
+    {
+        "pk": 36,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "",
+            "is_approved": true,
+            "name": "Atat\u00fcrk Cultural Centre",
+            "webpage": "",
+            "coordinates": "41.03680,28.98753",
+            "address": "Taksim",
+            "banner": "organizations/Ataturk Cultural Centre/329591_500_333.jpg",
+            "email": "",
+            "description": "Situated at the centre of all the action in Taksim Square, there are few easier and cheaper ways to get a bit of culture in Istanbul than at the Ataturk Cultural Centre (AKM)."
+        }
+    },
+    {
+        "pk": 37,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-2633983",
+            "is_approved": true,
+            "name": "Turkcell Kurucesme Arena",
+            "webpage": "",
+            "coordinates": "41.05622,29.03539",
+            "address": "Muallim Naci Cad. No:60, Kurucesme",
+            "banner": "organizations/Turkcell Kurucesme Arena/329553_800_416.jpg",
+            "email": "bkm@bkmonline.ne",
+            "description": "With some of the best live acts around and an even better view of the Bosphorus, what better way to fend off the balmy summer heat than to see a concert at the Kurucesme Arena. "
+        }
+    },
+    {
+        "pk": 38,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "",
+            "is_approved": true,
+            "name": "Sureyya Opera House",
+            "webpage": "http://www.sureyyaoperasi.org/",
+            "coordinates": "40.994411,29.030571",
+            "address": "Bahariye Cad., Kadikoy - Asian side",
+            "banner": "organizations/ Sureyya Opera House/329561_657_498.jpg",
+            "email": "",
+            "description": "Though perhaps not usually associated with Turkey, opera is nevertheless alive and well at Kadikoy\u2019s Surreya Opera House, offering up an enchanting array of musical treats in the heart of Istanbul\u2019s Asian side."
+        }
+    },
+    {
+        "pk": 39,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "212-3161083",
+            "is_approved": true,
+            "name": "IS Sanat Arts and Culture Centre",
+            "webpage": "",
+            "coordinates": "41.08294,29.01102",
+            "address": "Is Kuleleri 34330, Levent",
+            "banner": "organizations/Is Sanat Arts and Culture Centre/210432_613_296.jpg",
+            "email": "",
+            "description": "Is Sanat is located inside the Isbank Towers. This beautiful venue regularly hosts classical music, jazz and traditional Turkish music performances as well as plays and poetry readings."
+        }
+    },
+    {
+        "pk": 40,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "",
+            "is_approved": true,
+            "name": " Besiktas Kultur Merkezi",
+            "webpage": "",
+            "coordinates": "41.043249,29.006135",
+            "address": "Sinanpasa Mah. Hasfirin Cad. No:75     Besiktas / Istanbul",
+            "banner": "organizations/ Besiktas K\u00fclt\u00fcr Merkezi/BK.jpg",
+            "email": "",
+            "description": "The foremost centre for arts and culture in Istanbul, BKM was founded on the grounds of historic Mistik Theatre, in 1994, and by the initiatives of producer Necati Akpinar and actor/author Yilmaz Erdogan. "
+        }
+    },
+    {
+        "pk": 41,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "",
+            "is_approved": true,
+            "name": "Mask Live Music Club",
+            "webpage": "",
+            "coordinates": "40.982619,28.736304",
+            "address": "     Istiklal Cad. Bekar Sok. No: 10     TAKSIM / Istanbul",
+            "banner": "organizations/Mask Live Music Club/GB.jpg",
+            "email": "",
+            "description": "Mask Live Music Club"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "",
+            "is_approved": true,
+            "name": "Olimpia Event Hall",
+            "webpage": "",
+            "coordinates": "41.033981,28.976598",
+            "address": "     Istiklal Cad. Acara Sok. No: 2 ( next to the Yapi Kredi K\u00fclt\u00fcr Merkezi)     GALATASARAY / Istanbul",
+            "banner": "organizations/Olimpia Event Hall/XF.jpg",
+            "email": "",
+            "description": "Located centrally in Galatasaray, Taksim, Hakan K\u00fcf\u00fcnd\u00fcr's Olimpa organizes various party nights with themes ranging from 90s-parties to Gypsy music."
+        }
+    },
+    {
+        "pk": 3,
+        "model": "event.event",
+        "fields": {
+            "status": "C",
+            "description": "Hassan Khan will be in Istanbul on January 03, 2013.",
+            "tags": "",
+            "start_time": "2013-01-03T06:00:00",
+            "title": "Hassan Khan in Istanbul",
+            "host": 1,
+            "location": 33,
+            "banner": "events/Hassan Khan in Istanbul/197488.Logo.20121222-134801.jpg",
+            "is_private": false,
+            "end_time": "2013-01-10T12:00:00"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "The Istanbul Modern will be presenting an anthology of portrait photography from the Bank of America private collection.",
+            "tags": "",
+            "start_time": "2012-10-03T12:00:00",
+            "title": "Gaze - Changing Face of Portrait Photography",
+            "host": 1,
+            "location": 28,
+            "banner": "events/Gaze - Changing Face of Portrait Photography/189212.Logo.20120823-195559.jpg",
+            "is_private": false,
+            "end_time": "2013-01-20T12:00:00"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "Better known as the lead singer of British Indie-Rock band Interpol, Paul Banks will be presenting his new solo project for two nights at Babylon.",
+            "tags": "",
+            "start_time": "2013-02-14T12:00:00",
+            "title": "Paul Banks",
+            "host": 1,
+            "location": 5,
+            "banner": "events/Paul Banks/191359.Logo.20120921-153752.jpg",
+            "is_private": false,
+            "end_time": "2013-02-15T06:00:00"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "event.event",
+        "fields": {
+            "status": "C",
+            "description": "Lenny Kravitz is getting ready to give one of the most memorable concerts of this autumn in Istanbul.",
+            "tags": "",
+            "start_time": "2012-10-04T21:00:00",
+            "title": "Lenny Kravitz in Istanbul",
+            "host": 1,
+            "location": 37,
+            "banner": "events/Lenny Kravitz in Istanbul/lenny-kravitz-212-266.jpg",
+            "is_private": false,
+            "end_time": "2012-10-05T06:00:00"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "SLASH Feat. Myles Kennedy & The Conspirators to perform at K\u00fcc\u00fckciftlik Park, Istanbul on February 2, 2012 Renowned as one of the best guitar players in Rock history, Slash will be performing in Istanbul on February 2nd 2012 with his new project.",
+            "tags": "",
+            "start_time": "2013-02-02T18:00:00",
+            "title": "Slash Featuring Myles Kennedy and The Conspirators",
+            "host": null,
+            "location": 33,
+            "banner": "events/Slash Featuring Myles Kennedy and The Conspirators/slash.jpg",
+            "is_private": false,
+            "end_time": "2013-02-02T00:00:00"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "Due to the overwhelming demand stand up comedian Tolga \u00c7evik is back on stage with his new show. ",
+            "tags": "",
+            "start_time": "2013-01-03T12:00:00",
+            "title": "Tolga Cevik Komedi Dukkani - Arkadasim Hosgeldin",
+            "host": 1,
+            "location": 40,
+            "banner": "events/Tolga Cevik Komedi Dukkani - Arkadasim Hosgeldin/tolgacevik_kd.jpg",
+            "is_private": false,
+            "end_time": "2013-01-22T12:00:00"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "Depeche Mode",
+            "tags": "",
+            "start_time": "2013-05-17T12:00:00",
+            "title": "Depeche Mode",
+            "host": 1,
+            "location": 33,
+            "banner": "events/Depeche Mode/depeche_mode_02.jpg",
+            "is_private": false,
+            "end_time": "2013-05-17T00:00:00"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "event.event",
+        "fields": {
+            "status": "C",
+            "description": "Russian-Canadian musician Chinawoman has a meeting with her fans on January 9 and 10 with the support of Radyo Eksen.. ",
+            "tags": "",
+            "start_time": "2013-01-09T12:00:00",
+            "title": "Chinawoman",
+            "host": 1,
+            "location": 5,
+            "banner": "events/Chinawoman/ScaleAndCrop.aspx.png",
+            "is_private": false,
+            "end_time": "2013-01-10T00:00:00"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "event.event",
+        "fields": {
+            "status": "C",
+            "description": " Carrying 20s\u2019 and 30s\u2019 soul to the modern world, Tobumusikizm is inviting you to share the fun with its wide electro-swing records! ",
+            "tags": "",
+            "start_time": "2013-01-04T22:00:00",
+            "title": "Electro Swing Party",
+            "host": null,
+            "location": 5,
+            "banner": "events/Electro Swing Party/ScaleAndCrop.aspx.png",
+            "is_private": false,
+            "end_time": "2013-01-05T06:00:00"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "All the way from Florida, the pop punk and alternative rock band Yellowcard will perform in Turkey for the first time at Babylon for two consecutive nights on 6th and 7th of February!",
+            "tags": "",
+            "start_time": "2013-02-06T20:30:00",
+            "title": "Yellowcard",
+            "host": 1,
+            "location": 5,
+            "banner": "events/Yellowcard/ScaleAndCrop.aspx.png",
+            "is_private": false,
+            "end_time": "2013-01-17T00:00:00"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "event.event",
+        "fields": {
+            "status": "C",
+            "description": "Malt at Bronx Pi Sahne ",
+            "tags": "",
+            "start_time": "2013-01-05T23:30:00",
+            "title": "Malt",
+            "host": 1,
+            "location": 12,
+            "banner": "events/Malt/malt-bronx.jpg",
+            "is_private": false,
+            "end_time": "2013-01-06T06:00:00"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "event.event",
+        "fields": {
+            "status": "C",
+            "description": "GROOVE OLDIES PARTY  Canli Grup SOUL SENSATION  ",
+            "tags": "",
+            "start_time": "2013-01-04T22:00:00",
+            "title": "Soul Sensation",
+            "host": 1,
+            "location": 12,
+            "banner": "events/Soul Sensation/349_dilan.jpg",
+            "is_private": false,
+            "end_time": "2013-01-04T00:00:00"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "Gurcan Ersoy",
+            "tags": "",
+            "start_time": "2013-01-11T22:00:00",
+            "title": "Gurcan Ersoy",
+            "host": 1,
+            "location": 12,
+            "banner": "events/Gurcan Ersoy/332_1101-rsoy-Background-1360x750.jpg",
+            "is_private": false,
+            "end_time": "2013-01-11T00:00:00"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "Flort",
+            "tags": "",
+            "start_time": "2013-01-19T22:00:00",
+            "title": "Flort",
+            "host": 1,
+            "location": 12,
+            "banner": "events/Flort/334_1901-Flort-Background-1360x750.jpg",
+            "is_private": false,
+            "end_time": "2013-01-19T00:00:00"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "MxPx - Second - Dinamit",
+            "tags": "",
+            "start_time": "2013-03-17T22:00:00",
+            "title": "MxPx - Second - Dinamit",
+            "host": 1,
+            "location": 14,
+            "banner": "events/MxPx - Second - Dinamit/mxpx.jpg",
+            "is_private": false,
+            "end_time": "2013-03-18T06:00:00"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "event.event",
+        "fields": {
+            "status": "C",
+            "description": "Iskender Paydas",
+            "tags": "",
+            "start_time": "2013-01-04T00:00:00",
+            "title": "Iskender Paydas",
+            "host": 1,
+            "location": 41,
+            "banner": "events/Iskender Paydas/iskender_paydas.jpg",
+            "is_private": false,
+            "end_time": "2013-01-05T06:00:00"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "\u00d6zge",
+            "tags": "",
+            "start_time": "2013-01-12T22:00:00",
+            "title": "Ozge",
+            "host": 1,
+            "location": 41,
+            "banner": "events/Ozge/ozge.jpg",
+            "is_private": false,
+            "end_time": "2013-01-13T02:00:00"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "Eski Bando",
+            "tags": "",
+            "start_time": "2013-01-11T22:30:00",
+            "title": "Eski Bando",
+            "host": 1,
+            "location": 16,
+            "banner": "events/Eski Bando/eski_bando.jpg",
+            "is_private": false,
+            "end_time": "2013-01-12T03:00:00"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "Orient Expressions",
+            "tags": "",
+            "start_time": "2013-01-26T22:00:00",
+            "title": "Orient Expressions",
+            "host": 1,
+            "location": 16,
+            "banner": "events/Orient Expressions/OrientExpressions.jpg",
+            "is_private": false,
+            "end_time": "2013-01-27T06:00:00"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "event.event",
+        "fields": {
+            "status": "C",
+            "description": "Alex Metric",
+            "tags": "",
+            "start_time": "2013-01-05T22:00:00",
+            "title": "Alex Metric",
+            "host": 1,
+            "location": 17,
+            "banner": "events/Alex Metric/alex_metric.jpg",
+            "is_private": false,
+            "end_time": "2013-01-06T02:00:00"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "  Australian drum and bass master Pendulum who was the headline of many important festivals of the worl incluiding Glastonbury will be at Turkey for the first time. Get your tickets to join this concert now!",
+            "tags": "",
+            "start_time": "2013-01-19T22:00:00",
+            "title": "Pendulum DJ Set + MC Verse",
+            "host": 1,
+            "location": 17,
+            "banner": "events/Pendulum DJ Set + MC Verse/pendulum_01.jpg",
+            "is_private": false,
+            "end_time": "2013-01-20T06:00:00"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "event.event",
+        "fields": {
+            "status": "C",
+            "description": "Amy Winehouse Tribute",
+            "tags": "",
+            "start_time": "2013-01-03T21:30:00",
+            "title": "Amy Winehouse Tribute",
+            "host": 1,
+            "location": 42,
+            "banner": "events/Amy Winehouse Tribute/ammy_merve_tribute.jpg",
+            "is_private": false,
+            "end_time": "2013-01-03T00:00:00"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": " Geveze & Zeliha Sunal : Neseli Masrapa",
+            "tags": "",
+            "start_time": "2013-01-25T21:00:00",
+            "title": " Geveze & Zeliha Sunal : Neseli Masrapa",
+            "host": 1,
+            "location": 42,
+            "banner": "events/ Geveze & Zeliha Sunal : Neseli Masrapa/zeliha_geveze.jpg",
+            "is_private": false,
+            "end_time": "2013-01-25T00:00:00"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "event.event",
+        "fields": {
+            "status": "C",
+            "description": "Cem Adrian",
+            "tags": "",
+            "start_time": "2013-01-03T22:00:00",
+            "title": "Cem Adrian",
+            "host": 1,
+            "location": 21,
+            "banner": "events/Cem Adrian/cem_adrian_yeni.jpg",
+            "is_private": false,
+            "end_time": "2013-01-03T00:00:00"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "Rock band Gripin, started off together in 1999 playing mostly cover at bars not only included Britpop, but also featured examples of American Alternative rock. They had a considerably huge group of fans before they even released an album.",
+            "tags": "",
+            "start_time": "2013-01-12T22:00:00",
+            "title": "Gripin",
+            "host": 1,
+            "location": 21,
+            "banner": "events/Gripin/gripin_jollyjoker.jpg",
+            "is_private": false,
+            "end_time": "2013-01-12T00:00:00"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "Cheerful, alive and rhythmic\u2026Get ready for a splendid musical journey with one of the world\u2019s foremost jazz vocalists, Kurt Elling and Istanbul Superband, one of the the most privileged Big Bands of Turkey. ",
+            "tags": "",
+            "start_time": "2013-03-24T20:00:00",
+            "title": "Kurt Elling & Istanbul Superband",
+            "host": 1,
+            "location": 39,
+            "banner": "events/Kurt Elling & Istanbul Superband/kurt_elling.jpg",
+            "is_private": false,
+            "end_time": "2013-03-24T00:00:00"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "event.event",
+        "fields": {
+            "status": "C",
+            "description": "Big Beats Big Times Vol.1",
+            "tags": "",
+            "start_time": "2013-01-05T21:30:00",
+            "title": "Big Beats Big Times Vol.1",
+            "host": 1,
+            "location": 35,
+            "banner": "events/Big Beats Big Times Vol.1/bigbeatsbigtimes.jpg",
+            "is_private": false,
+            "end_time": "2013-01-05T00:00:00"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "event.participant",
+        "fields": {
+            "is_approved": true,
+            "event": 5,
+            "guest": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "event.participant",
+        "fields": {
+            "is_approved": true,
+            "event": 10,
+            "guest": 1
+        }
+    }
+]
