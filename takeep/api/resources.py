@@ -33,7 +33,7 @@ class UserResource(ModelResource):
         # Every mobile client will have a unique apikey inorder to have ability,
         # -- to create users for system.
         # Authentication module.
-        authentication = BasicAuthentication()
+        authentication = Authentication()
         # Permissions
         authorization = Authorization()
         # System cache.
@@ -72,7 +72,7 @@ class UserProfileResource(ModelResource):
         # Return data when created.
         always_return_data = True
         # Authentication module.
-        authentication = BasicAuthentication()
+        authentication = Authentication()
         # Permissions
         authorization = Authorization()
         # System cache.
@@ -109,7 +109,7 @@ class PlaceResource(ModelResource):
         # Return data when created.
         always_return_data = True
         # Authentication module.
-        authentication = BasicAuthentication()
+        authentication = Authentication()
         # Permissions
         authorization = Authorization()
         # System cache.
@@ -143,7 +143,7 @@ class EventResource(ModelResource):
             'id': ALL,
         }
         # Authentication module.
-        authentication = BasicAuthentication()
+        authentication = Authentication()
         # Permissions
         authorization = Authorization()
         # System cache.
@@ -178,7 +178,7 @@ class ParticipantResource(ModelResource):
         # Return data when created.
         always_return_data = True
         # Authentication module.
-        authentication = BasicAuthentication()
+        authentication = Authentication()
         # Permissions
         authorization = Authorization()
         # System cache..
