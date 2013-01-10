@@ -1,0 +1,14 @@
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+PROJECT_DIR = BASE_DIR
+
+from settings_default import *
+
+STATIC_ROOT = 'os.path.join(PROJECT_DIR, "static/")'
+
+STATIC_URL = 'http://takeep.kemalakkoyun.com/static/'
+
+STATICFILES_DIRS = (
+)
