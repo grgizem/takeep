@@ -54,3 +54,18 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-01-10 22:38:46.893
+!MESSAGE Warning: Ignoring name conflict in resource file for name title_section3
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-01-10 22:38:46.896
+!MESSAGE Warning: Ignoring name conflict in resource file for name title_section2
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-01-10 22:38:46.899
+!MESSAGE Warning: Ignoring name conflict in resource file for name title_section1
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-01-10 22:38:46.902
+!MESSAGE Warning: Ignoring name conflict in resource file for name hello_world
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-01-10 22:38:46.905
+!MESSAGE Warning: Ignoring name conflict in resource file for name menu_settings
