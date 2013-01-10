@@ -44,6 +44,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.cleverestfreakin.mobile.takeep" />
         </activity>
+        <activity
+            android:name="com.cleverestfreakin.mobile.takeep.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName="com.cleverestfreakin.mobile.takeep" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cleverestfreakin.mobile.takeep" />
+        </activity>
     </application>
 
 </manifest>
