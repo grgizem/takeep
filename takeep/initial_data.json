@@ -707,6 +707,36 @@
         }
     },
     {
+        "pk": 45,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "02122329830",
+            "is_approved": true,
+            "name": "Cemal Resit Rey Concert Hall",
+            "webpage": "http://www.crrks.org/",
+            "coordinates": "41.048272,28.989848",
+            "address": "Dar\u00fclbedai Caddesi 1,  Harbiye Istanbul",
+            "banner": "organizations/Cemal Resit Rey Concert Hall/cemal_resit.jpg",
+            "email": "",
+            "description": "This venue, the 860-seat home of the municipal CRR Symphony Orchestra has a diverse programme, including Turkish religious and traditional music. Itl is a key venue for several festivals, including October's International Mystic Music Festival, December's International CRR Piano Festival, January's International Istanbul Baroque Days, April's International Dance Festival and the International Youth Festival in May."
+        }
+    },
+    {
+        "pk": 46,
+        "model": "place.place",
+        "fields": {
+            "phone_number": "02122762214",
+            "is_approved": true,
+            "name": "Enka Ibrahim Betil Auditorium",
+            "webpage": "http://www.enkasanat.org/",
+            "coordinates": "41.111766,29.037872",
+            "address": "Sadi G\u00fcl\u00e7elik Spor Sitesi,  Istinye",
+            "banner": "organizations/Enka Ibrahim Betil Auditorium/Enka.jpg",
+            "email": "",
+            "description": "A 600-seat modern auditorium with perfect acoustics. It hosts a variety of events, including drama, concerts, folk dancing and ballet, and regularly plays host to the local metropolitan and state music and dance companies."
+        }
+    },
+    {
         "pk": 3,
         "model": "event.event",
         "fields": {
@@ -1168,6 +1198,22 @@
             "banner": "events/Kungfu/kungfu_n.jpg",
             "is_private": false,
             "end_time": "2013-02-03T02:30:00"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "event.event",
+        "fields": {
+            "status": "O",
+            "description": "Of life, secrets, images, animation, sounds, gestures, and transformed into music scene for over 25 years, ENKA. I February 4 to March 26 between ENKA invite you to meet with the power of imagination. ENKA Culture and Art Encounters 25 by theater season begins. 12 performance problems of modern life, the nature of the human spirit open to debate. Istanbul State Theatre of I am Bertolt Brecht comes ENKA scene with  \u015eahika Tekand.",
+            "tags": "",
+            "start_time": "2013-03-12T20:30:00",
+            "title": "Ben Bertolt Brecht",
+            "host": 1,
+            "location": 46,
+            "banner": "events/Ben Bertolt Brecht/dostlar_tiyatrosu_enka.jpg",
+            "is_private": false,
+            "end_time": "2013-03-12T11:30:00"
         }
     },
     {
