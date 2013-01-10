@@ -13,7 +13,10 @@ from apps.event.models import Event, Participant
 
 
 def index(request):
-    return render(request, 'index.html')
+    all_events = Event.objects.filter(
+        status="O").select_related()
+    return render(request, 'index.html',
+        {'events': all_events})
 
 
 def events(request):
