@@ -156,6 +156,25 @@ LOGGING = {
     }
 }
 
+# Haystack options:
+
+# Following code only for development purposes.
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+    },
+}
+
+# Production settings, work with elastic search.
+"""
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': 'http://127.0.0.1:9200/',
+        'INDEX_NAME': 'haystack',
+    },
+}
+"""
 
 # Tastypie 3rd party app options:
 TASTYPIE_FULL_DEBUG = True
