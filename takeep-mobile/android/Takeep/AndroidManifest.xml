@@ -18,6 +18,22 @@
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>
+        <activity
+            android:name="com.cleverestfreakin.mobile.takeep.EventListActivity"
+            android:label="@string/title_event_list"
+            android:parentActivityName="com.cleverestfreakin.mobile.takeep" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cleverestfreakin.mobile.takeep" />
+        </activity>
+        <activity
+            android:name="com.cleverestfreakin.mobile.takeep.EventDetailActivity"
+            android:label="@string/title_event_detail"
+            android:parentActivityName=".EventListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EventListActivity" />
+        </activity>
     </application>
 
 </manifest>
