@@ -1,13 +1,14 @@
 from django.contrib.auth.models import User
 
 from api.forms import UserForm
+from api.forms import ParticipantForm
 from api.validation import ModelFormValidation
-from account.forms import UserProfileForm
-from account.models import UserProfile
-from event.forms import EventForm, ParticipantForm
-from event.models import Event, Participant
-from place.forms import PlaceForm
-from place.models import Place
+from apps.accounts.forms import UserForm as UserProfileForm
+from apps.accounts.models import UserProfile
+from apps.event.forms import EventForm
+from apps.event.models import Event, Participant
+from apps.place.forms import PlaceForm
+from apps.place.models import Place
 
 from tastypie import fields
 from tastypie.authentication import BasicAuthentication, ApiKeyAuthentication
@@ -80,7 +81,7 @@ class UserProfileResource(ModelResource):
         serializer = Serializer()
         # Validation of data that send.
         validation = ModelFormValidation(form_class=UserProfileForm)
-        #validation = CleanedDataFormValidation(form_class=PlaceForm)
+        #validation = CleanedDataFormValidation(form_class=UserProfileForm)
 
         def apply_authorization_limits(self, request, object_list):
             return object_list.filter(user=request.user)
