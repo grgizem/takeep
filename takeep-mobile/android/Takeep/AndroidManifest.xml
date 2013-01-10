@@ -34,6 +34,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".EventListActivity" />
         </activity>
+        <activity
+            android:name="com.cleverestfreakin.mobile.takeep.NearbyEventsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_nearby_events"
+            android:parentActivityName="com.cleverestfreakin.mobile.takeep"
+            android:theme="@style/FullscreenTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cleverestfreakin.mobile.takeep" />
+        </activity>
     </application>
 
 </manifest>

@@ -4,5 +4,8 @@
     <string name="app_name">Takeep</string>
     <string name="title_event_detail">Event Detail</string>
     <string name="title_event_list">Events</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="title_activity_nearby_events">NearbyEventsActivity</string>
 
 </resources>
