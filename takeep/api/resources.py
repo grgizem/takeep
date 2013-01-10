@@ -11,7 +11,7 @@ from apps.place.forms import PlaceForm
 from apps.place.models import Place
 
 from tastypie import fields
-from tastypie.authentication import BasicAuthentication, ApiKeyAuthentication
+from tastypie.authentication import BasicAuthentication, ApiKeyAuthentication, Authentication
 from tastypie.authorization import Authorization, DjangoAuthorization
 from tastypie.cache import SimpleCache
 from tastypie.resources import ModelResource, ALL, ALL_WITH_RELATIONS
