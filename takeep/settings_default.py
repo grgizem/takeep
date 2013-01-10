@@ -121,7 +121,7 @@ INSTALLED_APPS = (
     # 3rd party apps:
     'django_extensions',
     'registration',
-    'haystack'
+    'haystack',
     # apps:
     'apps.event',
     'apps.place',
@@ -158,23 +158,8 @@ LOGGING = {
 
 # Haystack options:
 
-# Following code only for development purposes.
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
-    },
-}
-
-# Production settings, work with elastic search.
-"""
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
-        'URL': 'http://127.0.0.1:9200/',
-        'INDEX_NAME': 'haystack',
-    },
-}
-"""
+HAYSTACK_SITECONF = 'takeep.search_sites'
+HAYSTACK_SEARCH_ENGINE = 'simple'
 
 # Tastypie 3rd party app options:
 TASTYPIE_FULL_DEBUG = True
