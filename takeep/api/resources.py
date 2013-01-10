@@ -33,9 +33,9 @@ class UserResource(ModelResource):
         # Every mobile client will have a unique apikey inorder to have ability,
         # -- to create users for system.
         # Authentication module.
-        authentication = ApiKeyAuthentication()
+        authentication = BasicAuthentication()
         # Permissions
-        authorization = DjangoAuthorization()
+        authorization = Authorization()
         # System cache.
         cache = SimpleCache()
         # Support all available formats, such as xml, json, yaml.
@@ -57,7 +57,7 @@ class UserProfileResource(ModelResource):
         # Related model of resource.
         queryset = UserProfile.objects.all()
         # Optional but in case to be sure.
-        resource_name = 'UserProfile'
+        resource_name = 'profile'
         # Restrictions.
         allowed_methods = ['get', 'post', 'put']
 
@@ -111,7 +111,7 @@ class PlaceResource(ModelResource):
         # Authentication module.
         authentication = BasicAuthentication()
         # Permissions
-        authorization = DjangoAuthorization()
+        authorization = Authorization()
         # System cache.
         cache = SimpleCache()
         # Support all available formats.
@@ -122,12 +122,12 @@ class PlaceResource(ModelResource):
 
 
 class EventResource(ModelResource):
-    host = fields.ForeignKey(UserResource, 'user', full=True)
-    location = fields.ForeignKey(PlaceResource, 'place', full=True)
+    # host = fields.ForeignKey(UserResource, 'host', full=True)
+    location = fields.ForeignKey(PlaceResource, 'location', full=True)
 
     class Meta:
         # Related model of resource.
-        queryset = Event.objects.filter(status='O').order_by("time")
+        queryset = Event.objects.filter(status='O').order_by("start_time")
         # Optional but in case to be sure.
         resource_name = 'event'
 
@@ -141,7 +141,6 @@ class EventResource(ModelResource):
         # Fields that allowed to be filtered through.
         filtering = {
             'id': ALL,
-            'user': ALL_WITH_RELATIONS,
         }
         # Authentication module.
         authentication = BasicAuthentication()
@@ -158,7 +157,7 @@ class EventResource(ModelResource):
 
 class ParticipantResource(ModelResource):
     event = fields.ForeignKey(EventResource, 'event')
-    guest = fields.ForeignKey(UserResource, 'user')
+    guest = fields.ForeignKey(UserResource, 'guest')
 
     class Meta:
         # Related model of resource.

@@ -129,6 +129,7 @@ class Participant(models.Model):
         Since the user will be attend a particular event for once
         """
 
+
 class EventReport(models.Model):
     """
     Event report table required for complainment of events
