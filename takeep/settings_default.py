@@ -121,6 +121,7 @@ INSTALLED_APPS = (
     # 3rd party apps:
     'django_extensions',
     'registration',
+    'haystack',
     # apps:
     'apps.event',
     'apps.place',
@@ -155,6 +156,10 @@ LOGGING = {
     }
 }
 
+# Haystack options:
+
+HAYSTACK_SITECONF = 'takeep.search_sites'
+HAYSTACK_SEARCH_ENGINE = 'simple'
 
 # Tastypie 3rd party app options:
 TASTYPIE_FULL_DEBUG = True

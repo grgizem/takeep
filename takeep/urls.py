@@ -14,7 +14,7 @@ urlpatterns = patterns('',
     url(r'^event/', include('apps.event.urls')),
     url(r'^place/', include('apps.place.urls')),
     url(r'^api/', include('api.urls')),
-
+    url(r'^search/', include('haystack.urls')),
     url(r'^accounts/', include('registration.backends.default.urls')),
 
 )

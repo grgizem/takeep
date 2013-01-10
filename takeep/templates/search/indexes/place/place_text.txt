@@ -1,0 +1,8 @@
+{{ object.name }}
+{{ object.description }}
+{{ object.address }}
+{{ object.phone_number }}
+{{ object.email }}
+{{ object.webpage }}
+
+
