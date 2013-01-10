@@ -18,9 +18,14 @@
             <h3>Results</h3>
 
             {% for result in page.object_list %}
-                <p>
-                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.id }}</a>
-                </p>
+                {% if result.content_type == "event.event" %}
+                {% include "search/includes/event/event.html" %}
+                {% endif %}
+
+                {% if result.content_type == "place.place" %}
+                {% include "search/includes/place/place.html" %}
+                {% endif %}
+
             {% empty %}
                 <p>No results found.</p>
             {% endfor %}

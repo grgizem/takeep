@@ -2,7 +2,6 @@
 {{ object.host.get_full_name }}
 {{ object.description }}
 {{ object.location }}
-{{ object.is_private }}
 {{ object.start_time }}
 {{ object.end_time }}
 
