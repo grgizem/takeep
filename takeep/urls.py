@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('apps.accounts.urls')),
     url(r'^event/', include('apps.event.urls')),
     url(r'^place/', include('apps.place.urls')),
+    url(r'^api/', include('api.urls')),
 
     url(r'^accounts/', include('registration.backends.default.urls')),
 

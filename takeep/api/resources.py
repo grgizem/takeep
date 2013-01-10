@@ -1,13 +1,14 @@
 from django.contrib.auth.models import User
 
 from api.forms import UserForm
+from api.forms import ParticipantForm
 from api.validation import ModelFormValidation
-from account.forms import UserProfileForm
-from account.models import UserProfile
-from event.forms import EventForm, ParticipantForm
-from event.models import Event, Participant
-from place.forms import PlaceForm
-from place.models import Place
+from apps.accounts.forms import UserForm as UserProfileForm
+from apps.accounts.models import UserProfile
+from apps.event.forms import EventForm
+from apps.event.models import Event, Participant
+from apps.place.forms import PlaceForm
+from apps.place.models import Place
 
 from tastypie import fields
 from tastypie.authentication import BasicAuthentication, ApiKeyAuthentication
@@ -32,9 +33,9 @@ class UserResource(ModelResource):
         # Every mobile client will have a unique apikey inorder to have ability,
         # -- to create users for system.
         # Authentication module.
-        authentication = ApiKeyAuthentication()
+        authentication = BasicAuthentication()
         # Permissions
-        authorization = DjangoAuthorization()
+        authorization = Authorization()
         # System cache.
         cache = SimpleCache()
         # Support all available formats, such as xml, json, yaml.
@@ -56,7 +57,7 @@ class UserProfileResource(ModelResource):
         # Related model of resource.
         queryset = UserProfile.objects.all()
         # Optional but in case to be sure.
-        resource_name = 'UserProfile'
+        resource_name = 'profile'
         # Restrictions.
         allowed_methods = ['get', 'post', 'put']
 
@@ -80,7 +81,7 @@ class UserProfileResource(ModelResource):
         serializer = Serializer()
         # Validation of data that send.
         validation = ModelFormValidation(form_class=UserProfileForm)
-        #validation = CleanedDataFormValidation(form_class=PlaceForm)
+        #validation = CleanedDataFormValidation(form_class=UserProfileForm)
 
         def apply_authorization_limits(self, request, object_list):
             return object_list.filter(user=request.user)
@@ -110,7 +111,7 @@ class PlaceResource(ModelResource):
         # Authentication module.
         authentication = BasicAuthentication()
         # Permissions
-        authorization = DjangoAuthorization()
+        authorization = Authorization()
         # System cache.
         cache = SimpleCache()
         # Support all available formats.
@@ -121,12 +122,12 @@ class PlaceResource(ModelResource):
 
 
 class EventResource(ModelResource):
-    host = fields.ForeignKey(UserResource, 'user', full=True)
-    location = fields.ForeignKey(PlaceResource, 'place', full=True)
+    # host = fields.ForeignKey(UserResource, 'host', full=True)
+    location = fields.ForeignKey(PlaceResource, 'location', full=True)
 
     class Meta:
         # Related model of resource.
-        queryset = Event.objects.filter(status='O').order_by("time")
+        queryset = Event.objects.filter(status='O').order_by("start_time")
         # Optional but in case to be sure.
         resource_name = 'event'
 
@@ -140,7 +141,6 @@ class EventResource(ModelResource):
         # Fields that allowed to be filtered through.
         filtering = {
             'id': ALL,
-            'user': ALL_WITH_RELATIONS,
         }
         # Authentication module.
         authentication = BasicAuthentication()
@@ -157,7 +157,7 @@ class EventResource(ModelResource):
 
 class ParticipantResource(ModelResource):
     event = fields.ForeignKey(EventResource, 'event')
-    guest = fields.ForeignKey(UserResource, 'user')
+    guest = fields.ForeignKey(UserResource, 'guest')
 
     class Meta:
         # Related model of resource.
