@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>accounts Package &mdash; Takeep 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Takeep 1.0 documentation" href="index.html" />
+    <link rel="up" title="apps Package" href="apps.html" />
+    <link rel="next" title="templatetags Package" href="apps.accounts.templatetags.html" />
+    <link rel="prev" title="apps Package" href="apps.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="apps.accounts.templatetags.html" title="templatetags Package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="apps.html" title="apps Package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Takeep 1.0 documentation</a> &raquo;</li>
+          <li><a href="apps.html" accesskey="U">apps Package</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="accounts-package">
+<h1>accounts Package<a class="headerlink" href="#accounts-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="admin-module">
+<h2><tt class="xref py py-mod docutils literal"><span class="pre">admin</span></tt> Module<a class="headerlink" href="#admin-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-apps.accounts.forms">
+<span id="forms-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">forms</span></tt> Module<a class="headerlink" href="#module-apps.accounts.forms" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="apps.accounts.forms.UserForm">
+<em class="property">class </em><tt class="descclassname">apps.accounts.forms.</tt><tt class="descname">UserForm</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/apps/accounts/forms.html#UserForm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#apps.accounts.forms.UserForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.forms.models.ModelForm</span></tt></p>
+<dl class="class">
+<dt id="apps.accounts.forms.UserForm.Meta">
+<em class="property">class </em><tt class="descname">Meta</tt><a class="reference internal" href="_modules/apps/accounts/forms.html#UserForm.Meta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#apps.accounts.forms.UserForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="apps.accounts.forms.UserForm.Meta.bio">
+<tt class="descname">bio</tt><em class="property"> = &lt;django.forms.fields.CharField object at 0x4c63a10&gt;</em><a class="headerlink" href="#apps.accounts.forms.UserForm.Meta.bio" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.forms.UserForm.Meta.fields">
+<tt class="descname">fields</tt><em class="property"> = ('first_name', 'last_name')</em><a class="headerlink" href="#apps.accounts.forms.UserForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.forms.UserForm.Meta.model">
+<tt class="descname">model</tt><a class="headerlink" href="#apps.accounts.forms.UserForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">User</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.forms.UserForm.base_fields">
+<tt class="descclassname">UserForm.</tt><tt class="descname">base_fields</tt><em class="property"> = {'first_name': &lt;django.forms.fields.CharField object at 0x4c63dd0&gt;, 'last_name': &lt;django.forms.fields.CharField object at 0x4c7b110&gt;}</em><a class="headerlink" href="#apps.accounts.forms.UserForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.forms.UserForm.declared_fields">
+<tt class="descclassname">UserForm.</tt><tt class="descname">declared_fields</tt><em class="property"> = {}</em><a class="headerlink" href="#apps.accounts.forms.UserForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.forms.UserForm.media">
+<tt class="descclassname">UserForm.</tt><tt class="descname">media</tt><a class="headerlink" href="#apps.accounts.forms.UserForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="apps.accounts.forms.UserProfileForm">
+<em class="property">class </em><tt class="descclassname">apps.accounts.forms.</tt><tt class="descname">UserProfileForm</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/apps/accounts/forms.html#UserProfileForm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#apps.accounts.forms.UserProfileForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.forms.models.ModelForm</span></tt></p>
+<dl class="class">
+<dt id="apps.accounts.forms.UserProfileForm.Meta">
+<em class="property">class </em><tt class="descname">Meta</tt><a class="reference internal" href="_modules/apps/accounts/forms.html#UserProfileForm.Meta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#apps.accounts.forms.UserProfileForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="apps.accounts.forms.UserProfileForm.Meta.fields">
+<tt class="descname">fields</tt><em class="property"> = ('gender', 'birthdate', 'address', 'location', 'bio')</em><a class="headerlink" href="#apps.accounts.forms.UserProfileForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.forms.UserProfileForm.Meta.model">
+<tt class="descname">model</tt><a class="headerlink" href="#apps.accounts.forms.UserProfileForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">UserProfile</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.forms.UserProfileForm.Meta.widgets">
+<tt class="descname">widgets</tt><em class="property"> = {'birthdate': &lt;django.forms.extras.widgets.SelectDateWidget object at 0x4c7b2d0&gt;}</em><a class="headerlink" href="#apps.accounts.forms.UserProfileForm.Meta.widgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.forms.UserProfileForm.base_fields">
+<tt class="descclassname">UserProfileForm.</tt><tt class="descname">base_fields</tt><em class="property"> = {'gender': &lt;django.forms.fields.TypedChoiceField object at 0x4c7b3d0&gt;, 'birthdate': &lt;django.forms.fields.DateField object at 0x4c7b4d0&gt;, 'address': &lt;django.forms.fields.CharField object at 0x4c7b510&gt;, 'location': &lt;django.forms.fields.TypedChoiceField object at 0x4c7b590&gt;, 'bio': &lt;django.forms.fields.CharField object at 0x4c7b610&gt;, 'first_name': &lt;django.forms.fields.CharField object at 0x4c63b90&gt;, 'last_name': &lt;django.forms.fields.CharField object at 0x4c7b250&gt;}</em><a class="headerlink" href="#apps.accounts.forms.UserProfileForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.forms.UserProfileForm.declared_fields">
+<tt class="descclassname">UserProfileForm.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'first_name': &lt;django.forms.fields.CharField object at 0x4c63b90&gt;, 'last_name': &lt;django.forms.fields.CharField object at 0x4c7b250&gt;}</em><a class="headerlink" href="#apps.accounts.forms.UserProfileForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.forms.UserProfileForm.media">
+<tt class="descclassname">UserProfileForm.</tt><tt class="descname">media</tt><a class="headerlink" href="#apps.accounts.forms.UserProfileForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="apps.accounts.forms.UserProfileForm.save">
+<tt class="descclassname">UserProfileForm.</tt><tt class="descname">save</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/apps/accounts/forms.html#UserProfileForm.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#apps.accounts.forms.UserProfileForm.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="models-module">
+<h2><tt class="xref py py-mod docutils literal"><span class="pre">models</span></tt> Module<a class="headerlink" href="#models-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-apps.accounts.models"></span><dl class="class">
+<dt id="apps.accounts.models.UserProfile">
+<em class="property">class </em><tt class="descclassname">apps.accounts.models.</tt><tt class="descname">UserProfile</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/apps/accounts/models.html#UserProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#apps.accounts.models.UserProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>UserProfile(id, user_id, gender, birthdate, address, photo, location, bio)</p>
+<dl class="attribute">
+<dt id="apps.accounts.models.UserProfile.ANKARA">
+<tt class="descname">ANKARA</tt><em class="property"> = '06'</em><a class="headerlink" href="#apps.accounts.models.UserProfile.ANKARA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="apps.accounts.models.UserProfile.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#apps.accounts.models.UserProfile.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.models.UserProfile.FEMALE">
+<tt class="descclassname">UserProfile.</tt><tt class="descname">FEMALE</tt><em class="property"> = 'F'</em><a class="headerlink" href="#apps.accounts.models.UserProfile.FEMALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.models.UserProfile.GENDER_CHOICES">
+<tt class="descclassname">UserProfile.</tt><tt class="descname">GENDER_CHOICES</tt><em class="property"> = (('F', 'FEMALE'), ('M', 'MALE'))</em><a class="headerlink" href="#apps.accounts.models.UserProfile.GENDER_CHOICES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.models.UserProfile.ISTANBUL">
+<tt class="descclassname">UserProfile.</tt><tt class="descname">ISTANBUL</tt><em class="property"> = '34'</em><a class="headerlink" href="#apps.accounts.models.UserProfile.ISTANBUL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.models.UserProfile.IZMIR">
+<tt class="descclassname">UserProfile.</tt><tt class="descname">IZMIR</tt><em class="property"> = '35'</em><a class="headerlink" href="#apps.accounts.models.UserProfile.IZMIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.models.UserProfile.LOCATION_CHOICES">
+<tt class="descclassname">UserProfile.</tt><tt class="descname">LOCATION_CHOICES</tt><em class="property"> = (('34', 'Istanbul'), ('06', 'Ankara'), ('35', 'Izmir'), ('00', 'Other'))</em><a class="headerlink" href="#apps.accounts.models.UserProfile.LOCATION_CHOICES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.models.UserProfile.MALE">
+<tt class="descclassname">UserProfile.</tt><tt class="descname">MALE</tt><em class="property"> = 'M'</em><a class="headerlink" href="#apps.accounts.models.UserProfile.MALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="apps.accounts.models.UserProfile.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">UserProfile.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#apps.accounts.models.UserProfile.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.models.UserProfile.OTHER">
+<tt class="descclassname">UserProfile.</tt><tt class="descname">OTHER</tt><em class="property"> = '00'</em><a class="headerlink" href="#apps.accounts.models.UserProfile.OTHER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="apps.accounts.models.UserProfile.get_gender_display">
+<tt class="descclassname">UserProfile.</tt><tt class="descname">get_gender_display</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#apps.accounts.models.UserProfile.get_gender_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="apps.accounts.models.UserProfile.get_location_display">
+<tt class="descclassname">UserProfile.</tt><tt class="descname">get_location_display</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#apps.accounts.models.UserProfile.get_location_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.models.UserProfile.objects">
+<tt class="descclassname">UserProfile.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x4c63450&gt;</em><a class="headerlink" href="#apps.accounts.models.UserProfile.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="apps.accounts.models.UserProfile.upload_to">
+<tt class="descclassname">UserProfile.</tt><tt class="descname">upload_to</tt><big>(</big><em>filename</em><big>)</big><a class="reference internal" href="_modules/apps/accounts/models.html#UserProfile.upload_to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#apps.accounts.models.UserProfile.upload_to" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="apps.accounts.models.UserProfile.user">
+<tt class="descclassname">UserProfile.</tt><tt class="descname">user</tt><a class="headerlink" href="#apps.accounts.models.UserProfile.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="apps.accounts.models.post_user_creation_handler">
+<tt class="descclassname">apps.accounts.models.</tt><tt class="descname">post_user_creation_handler</tt><big>(</big><em>sender</em>, <em>instance</em>, <em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/apps/accounts/models.html#post_user_creation_handler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#apps.accounts.models.post_user_creation_handler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-apps.accounts.urls">
+<span id="urls-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">urls</span></tt> Module<a class="headerlink" href="#module-apps.accounts.urls" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-apps.accounts.views">
+<span id="views-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">views</span></tt> Module<a class="headerlink" href="#module-apps.accounts.views" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="apps.accounts.views.deactivate">
+<tt class="descclassname">apps.accounts.views.</tt><tt class="descname">deactivate</tt><big>(</big><em>request</em>, <em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/apps/accounts/views.html#deactivate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#apps.accounts.views.deactivate" title="Permalink to this definition">¶</a></dt>
+<dd><p>To deactivate the user account</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="apps.accounts.views.edit_profile">
+<tt class="descclassname">apps.accounts.views.</tt><tt class="descname">edit_profile</tt><big>(</big><em>request</em>, <em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/apps/accounts/views.html#edit_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#apps.accounts.views.edit_profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="apps.accounts.views.my_event">
+<tt class="descclassname">apps.accounts.views.</tt><tt class="descname">my_event</tt><big>(</big><em>request</em>, <em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/apps/accounts/views.html#my_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#apps.accounts.views.my_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>users event, will show the details of the event
+and options for approve and disapprove the participations,
+edit event, close event</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="apps.accounts.views.my_events">
+<tt class="descclassname">apps.accounts.views.</tt><tt class="descname">my_events</tt><big>(</big><em>request</em>, <em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/apps/accounts/views.html#my_events"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#apps.accounts.views.my_events" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="apps.accounts.views.profile">
+<tt class="descclassname">apps.accounts.views.</tt><tt class="descname">profile</tt><big>(</big><em>request</em>, <em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/apps/accounts/views.html#profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#apps.accounts.views.profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Users own profile page</p>
+</dd></dl>
+
+</div>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="apps.accounts.templatetags.html">templatetags Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="apps.accounts.templatetags.html#module-apps.accounts.templatetags.gravatar"><tt class="docutils literal"><span class="pre">gravatar</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">accounts Package</a><ul>
+<li><a class="reference internal" href="#admin-module"><tt class="docutils literal"><span class="pre">admin</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-apps.accounts.forms"><tt class="docutils literal"><span class="pre">forms</span></tt> Module</a></li>
+<li><a class="reference internal" href="#models-module"><tt class="docutils literal"><span class="pre">models</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-apps.accounts.urls"><tt class="docutils literal"><span class="pre">urls</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-apps.accounts.views"><tt class="docutils literal"><span class="pre">views</span></tt> Module</a></li>
+<li><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="apps.html"
+                        title="previous chapter">apps Package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="apps.accounts.templatetags.html"
+                        title="next chapter">templatetags Package</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/apps.accounts.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="apps.accounts.templatetags.html" title="templatetags Package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="apps.html" title="apps Package"
+             >previous</a> |</li>
+        <li><a href="index.html">Takeep 1.0 documentation</a> &raquo;</li>
+          <li><a href="apps.html" >apps Package</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Gizem Gür.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

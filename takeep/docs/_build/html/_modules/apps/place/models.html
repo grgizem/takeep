@@ -1,0 +1,207 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>apps.place.models &mdash; Takeep 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Takeep 1.0 documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../../index.html">Takeep 1.0 documentation</a> &raquo;</li>
+          <li><a href="../../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for apps.place.models</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+
+
+<div class="viewcode-block" id="Place"><a class="viewcode-back" href="../../../apps.place.html#apps.place.models.Place">[docs]</a><span class="k">class</span> <span class="nc">Place</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s">&quot;Place Name&quot;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="s">&#39;100&#39;</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Name of the place.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s">&quot;Description&quot;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="s">&#39;500&#39;</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Description of the place.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">coordinates</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s">&quot;Geolocation&quot;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Coordinates of the place which is a geographical representation as</span>
+<span class="sd">    longtitude and latitude.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">address</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s">&quot;Address&quot;</span><span class="p">,</span>
+                               <span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
+                               <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                               <span class="n">null</span><span class="o">=</span><span class="bp">True</span>
+                               <span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Adress of the place which is an open presciriptive adress.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">phone_number</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s">&quot;Phone Number&quot;</span><span class="p">,</span>
+                                    <span class="n">max_length</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span>
+                                    <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                    <span class="n">null</span><span class="o">=</span><span class="bp">True</span>
+                                    <span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Phone number of the place.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">EmailField</span><span class="p">(</span><span class="s">&quot;E-Mail&quot;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Email of the place.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">webpage</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">URLField</span><span class="p">(</span><span class="s">&quot;Webpage&quot;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Webpage of the place.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">is_approved</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The approval status of the place</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Place.upload_to"><a class="viewcode-back" href="../../../apps.place.html#apps.place.models.Place.upload_to">[docs]</a>    <span class="k">def</span> <span class="nf">upload_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s">&#39;organizations/</span><span class="si">%s</span><span class="s">/</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+</div>
+    <span class="n">banner</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ImageField</span><span class="p">(</span><span class="n">upload_to</span><span class="o">=</span><span class="n">upload_to</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The banner photo of the place.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__unicode__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+
+</div>
+<div class="viewcode-block" id="FlagPlace"><a class="viewcode-back" href="../../../apps.place.html#apps.place.models.FlagPlace">[docs]</a><span class="k">class</span> <span class="nc">FlagPlace</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">place</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Place</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The reported place to be change</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s">&quot;Place Name&quot;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="s">&#39;100&#39;</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Name of the place.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s">&quot;Description&quot;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="s">&#39;255&#39;</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Description of the place.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">coordinates</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s">&quot;Geolocation&quot;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Coordinates of the place which is a geographical representation as</span>
+<span class="sd">    longtitude and latitude.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">address</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s">&quot;Address&quot;</span><span class="p">,</span>
+                               <span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
+                               <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                               <span class="n">null</span><span class="o">=</span><span class="bp">True</span>
+                               <span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Adress of the place which is an open presciriptive adress.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">phone_number</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s">&quot;Phone Number&quot;</span><span class="p">,</span>
+                                    <span class="n">max_length</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span>
+                                    <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                    <span class="n">null</span><span class="o">=</span><span class="bp">True</span>
+                                    <span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Phone number of the place.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">EmailField</span><span class="p">(</span><span class="s">&quot;E-Mail&quot;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Email of the place.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">webpage</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">URLField</span><span class="p">(</span><span class="s">&quot;Webpage&quot;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Webpage of the place.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">is_considered</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The consideration status of the flag</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="FlagPlace.upload_to"><a class="viewcode-back" href="../../../apps.place.html#apps.place.models.FlagPlace.upload_to">[docs]</a>    <span class="k">def</span> <span class="nf">upload_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s">&#39;organizations/</span><span class="si">%s</span><span class="s">/</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+</div>
+    <span class="n">banner</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ImageField</span><span class="p">(</span><span class="n">upload_to</span><span class="o">=</span><span class="n">upload_to</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The banner photo of the place.</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../../index.html">Takeep 1.0 documentation</a> &raquo;</li>
+          <li><a href="../../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Gizem Gür.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

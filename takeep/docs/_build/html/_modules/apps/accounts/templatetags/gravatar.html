@@ -1,0 +1,128 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>apps.accounts.templatetags.gravatar &mdash; Takeep 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Takeep 1.0 documentation" href="../../../../index.html" />
+    <link rel="up" title="Module code" href="../../../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../../../index.html">Takeep 1.0 documentation</a> &raquo;</li>
+          <li><a href="../../../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for apps.accounts.templatetags.gravatar</h1><div class="highlight"><pre>
+<span class="c"># -*- coding:utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">urllib</span><span class="o">,</span> <span class="nn">hashlib</span>
+<span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">template</span>
+
+<span class="n">register</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">Library</span><span class="p">()</span>
+
+<span class="nd">@register.inclusion_tag</span><span class="p">(</span><span class="s">&#39;accounts/gravatar.html&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="show_gravatar"><a class="viewcode-back" href="../../../../apps.accounts.templatetags.html#apps.accounts.templatetags.gravatar.show_gravatar">[docs]</a><span class="k">def</span> <span class="nf">show_gravatar</span><span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">48</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Gravatar &#39;APIs&#39; require no authentication, and are all based around simple HTTP GET requests.</span>
+<span class="sd">	Gravatar images may be requested just like a normal image, using an IMG tag.</span>
+
+<span class="sd">	The most basic image request URL looks like this:</span>
+<span class="sd">	http://www.gravatar.com/avatar.php?gravatar_id=HASH</span>
+
+<span class="sd">	All that is required to display a user’s Gravatar is their e-mail address.</span>
+<span class="sd">	The URL to the Gravatar image simply takes a hashed e-mail address to identify the user,</span>
+<span class="sd">	- and a few other optional parameters to control the size</span>
+<span class="sd">	- and what to do if there us no Gravatar associated with their e-mail address.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="n">default</span> <span class="o">=</span> <span class="s">&quot;/static/images/default_avatar.png&quot;</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Default avatar image, that is going to be use if the user does not have an account on gravatar.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="n">url</span> <span class="o">=</span> <span class="s">&quot;http://www.gravatar.com/avatar.php?&quot;</span>
+	<span class="n">url</span> <span class="o">+=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span>
+        <span class="s">&#39;gravatar_id&#39;</span><span class="p">:</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">email</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">(),</span>
+        <span class="s">&#39;default&#39;</span><span class="p">:</span> <span class="n">default</span><span class="p">,</span>
+        <span class="s">&#39;size&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+    <span class="p">})</span>
+
+	<span class="k">return</span> <span class="p">{</span><span class="s">&#39;gravatar&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;url&#39;</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="s">&#39;size&#39;</span><span class="p">:</span> <span class="n">size</span><span class="p">}}</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../../../index.html">Takeep 1.0 documentation</a> &raquo;</li>
+          <li><a href="../../../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Gizem Gür.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
